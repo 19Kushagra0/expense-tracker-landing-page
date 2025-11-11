@@ -3,7 +3,7 @@ import "@/app/style.css";
 import Link from "next/link";
 export default function privacy1() {
   return (
-    <div className="privacy">
+    <div className="privacyPage">
       {/* Title */}
       <div className="title-container">
         <div className="title-box">
@@ -194,15 +194,28 @@ export default function privacy1() {
       </div>
       {/* Footer */}
       <div className="footer">
-        <div className="numora-icon"></div>
+        <svg
+          className="numora-icon"
+          width="35"
+          height="38"
+          viewBox="0 0 35 38"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.2188 1.14714C15.868 -0.38238 19.132 -0.38238 21.7812 1.14714L30.7188 6.30733C33.368 7.83685 35 10.6635 35 13.7226V24.0428C35 27.1018 33.368 29.9285 30.7188 31.4581L21.7812 36.6182C19.6801 37.8313 17.1924 38.082 14.9313 37.3709V18.3261C14.9313 14.9923 12.2286 12.2896 8.89478 12.2896C5.56092 12.2896 2.85829 14.9923 2.85829 18.3261V30.4284C1.06016 28.8223 0 26.5081 0 24.0428V13.7226C0 10.6635 1.63199 7.83685 4.2812 6.30733L13.2188 1.14714Z"
+            fill="black"
+          />
+        </svg>
         <div className="footer-button-container">
-          <Link href="/" className="footer-button-text">
-            Careers
-          </Link>
+          <button className="footer-button-text"> Careers</button>
+
           <Link href="/privacy" className="footer-button-text black">
             Privacy
           </Link>
-          <button className="footer-button-text "> Terms</button>
+          <Link href="/" className="footer-button-text ">
+            Terms
+          </Link>
 
           <span className="footer-button-text">© 2025 Numora</span>
         </div>

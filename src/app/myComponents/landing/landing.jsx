@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import "@/app/myComponents/landing/landing.css";
 import Header from "@/app/myComponents/Header/Header.jsx";
+import Link from "next/link";
 
 export default function Landing() {
   return (

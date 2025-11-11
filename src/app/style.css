@@ -1,8 +1,8 @@
-.terms,
-.privacy {
+.termsPage,
+.privacyPage {
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: #ebebeb;
 
   color: black;
 
@@ -22,6 +22,8 @@
   /* padding-left: 68px; */
 
   padding-bottom: 62px;
+
+  color: black;
 }
 .title-box {
   width: fit-content;
@@ -45,6 +47,8 @@
   letter-spacing: -2%;
 
   line-height: 56px;
+
+  color: black;
 }
 .time-container {
   width: fit-content;
@@ -242,7 +246,7 @@
 .numora-icon {
   width: 30px;
   height: 30px;
-  background-color: coral;
+  /* background-color: coral; */
 }
 .footer-button-container {
   display: flex;
