@@ -89,69 +89,136 @@ export default function Terms() {
       <div className="terms-privacy-index-content-container">
         {/* Index */}
         <div className="terms-privacy-index-container">
-          <button className="terms-privacy-index">
+          <button
+            className="terms-privacy-index"
+            onClick={() => {
+              document
+                .getElementById("using-numora")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <span className="terms-privacy-index-number">1.</span>
             <span className="terms-privacy-index-name">Using Numora</span>
           </button>
-          <button className="terms-privacy-index">
-            <span className="terms-privacy-index-number ">2.</span>
+          <button
+            className="terms-privacy-index"
+            onClick={() => {
+              document
+                .getElementById("account-authentication")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            <span className="terms-privacy-index-number">2.</span>
             <span className="terms-privacy-index-name">
               Account & Authentication
             </span>
           </button>
-          <button className="terms-privacy-index">
+          <button
+            className="terms-privacy-index"
+            onClick={() => {
+              document
+                .getElementById("user-content")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <span className="terms-privacy-index-number">3.</span>
             <span className="terms-privacy-index-name">User Content</span>
           </button>
-          <button className="terms-privacy-index">
+          <button
+            className="terms-privacy-index"
+            onClick={() => {
+              document
+                .getElementById("prohibited-conduct")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <span className="terms-privacy-index-number">4.</span>
             <span className="terms-privacy-index-name">Prohibited Conduct</span>
           </button>
-          <button className="terms-privacy-index">
+          <button
+            className="terms-privacy-index"
+            onClick={() => {
+              document
+                .getElementById("disclaimer-of-warranties")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <span className="terms-privacy-index-number">5.</span>
             <span className="terms-privacy-index-name">
               Disclaimer of Warranties
             </span>
           </button>
-          <button className="terms-privacy-index">
+          <button
+            className="terms-privacy-index"
+            onClick={() => {
+              document
+                .getElementById("limitations-of-liability")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <span className="terms-privacy-index-number">6.</span>
             <span className="terms-privacy-index-name">
               Limitations of Liability
             </span>
           </button>
-          <button className="terms-privacy-index">
+          <button
+            className="terms-privacy-index"
+            onClick={() => {
+              document
+                .getElementById("account-termination")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <span className="terms-privacy-index-number">7.</span>
             <span className="terms-privacy-index-name">
               Account Termination
             </span>
           </button>
-          <button className="terms-privacy-index">
+          <button
+            className="terms-privacy-index"
+            onClick={() => {
+              document
+                .getElementById("changes-to-terms")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <span className="terms-privacy-index-number">8.</span>
             <span className="terms-privacy-index-name">
               Changes to the Terms
             </span>
           </button>
-          <button className="terms-privacy-index">
+          <button
+            className="terms-privacy-index"
+            onClick={() => {
+              document
+                .getElementById("governing-law")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <span className="terms-privacy-index-number">9.</span>
             <span className="terms-privacy-index-name">Governing Law</span>
           </button>
-          <button className="terms-privacy-index">
+          <button
+            className="terms-privacy-index"
+            onClick={() => {
+              document
+                .getElementById("contact-us")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             <span className="terms-privacy-index-number">10.</span>
             <span className="terms-privacy-index-name">Contact Us</span>
           </button>
         </div>
 
         {/* Content */}
-        {/* Content */}
         <div className="terms-privacy-content-container">
-          <span className="terms-privacy-content-intro">
-            These Terms of Service ("Terms") govern your use of the Numora
-            mobile application and related services (the "App"). By accessing or
-            using Numora, you agree to be bound by these Terms. If you do not
-            agree, do not use the App.
-          </span>
           <div className="terms-privacy-content-title-text-container">
-            <div className="terms-privacy-content-title-text-box">
+            {/* 1. Using Numora */}
+            <div
+              className="terms-privacy-content-title-text-box"
+              id="using-numora"
+            >
               <span className="terms-privacy-content-title">
                 1. Using Numora
               </span>
@@ -163,7 +230,12 @@ export default function Terms() {
                 to your account.
               </span>
             </div>
-            <div className="terms-privacy-content-title-text-box">
+
+            {/* 2. Account & Authentication */}
+            <div
+              className="terms-privacy-content-title-text-box"
+              id="account-authentication"
+            >
               <span className="terms-privacy-content-title">
                 2. Account & Authentication
               </span>
@@ -174,7 +246,12 @@ export default function Terms() {
                 authentication purposes.
               </span>
             </div>
-            <div className="terms-privacy-content-title-text-box">
+
+            {/* 3. User Content */}
+            <div
+              className="terms-privacy-content-title-text-box"
+              id="user-content"
+            >
               <span className="terms-privacy-content-title">
                 3. User Content
               </span>
@@ -185,7 +262,12 @@ export default function Terms() {
                 applicable laws or the rights of third parties.
               </span>
             </div>
-            <div className="terms-privacy-content-title-text-box">
+
+            {/* 4. Prohibited Conduct */}
+            <div
+              className="terms-privacy-content-title-text-box"
+              id="prohibited-conduct"
+            >
               <span className="terms-privacy-content-title">
                 4. Prohibited Conduct
               </span>
@@ -206,7 +288,12 @@ export default function Terms() {
                 </ul>
               </span>
             </div>
-            <div className="terms-privacy-content-title-text-box">
+
+            {/* 5. Disclaimer of Warranties */}
+            <div
+              className="terms-privacy-content-title-text-box"
+              id="disclaimer-of-warranties"
+            >
               <span className="terms-privacy-content-title">
                 5. Disclaimer of Warranties
               </span>
@@ -217,7 +304,12 @@ export default function Terms() {
                 express or implied.
               </span>
             </div>
-            <div className="terms-privacy-content-title-text-box">
+
+            {/* 6. Limitation of Liability */}
+            <div
+              className="terms-privacy-content-title-text-box"
+              id="limitations-of-liability"
+            >
               <span className="terms-privacy-content-title">
                 6. Limitation of Liability
               </span>
@@ -228,7 +320,12 @@ export default function Terms() {
                 use of the App.
               </span>
             </div>
-            <div className="terms-privacy-content-title-text-box">
+
+            {/* 7. Account Termination */}
+            <div
+              className="terms-privacy-content-title-text-box"
+              id="account-termination"
+            >
               <span className="terms-privacy-content-title">
                 7. Account Termination
               </span>
@@ -239,7 +336,12 @@ export default function Terms() {
                 account at any time by contacting us.
               </span>
             </div>
-            <div className="terms-privacy-content-title-text-box">
+
+            {/* 8. Changes to the Terms */}
+            <div
+              className="terms-privacy-content-title-text-box"
+              id="changes-to-terms"
+            >
               <span className="terms-privacy-content-title">
                 8. Changes to the Terms
               </span>
@@ -250,7 +352,12 @@ export default function Terms() {
                 Terms.
               </span>
             </div>
-            <div className="terms-privacy-content-title-text-box">
+
+            {/* 9. Governing Law */}
+            <div
+              className="terms-privacy-content-title-text-box"
+              id="governing-law"
+            >
               <span className="terms-privacy-content-title">
                 9. Governing Law
               </span>
@@ -260,7 +367,12 @@ export default function Terms() {
                 regard to conflict of law provisions.
               </span>
             </div>
-            <div className="terms-privacy-content-title-text-box">
+
+            {/* 10. Contact Us */}
+            <div
+              className="terms-privacy-content-title-text-box"
+              id="contact-us"
+            >
               <span className="terms-privacy-content-title">
                 10. Contact Us
               </span>
@@ -278,6 +390,7 @@ export default function Terms() {
           </div>
         </div>
       </div>
+
       {/* Border */}
       <div className="terms-privacy-line-conatiner">
         <div className="terms-privacy-line"></div>
