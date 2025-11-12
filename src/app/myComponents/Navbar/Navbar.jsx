@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "@/app/myComponents/Navbar/Navbar.css";
+import { Inter } from "next/font/google";
 import Link from "next/link";
 
 export default function navbar({ showNavBar }) {

@@ -4,6 +4,7 @@ import "@/app/style.css";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import Navbar from "@/app/myComponents/Navbar/Navbar";
+import "@/app/myComponents/Header/Header";
 export default function Terms() {
   const [navBar, setNavBar] = useState(false);
 
@@ -29,13 +30,13 @@ export default function Terms() {
           </svg>
         </Link>
         <div className="term-privacy-header-button-container">
-          <Link href="/" className="term-privacy-header-button">
+          <Link href="/" className="careers">
             Carrers
           </Link>
-          <Link href="/privacy" className="term-privacy-header-button">
+          <Link href="/privacy" className="privacy">
             Privacy
           </Link>
-          <Link href="/terms" className="black term-privacy-header-button">
+          <Link href="/terms" className="terms-privacy-black  terms">
             Terms
           </Link>
         </div>
@@ -91,8 +92,8 @@ export default function Terms() {
             <span className="terms-privacy-index-name">Using Numora</span>
           </button>
           <button className="terms-privacy-index">
-            <span className="terms-privacy-index-number black">2.</span>
-            <span className="terms-privacy-index-name black">
+            <span className="terms-privacy-index-number ">2.</span>
+            <span className="terms-privacy-index-name">
               Account & Authentication
             </span>
           </button>
@@ -283,8 +284,8 @@ export default function Terms() {
       <div className="terms-privacy-footer">
         <svg
           className="terms-privacy-numora-icon"
-          width="35"
-          height="38"
+          height={36}
+          width={36}
           viewBox="0 0 35 38"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -294,24 +295,21 @@ export default function Terms() {
             fill="black"
           />
         </svg>
-        <div className="terms-privacy-footer-button-container">
-          <Link href="/" className="terms-privacy-footer-button-text">
+        <div className="terms-privacy-footer-button-container ">
+          <Link href="/" className="careers terms-privacy-display-none">
             Careers
           </Link>
 
-          <Link
-            href="/privacy"
-            className="terms-privacy-footer-button-text terms-privacy-privacy"
-          >
+          <Link href="/privacy" className="privacy terms-privacy-display-none ">
             Privacy
           </Link>
           <Link
             href="/terms"
-            className="terms-privacy-footer-button-text terms-privacy-terms terms-privacy-black"
+            className="terms terms-privacy-black terms-privacy-display-none"
           >
             Terms
           </Link>
-          <span className="terms-privacy-footer-button-text">
+          <span className="terms-privacy-footer-button-text terms-privacy-trademark-logo">
             © 2025 Numora
           </span>
         </div>
