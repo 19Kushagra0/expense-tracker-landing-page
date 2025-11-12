@@ -1,10 +1,10 @@
-/* ===== HEADER ===== */
 html {
   scroll-behavior: smooth;
 }
 .terms-privacy-content-title-text-box {
   scroll-margin-top: 170px; /* Adjust based on your fixed header height */
 }
+/* ===== HEADER ===== */
 
 .term-privacy-header {
   width: 100%;
@@ -16,6 +16,7 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 65px 4.72%;
+  z-index: 9;
 }
 
 .term-privacy-header-image-container {

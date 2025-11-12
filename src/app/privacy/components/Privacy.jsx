@@ -29,7 +29,7 @@ export default function privacy1() {
           </svg>
         </Link>
         <div className="term-privacy-header-button-container">
-          <Link href="/" className="term-privacy-header-button">
+          <Link href="/career" className="term-privacy-header-button">
             Careers
           </Link>
           <Link
@@ -186,6 +186,14 @@ export default function privacy1() {
 
         {/* Content */}
         <div className="terms-privacy-content-container">
+          <span className="terms-privacy-content-intro">
+            Numora ("we", "our", or "us") is committed to protecting your
+            privacy. This Privacy Policy explains how we collect, use, and
+            protect information when you use the Numora mobile application and
+            related services (collectively, the "App"). Numora is a free
+            personal and split expense management app.
+          </span>
+
           <div className="terms-privacy-content-title-text-container">
             {/* 1. Information We Collect */}
             <div
@@ -389,7 +397,7 @@ export default function privacy1() {
 
         <div className="terms-privacy-footer-button-container">
           <Link
-            href="/"
+            href="/career"
             className="term-privacy-header-button  terms-privacy-display-none"
           >
             Careers

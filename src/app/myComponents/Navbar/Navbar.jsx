@@ -85,7 +85,7 @@ export default function Navbar({ showNavBar }) {
         </button>
         {/* Navigation links */}
         <div className="navbar-links">
-          <Link onClick={handleClose} href="/" className="navbar-button">
+          <Link onClick={handleClose} href="/career" className="navbar-button">
             Careers
           </Link>
           <Link onClick={handleClose} href="/privacy" className="navbar-button">
