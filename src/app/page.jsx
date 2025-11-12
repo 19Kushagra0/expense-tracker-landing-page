@@ -6,7 +6,13 @@ export const metadata = {
   openGraph: {
     title: "Home | My Website",
     description: "Welcome to my awesome homepage.",
-    images: ["/images/og-landing.png"],
+    images: [
+      {
+        url: "/images/og-landing.png", // image path
+        width: 1918, // your custom width
+        height: 968, // your custom height
+      },
+    ],
   },
 };
 export default function Home() {
