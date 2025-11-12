@@ -32,7 +32,7 @@ export default function privacy1() {
 
         <div className="term-privacy-header-button-container">
           <Link href="/" className="careers">
-            Carrers
+            Careers
           </Link>
           <Link href="/privacy" className="privacy terms-privacy-black ">
             Privacy
