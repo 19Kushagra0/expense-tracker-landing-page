@@ -1,4 +1,11 @@
 /* ===== HEADER ===== */
+html {
+  scroll-behavior: smooth;
+}
+.terms-privacy-content-title-text-box {
+  scroll-margin-top: 170px; /* Adjust based on your fixed header height */
+}
+
 .term-privacy-header {
   width: 100%;
   background-color: #ebebeb;
@@ -8,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4.19% 4.72%;
+  padding: 65px 4.72%;
 }
 
 .term-privacy-header-image-container {
@@ -90,6 +97,7 @@
   flex-direction: column;
   padding-bottom: 62px;
   color: black;
+  padding-bottom: 44px;
 }
 
 .terms-privacy-title-box {
@@ -132,6 +140,8 @@
   display: flex;
   flex-direction: row;
   gap: 166px;
+  flex-direction: column;
+  gap: 44px;
 }
 
 .terms-privacy-index-container {
@@ -173,13 +183,16 @@
   display: flex;
   flex-direction: column;
   gap: 44px;
+  max-width: 1301px;
 }
 
-.terms-privacy-content-intro,
 .terms-privacy-content-intro2 {
   font-size: 16px;
   max-width: 826px;
   display: flex;
+  display: flex;
+  padding-bottom: 44px;
+  max-width: 1119px;
 }
 
 .terms-privacy-content-intro2 {
@@ -190,6 +203,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  gap: 44px;
 }
 
 .terms-privacy-content-title-text-box {
@@ -292,34 +306,15 @@
 .terms-privacy-display-none {
   display: flex !important;
 }
-
 /* ===== RESPONSIVE ===== */
-@media screen and (max-width: 1440px) {
-  .terms-privacy-title-container {
-    padding-bottom: 44px;
-  }
 
-  .terms-privacy-content-intro {
-    display: none;
-  }
-
-  .terms-privacy-content-intro2 {
+@media screen and (max-width: 800px) {
+  .term-privacy-header-hamberburger-container {
     display: flex;
-    padding-bottom: 44px;
-    max-width: 1119px;
   }
 
-  .terms-privacy-index-content-container {
-    flex-direction: column;
-    gap: 44px;
-  }
-
-  .terms-privacy-content-title-text-container {
-    gap: 44px;
-  }
-
-  .terms-privacy-content-container {
-    max-width: 1301px;
+  .term-privacy-header-button-container {
+    display: none;
   }
 }
 
@@ -365,5 +360,40 @@
 
   .terms-privacy-content-title {
     font-size: 22px;
+  }
+}
+
+/* auto scrolling */
+@media screen and (max-width: 1024px) {
+  .term-privacy-header {
+    padding: 45px 4.72%;
+  }
+  .terms-privacy-content-title-text-box {
+    scroll-margin-top: 170px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .term-privacy-header {
+    padding: 45px 4.72%;
+  }
+  .terms-privacy-content-title-text-box {
+    scroll-margin-top: 155px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .term-privacy-header {
+    padding: 30px 4.72%;
+  }
+  .terms-privacy-content-title-text-box {
+    scroll-margin-top: 105px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .term-privacy-header {
+    padding: 20px 4.72%;
+  }
+  .terms-privacy-content-title-text-box {
+    scroll-margin-top: 105px;
   }
 }
