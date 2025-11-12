@@ -5,7 +5,6 @@ import Header from "../myComponents/Header/Header";
 export default function page() {
   return (
     <div>
-      <Header />
       <Terms />
     </div>
   );
