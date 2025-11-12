@@ -4,7 +4,6 @@ import "@/app/style.css";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import Navbar from "@/app/myComponents/Navbar/Navbar";
-
 export default function privacy1() {
   const [navBar, setNavBar] = useState(false);
 
@@ -29,15 +28,17 @@ export default function privacy1() {
             />
           </svg>
         </Link>
-
         <div className="term-privacy-header-button-container">
           <Link href="/" className="term-privacy-header-button">
-            Carrers
+            Careers
           </Link>
-          <Link href="/privacy" className="term-privacy-header-button black">
+          <Link
+            href="/privacy"
+            className="terms-privacy-black term-privacy-header-button"
+          >
             Privacy
           </Link>
-          <Link href="/terms" className=" term-privacy-header-button">
+          <Link href="/terms" className="  term-privacy-header-button">
             Terms
           </Link>
         </div>
@@ -92,8 +93,8 @@ export default function privacy1() {
             </span>
           </button>
           <button className="terms-privacy-index">
-            <span className="terms-privacy-index-number black">2.</span>
-            <span className="terms-privacy-index-name black">
+            <span className="terms-privacy-index-number ">2.</span>
+            <span className="terms-privacy-index-name ">
               Use of Information
             </span>
           </button>
@@ -283,37 +284,43 @@ export default function privacy1() {
       </div>
       {/* Footer */}
       <div className="terms-privacy-footer">
-        <svg
-          className="terms-privacy-numora-icon"
-          width="35"
-          height="38"
-          viewBox="0 0 35 38"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M13.2188 1.14714C15.868 -0.38238 19.132 -0.38238 21.7812 1.14714L30.7188 6.30733C33.368 7.83685 35 10.6635 35 13.7226V24.0428C35 27.1018 33.368 29.9285 30.7188 31.4581L21.7812 36.6182C19.6801 37.8313 17.1924 38.082 14.9313 37.3709V18.3261C14.9313 14.9923 12.2286 12.2896 8.89478 12.2896C5.56092 12.2896 2.85829 14.9923 2.85829 18.3261V30.4284C1.06016 28.8223 0 26.5081 0 24.0428V13.7226C0 10.6635 1.63199 7.83685 4.2812 6.30733L13.2188 1.14714Z"
-            fill="black"
-          />
-        </svg>
+        <Link href="/">
+          <svg
+            className="terms-privacy-numora-icon"
+            height={36}
+            width={36}
+            viewBox="0 0 35 38"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.2188 1.14714C15.868 -0.38238 19.132 -0.38238 21.7812 1.14714L30.7188 6.30733C33.368 7.83685 35 10.6635 35 13.7226V24.0428C35 27.1018 33.368 29.9285 30.7188 31.4581L21.7812 36.6182C19.6801 37.8313 17.1924 38.082 14.9313 37.3709V18.3261C14.9313 14.9923 12.2286 12.2896 8.89478 12.2896C5.56092 12.2896 2.85829 14.9923 2.85829 18.3261V30.4284C1.06016 28.8223 0 26.5081 0 24.0428V13.7226C0 10.6635 1.63199 7.83685 4.2812 6.30733L13.2188 1.14714Z"
+              fill="black"
+            />
+          </svg>
+        </Link>
+
         <div className="terms-privacy-footer-button-container">
-          <Link href="/" className="terms-privacy-footer-button-text">
+          <Link
+            href="/"
+            className="term-privacy-header-button  terms-privacy-display-none"
+          >
             Careers
           </Link>
 
           <Link
             href="/privacy"
-            className="terms-privacy-footer-button-text terms-privacy-privacy"
+            className="term-privacy-header-button  terms-privacy-black terms-privacy-display-none"
           >
             Privacy
           </Link>
           <Link
             href="/terms"
-            className="terms-privacy-footer-button-text terms-privacy-terms terms-privacy-black"
+            className="term-privacy-header-button   terms-privacy-display-none"
           >
             Terms
           </Link>
-          <span className="terms-privacy-footer-button-text">
+          <span className="terms-privacy-footer-button-text terms-privacy-trademark-logo">
             © 2025 Numora
           </span>
         </div>
