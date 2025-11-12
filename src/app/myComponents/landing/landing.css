@@ -105,6 +105,10 @@
   width: fit-content;
 }
 
+.store-icons-container:hover {
+  cursor: pointer;
+}
+
 .store-icons {
   display: flex;
   align-items: center;
@@ -114,6 +118,16 @@
   padding: 9px 20px 9px 15px;
 }
 
+.store-icons:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.store-icons:hover {
+  box-shadow: 0 4px 20px rgba(9, 9, 9, 0.35);
+  transform: translateY(-2px);
+}
+
 .store-icons p {
   color: #fff;
   padding-left: 7px;
@@ -121,6 +135,8 @@
   line-height: 24.1px;
   letter-spacing: -0.16px;
   cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
 }
 
 .apple-icon:hover,
@@ -128,12 +144,30 @@
   cursor: pointer;
 }
 
+.apple-icon,
+.playstore-icon {
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.apple-icon:hover,
+.playstore-icon:hover {
+  transform: scale(1.15) rotate(3deg);
+  filter: brightness(1.2);
+}
+
+/* Divider subtle fade */
 .divider {
   width: 1px;
   height: 12px;
   background-color: #555;
   margin: 0 10px;
   opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.store-icons:hover .divider {
+  opacity: 0.9;
 }
 
 /* RESPONSIVE BREAKPOINTS */
