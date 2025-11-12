@@ -1,0 +1,87 @@
+.navbar-cover {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9;
+}
+
+.navbar {
+  width: 60%;
+  height: 100vh;
+  background-color: #e6e6e6;
+  position: fixed;
+  right: 0;
+  top: 0;
+  /* padding-left: 10%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  box-shadow: 3px 0 12px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  border-right: 1px solid #bfbfbf;
+
+  z-index: 10;
+}
+
+.navbar-button {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  font-size: 17px;
+  font-weight: 500;
+  color: #2e2e2e;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #c4c4c4;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  text-decoration: none;
+}
+
+.navbar-button:hover {
+  background-color: #cfcfcf;
+  color: #000;
+  padding-left: 12%;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-left: 4px solid #000;
+}
+
+.navbar::-webkit-scrollbar {
+  width: 6px;
+}
+.navbar::-webkit-scrollbar-thumb {
+  background-color: #b5b5b5;
+  border-radius: 3px;
+}
+.back-button {
+  font-weight: 600;
+  color: #222;
+  background-color: #d0d0d0;
+  background-color: #666666;
+  color: #f4f4f4;
+  border-bottom: 1px solid #b0b0b0;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 10%;
+}
+.back-image {
+  width: 25px;
+  height: 25px;
+
+  stroke: white;
+}
+.back-button:hover {
+  background-color: #bfbfbf;
+  color: #000;
+  padding-left: 12%;
+}
