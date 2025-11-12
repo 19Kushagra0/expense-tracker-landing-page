@@ -1,4 +1,3 @@
-// 2
 "use client";
 import React, { useEffect, useState } from "react";
 import "@/app/myComponents/Navbar/Navbar.css";
