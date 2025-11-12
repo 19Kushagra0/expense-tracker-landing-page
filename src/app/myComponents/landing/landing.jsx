@@ -1,10 +1,19 @@
-import React from "react";
+"use client"
+import { React, useEffect } from "react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import "@/app/myComponents/landing/landing.css";
 import Header from "@/app/myComponents/Header/Header.jsx";
 
 export default function Landing() {
+
+  useEffect(() => {
+    document.body.classList.add("landing-page-active");
+    return () => {
+      document.body.classList.remove("landing-page-active");
+    };
+  }, []);
+
   return (
     <div className="outer">
       <Header />
@@ -25,6 +34,8 @@ export default function Landing() {
               alt="banner-img"
               width={377}
               height={815}
+              sizes="(max-width: 768px) 80vw, (max-width: 128s0px) 40vw, 360px"
+            // priority
             />
           </div>
         </div>
@@ -40,7 +51,7 @@ export default function Landing() {
           <div className="qr-container">
             <div className="qr-apple">
               <Image
-                src="/images/apple-qr.png"
+                src="/icons/applestore-qr.svg"
                 alt="apple store"
                 width={128}
                 height={128}
@@ -48,7 +59,7 @@ export default function Landing() {
             </div>
             <div className="qr-play-store">
               <Image
-                src="/images/qr-playstore.png"
+                src="/icons/playstore-qr.svg"
                 alt="play store"
                 width={128}
                 height={128}

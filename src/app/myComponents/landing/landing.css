@@ -1,33 +1,36 @@
 .outer {
   width: 100%;
+  height: 100vh;
   overflow-x: hidden;
-  /* background-color: palevioletred; */
+  overflow-y: hidden;
   background-color: #EBEBEB;
+  box-sizing: border-box;
 }
 
+/* Main landing layout */
 .landing-page {
   width: 100%;
   height: 91vh;
-  /* background-color: red; */
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
   padding: 20px 90px 20px 59px;
   margin-top: 8.6vh;
-  justify-content: space-between;
   font-family: "Inter", sans-serif;
-  align-items: flex-end;
 }
 
+/* LEFT SECTION */
 .left-landing {
-  /* background-color: orange; */
   height: 100%;
   display: flex;
   flex-direction: row;
-  gap: clamp(30px, 3vw, 70px);
+  gap: 70px;
   justify-content: space-between;
   align-items: flex-end;
 }
 
+/* Title Text Styles */
 .title-text {
   display: flex;
   flex-direction: column;
@@ -36,38 +39,36 @@
 }
 
 .title-text span {
-  font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-size: clamp(3rem, 10vw, 9.8rem);
+  font-size: 156px;
   letter-spacing: -0.38rem;
   line-height: 1.08;
+  transition: all 0.3s ease-in-out;
 }
 
 .title-text .gray {
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.1);
 }
 
 .title-text .black {
-  color: rgba(0, 0, 0, 0.9);
+  color: #000;
 }
 
+/* Hero Image Section */
 .hero-img-container {
   display: flex;
-  align-items: flex-end;
   justify-content: center;
-  width: clamp(200px, 25vw, 377px);
-  aspect-ratio: 377 / 815;
-  transition: all 0.3s ease-in-out;
+  align-items: center;
+  width: clamp(300px, 320vw, 360px);
 }
 
 .hero-img {
   width: 100%;
   height: auto;
-  object-fit: contain;
 }
 
+/* =========================== RIGHT SECTION =========================== */
 .right-landing {
-  /* background-color: purple; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -81,11 +82,11 @@
   font-weight: 600;
   line-height: 30px;
   letter-spacing: -1.2px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 0 24px;
   text-align: left;
 }
 
+/* QR Container */
 .qr-container {
   width: fit-content;
   display: flex;
@@ -96,25 +97,21 @@
   padding: 9px 10px;
 }
 
+/* App Store Icons */
 .store-icons-container {
   display: none;
   flex-direction: row;
   justify-content: left;
   width: fit-content;
-  /* background-color: tomato; */
 }
 
 .store-icons {
   display: flex;
-  flex-direction: row;
-  background-color: black;
-  border-radius: 9999px;
-  padding-left: 15px;
-  padding-right: 20px;
   align-items: center;
-  padding-top: 9px;
-  padding-bottom: 9px;
   gap: 3px;
+  background-color: black;
+  border-radius: 800px;
+  padding: 9px 20px 9px 15px;
 }
 
 .store-icons p {
@@ -123,12 +120,10 @@
   font-size: medium;
   line-height: 24.1px;
   letter-spacing: -0.16px;
-}
-
-.apple-icon:hover {
   cursor: pointer;
 }
 
+.apple-icon:hover,
 .playstore-icon {
   cursor: pointer;
 }
@@ -141,8 +136,8 @@
   opacity: 0.7;
 }
 
-/* Media queries */
-
+/* RESPONSIVE BREAKPOINTS */
+/* ----------- 1440px ----------- */
 @media screen and (max-width: 1440px) {
   .landing-page {
     padding-left: 47px;
@@ -154,16 +149,12 @@
     line-height: 105px;
     letter-spacing: -3.75px;
   }
-
-  .hero-img-container {
-    width: 360px;
-  }
 }
 
+/* ----------- 1280px ----------- */
 @media screen and (max-width: 1280px) {
   .landing-page {
-    padding-left: 59px;
-    padding-right: 59px;
+    padding: 20px 59px;
   }
 
   .left-landing {
@@ -177,31 +168,17 @@
   }
 
   .hero-img-container {
+    width: 337px;
+    height: 648px;
     transition: all 0.3s ease-in-out;
-  }
-
-  .hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
   }
 }
 
-
-
-@media screen and (max-width: 1000px) {
-  .landing-page {
-    margin-top: 80px;
-    padding-left: 40px;
-    padding-right: 80px;
-    position: relative;
-    padding-top: 30px;
-    padding-bottom: 20px;
-  }
-
+/* ----------- 1130px & below ----------- */
+@media screen and (max-width: 1130px) {
   .left-landing {
     align-items: flex-start;
-    gap: 40px;
+    width: 100%;
   }
 
   .qr-container {
@@ -211,7 +188,6 @@
   .title-text {
     width: 290px;
     justify-content: flex-start;
-    height: fit-content;
   }
 
   .title-text span {
@@ -221,9 +197,11 @@
   }
 
   .hero-img-container {
-    margin-top: 125px;
     position: sticky;
     right: 20px;
+    width: 360px;
+    height: 640px;
+    margin-top: 120px;
   }
 
   .store-icons-container {
@@ -232,53 +210,55 @@
 
   .hero-description {
     font-size: 15px;
-    text-align: left;
     line-height: 18.7px;
     letter-spacing: -0.75px;
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   .right-landing {
     position: absolute;
+    bottom: 60px;
+    left: 6%;
     gap: 14px;
-    bottom: 20px;
+  }
+}
+
+/* ----------- 1000px ----------- */
+@media screen and (max-width: 1000px) {
+  .landing-page {
+    padding: 20px 80px 20px 26px;
+  }
+
+  .right-landing {
     left: 26px;
   }
 }
 
-@media screen and (max-width: 699px) {
+/* ----------- 799px ----------- */
+@media screen and (max-width: 799px) {
   .landing-page {
-    padding-right: 18px;
+    padding-right: 8%;
   }
-}
 
-@media screen and (max-width: 599px) {
   .hero-img-container {
-    width: 280px;
-    height: 520px;
-    margin-top: 130px;
-  }
-
-  .hero-img {
-    height: 100%;
-    width: 100%;
+    margin-top: 0;
+    width: 330px;
+    height: 680px;
   }
 }
 
+/* ----------- 414px (Mobile) ----------- */
 @media screen and (max-width: 414px) {
   .landing-page {
-    gap: 0px;
-    padding-top: 60px;
-    padding-left: 26px;
-    padding-right: 0px;
-  }
-
-  .left-landing {
-    gap: 5px;
+    padding: 70px 0 0 26px;
+    margin-top: 0;
+    height: 100vh;
+    overflow: hidden;
   }
 
   .title-text {
     width: 200px;
+    margin-top: 20px;
   }
 
   .title-text span {
@@ -288,69 +268,104 @@
   }
 
   .hero-img-container {
-    width: 204px;
-    height: 440px;
-    right: 0px;
-  }
-
-  .hero-img {
-    width: 100%;
-    height: 100%
-  }
-}
-
-
-
-@media screen and (max-width: 1600px) and (max-height: 864px) {
-  .landing-page {
-    padding-top: 10px;
-    padding-left: 59px;
-    padding-right: 80px;
-    padding-bottom: clamp(60px, 8vh, 120px);
-  }
-
-  .hero-img-container {
-    margin-top: 0px;
-    width: 260px;
-    right: 5px;
+    width: 203px;
+    height: 443px;
+    margin-top: 120px;
+    right: 0;
   }
 
   .right-landing {
-    bottom: 20px;
+    bottom: 50px;
   }
 }
 
-@media screen and (max-width: 1000px) and (max-height: 864px) {
-  .landing-page {
-    padding-left: 59px;
-    padding-right: 59px;
-  }
-
+/* ----------- Extra tall screens ----------- */
+@media screen and (min-height: 960px) {
   .hero-img-container {
-    margin-top: 50px;
-    width: 240px;
-    right: 60px;
+    height: 817px;
+    width: 360px;
   }
 }
 
-@media screen and (max-width: 599px) and (max-height: 864px) {
-  .landing-page {
-    padding-right: 4%;
-    padding-left: 4%;
-  }
-
+@media screen and (max-height: 890px) {
   .hero-img-container {
-    margin-top: 0px;
-    width: 240px;
-    right: 4%;
+    height: auto;
+    width: 327px;
+    margin-top: 90px;
   }
 }
 
-@media screen and (max-width: 599px) and (max-height: 864px) {
+@media screen and (max-width: 1130) and (max-height: 800px) {
   .hero-img-container {
-    margin-top: 100px;
-    width: 200px;
     height: 500px;
-    right: 5px;
+    width: 327px;
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 440px) and (min-height: 900px) {
+  .left-landing {
+    gap: 0px;
+  }
+
+  .hero-img-container {
+    height: 700px;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 440px) and (max-height: 800px) {
+  .left-landing {
+    gap: 0px;
+  }
+
+  .hero-img-container {
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 430px) and (min-width: 335px) and (min-height: 900px) {
+  .hero-img-container {
+    height: max-content;
+    margin-top: 19vh;
+  }
+}
+
+@media screen and (max-width: 345px) and (min-width: 340px) and (max-height: 885px) and (min-height: 880px) {
+  .landing-page {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+
+  .left-landing {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .hero-img-container {
+    margin-top: 10px;
+    width: 200px;
+    top: 80px;
+  }
+
+  .right-landing {
+    left: 18%;
+    width: fit-content;
+  }
+
+  .hero-description {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 414px) and (min-height: 800px) and (max-height: 815px) {
+  .landing-page {
+    padding-top: 80px;
+  }
+
+  .hero-img-container {
+    margin-top: 19vh;
+    height: 680px;
   }
 }
