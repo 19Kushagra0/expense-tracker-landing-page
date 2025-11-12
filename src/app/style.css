@@ -318,6 +318,16 @@ html {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .term-privacy-header-hamberburger-container {
+    display: flex;
+  }
+
+  .term-privacy-header-button-container {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 530px) {
   .terms-privacy-footer {
     flex-direction: column;
