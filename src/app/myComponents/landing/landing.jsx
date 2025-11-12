@@ -1,12 +1,17 @@
-"use client"
-import { React, useEffect } from "react";
+"use client";
+import { React, useEffect, useState } from "react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import "@/app/myComponents/landing/landing.css";
 import Header from "@/app/myComponents/Header/Header.jsx";
+import Navbar from "../Navbar/Navbar";
 
 export default function Landing() {
+  const [navBar, setNavBar] = useState(false);
 
+  const showNavBar = () => {
+    setNavBar(!navBar);
+  };
   useEffect(() => {
     document.body.classList.add("landing-page-active");
     return () => {
@@ -16,8 +21,8 @@ export default function Landing() {
 
   return (
     <div className="outer">
-      <Header />
-
+      <Header showNavBar={showNavBar} />
+      {navBar ? <Navbar showNavBar={showNavBar} /> : null}
       <section className="landing-page">
         {/* LEFT SECTION */}
         <div className="left-landing">
@@ -35,7 +40,7 @@ export default function Landing() {
               width={377}
               height={815}
               sizes="(max-width: 768px) 80vw, (max-width: 128s0px) 40vw, 360px"
-            // priority
+              // priority
             />
           </div>
         </div>

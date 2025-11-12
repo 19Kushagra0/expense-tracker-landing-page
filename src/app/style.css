@@ -63,12 +63,16 @@
   justify-content: center;
 
   display: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .term-privacy-header-hamberburger-container:hover {
-  background-color: rgb(223, 223, 223);
+  cursor: pointer;
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 .term-privacy-header-hamberburger {
 }
+
 .termsPage,
 .privacyPage {
   width: 100%;
@@ -198,7 +202,9 @@
   cursor: pointer;
   border: 0px;
 }
-
+.terms-privacy-index:hover {
+  color: black;
+}
 .terms-privacy-index-number,
 .terms-privacy-index-name {
   font-weight: normal;
@@ -223,6 +229,7 @@
 
 .terms-privacy-content-intro,
 .terms-privacy-content-intro2 {
+  font-size: 16px;
   max-width: 826px;
   /* background-color: aqua; */
   display: flex;
@@ -323,8 +330,10 @@
 }
 
 .terms-privacy-numora-icon {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
+
+  cursor: pointer;
   /* background-color: coral; */
 }
 
@@ -353,10 +362,6 @@
 
 .terms-privacy-footer-button-text:hover {
   text-decoration: underline;
-}
-
-.terms-privacy-black {
-  color: #171717;
 }
 
 @media screen and (max-width: 1440px) {
@@ -400,7 +405,11 @@
     gap: 25px;
   }
   .terms-privacy-line-conatiner {
-    margin-top: 50px;
+    /* margin-top: 50px; */
+  }
+  .termsPage,
+  .privacyPage {
+    padding-top: 125px;
   }
 }
 
@@ -413,5 +422,34 @@
   }
   .term-privacy-header-button-container {
     display: none;
+  }
+}
+.terms-privacy-black {
+  color: #171717 !important;
+}
+.terms-privacy-trademark-logo {
+  text-decoration: none !important;
+}
+.terms-privacy-display-none {
+  display: flex !important;
+}
+
+@media screen and (max-width: 414px) {
+  .terms-privacy-title {
+    font-size: 42px;
+  }
+  .terms-privacy-last-update,
+  .terms-privacy-time {
+    font-size: 14px;
+  }
+  .terms-privacy-content-intro2 {
+    font-size: 14px;
+  }
+  .terms-privacy-content-title {
+    font-size: 22px;
+  }
+  .terms-privacy-content-text,
+  .terms-privacy-highlight {
+    font-size: 14px;
   }
 }
