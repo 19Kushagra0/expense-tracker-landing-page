@@ -34,49 +34,64 @@
     flex-direction: row;
 }
 
-.careers {
-    padding: 10px 16px;
-    color: #828282;
-    font-size: 16px;
-    line-height: 20px;
-}
-
-.careers:hover {
-    cursor: pointer;
-}
-
-.privacy {
-    padding: 10px 16px;
-    color: #828282;
-    font-size: 16px;
-    line-height: 20px;
-}
-
-.privacy:hover {
-    cursor: pointer;
-}
-
+.careers,
+.privacy,
 .terms {
     padding: 10px 16px;
     color: #828282;
     font-size: 16px;
     line-height: 20px;
+    position: relative;
+    transition: color 0.3s ease, opacity 0.3s ease;
 }
 
+/* Subtle underline animation */
+.careers::after,
+.privacy::after,
+.terms::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    bottom: 6px;
+    width: 0;
+    height: 2px;
+    background-color: #828282;
+    transition: width 0.3s ease;
+    opacity: 0.6;
+}
+
+.careers:hover,
+.privacy:hover,
 .terms:hover {
+    color: #555;
+    opacity: 0.9;
     cursor: pointer;
+}
+
+.careers:hover::after,
+.privacy:hover::after,
+.terms:hover::after {
+    width: calc(100% - 32px);
 }
 
 .menu-btn {
     line-height: 20px;
     height: 24px;
     width: 24px;
-    /* background-color: yellow; */
     display: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .menu-btn:hover {
     cursor: pointer;
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+@media screen and (max-height: 900px) and (max-width: 1600px) {
+    .header {
+        height: 50px;
+    }
 }
 
 @media screen and (max-width: 1800px) {
@@ -84,7 +99,6 @@
         padding-left: 3.28%;
         padding-right: 3.38%;
     }
-
 }
 
 @media screen and (max-width: 1440px) {
@@ -98,6 +112,13 @@
     .header {
         padding-left: 59px;
         padding-right: 59px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        padding-left: 26px;
+        padding-right: 80px;
     }
 }
 
@@ -126,7 +147,7 @@
 
 @media screen and (max-width: 414px) {
     .header {
-        padding-top: 40px;
+        padding-top: 30px;
         padding-left: 32px;
         padding-right: 32px;
     }

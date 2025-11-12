@@ -31,6 +31,10 @@ body {
   box-sizing: border-box;
 }
 
+body.landing-page-active {
+  overflow-y: hidden;
+}
+
 .app {
   overflow-x: hidden;
   height: 100vh;
