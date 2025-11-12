@@ -25,7 +25,7 @@ export default function Header({ showNavBar }) {
 
       <div className="right-header">
         <Link href="/" className="careers">
-          Carrers
+          Careers
         </Link>
         <Link href="/privacy" className="privacy">
           Privacy

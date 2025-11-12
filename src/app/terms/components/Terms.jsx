@@ -31,7 +31,7 @@ export default function Terms() {
         </Link>
         <div className="term-privacy-header-button-container">
           <Link href="/" className="careers">
-            Carrers
+            Careers
           </Link>
           <Link href="/privacy" className="privacy">
             Privacy
