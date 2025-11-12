@@ -4,7 +4,6 @@ import "@/app/style.css";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import Navbar from "@/app/myComponents/Navbar/Navbar";
-import "@/app/myComponents/Header/Header";
 export default function Terms() {
   const [navBar, setNavBar] = useState(false);
 
@@ -30,13 +29,16 @@ export default function Terms() {
           </svg>
         </Link>
         <div className="term-privacy-header-button-container">
-          <Link href="/" className="careers">
+          <Link href="/" className="term-privacy-header-button">
             Careers
           </Link>
-          <Link href="/privacy" className="privacy">
+          <Link href="/privacy" className="term-privacy-header-button">
             Privacy
           </Link>
-          <Link href="/terms" className="terms-privacy-black  terms">
+          <Link
+            href="/terms"
+            className="terms-privacy-black  term-privacy-header-button"
+          >
             Terms
           </Link>
         </div>
@@ -296,16 +298,22 @@ export default function Terms() {
           />
         </svg>
         <div className="terms-privacy-footer-button-container ">
-          <Link href="/" className="careers terms-privacy-display-none">
+          <Link
+            href="/"
+            className="term-privacy-header-button terms-privacy-display-none"
+          >
             Careers
           </Link>
 
-          <Link href="/privacy" className="privacy terms-privacy-display-none ">
+          <Link
+            href="/privacy"
+            className="term-privacy-header-button terms-privacy-display-none "
+          >
             Privacy
           </Link>
           <Link
             href="/terms"
-            className="terms terms-privacy-black terms-privacy-display-none"
+            className="term-privacy-header-button terms-privacy-black terms-privacy-display-none"
           >
             Terms
           </Link>

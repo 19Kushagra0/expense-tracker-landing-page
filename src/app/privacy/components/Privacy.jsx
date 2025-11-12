@@ -4,7 +4,6 @@ import "@/app/style.css";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import Navbar from "@/app/myComponents/Navbar/Navbar";
-import "@/app/myComponents/Header/Header";
 export default function privacy1() {
   const [navBar, setNavBar] = useState(false);
 
@@ -29,15 +28,17 @@ export default function privacy1() {
             />
           </svg>
         </Link>
-
         <div className="term-privacy-header-button-container">
-          <Link href="/" className="careers">
+          <Link href="/" className="term-privacy-header-button">
             Careers
           </Link>
-          <Link href="/privacy" className="privacy terms-privacy-black ">
+          <Link
+            href="/privacy"
+            className="terms-privacy-black term-privacy-header-button"
+          >
             Privacy
           </Link>
-          <Link href="/terms" className="  terms">
+          <Link href="/terms" className="  term-privacy-header-button">
             Terms
           </Link>
         </div>
@@ -92,10 +93,8 @@ export default function privacy1() {
             </span>
           </button>
           <button className="terms-privacy-index">
-            <span className="terms-privacy-index-number  terms-privacy-black">
-              2.
-            </span>
-            <span className="terms-privacy-index-name terms-privacy-black">
+            <span className="terms-privacy-index-number ">2.</span>
+            <span className="terms-privacy-index-name ">
               Use of Information
             </span>
           </button>
@@ -302,17 +301,23 @@ export default function privacy1() {
         </Link>
 
         <div className="terms-privacy-footer-button-container">
-          <Link href="/" className="careers terms-privacy-display-none">
+          <Link
+            href="/"
+            className="term-privacy-header-button  terms-privacy-display-none"
+          >
             Careers
           </Link>
 
           <Link
             href="/privacy"
-            className="privacy terms-privacy-black terms-privacy-display-none"
+            className="term-privacy-header-button  terms-privacy-black terms-privacy-display-none"
           >
             Privacy
           </Link>
-          <Link href="/terms" className="terms  terms-privacy-display-none">
+          <Link
+            href="/terms"
+            className="term-privacy-header-button   terms-privacy-display-none"
+          >
             Terms
           </Link>
           <span className="terms-privacy-footer-button-text terms-privacy-trademark-logo">

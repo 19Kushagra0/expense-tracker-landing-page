@@ -1,117 +1,100 @@
+/* ===== HEADER ===== */
 .term-privacy-header {
   width: 100%;
   background-color: #ebebeb;
-  /* background-color: red; */
-
   position: fixed;
-
-  top: 0px;
-  left: 0px;
-
+  top: 0;
+  left: 0;
   display: flex;
-  flex-direction: row;
-
   justify-content: space-between;
   align-items: center;
-
-  padding-top: 4.19%;
-  padding-bottom: 4.19%;
-  padding-left: 4.72%;
-  padding-right: 4.72%;
+  padding: 4.19% 4.72%;
 }
+
 .term-privacy-header-image-container {
-  /* width: 44px;
-  height: 47.48px; */
-  /* background-color: blue; */
   cursor: pointer;
 }
+
 .term-privacy-header-button-container {
-  /* background-color: yellow; */
-
   display: flex;
-
-  flex-direction: row;
-
   align-items: center;
 }
+
 .term-privacy-header-button {
   padding: 10px 16px;
-  /* background-color: brown; */
-
-  cursor: pointer;
-
   color: #828282;
+  font-size: 16px;
+  line-height: 20px;
   text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
+
+.term-privacy-header-button::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: 6px;
+  width: 0;
+  height: 2px;
+  background-color: #828282;
+  transition: width 0.3s ease;
+  opacity: 0.6;
+}
+
 .term-privacy-header-button:hover {
-  text-decoration: underline;
+  color: #555;
+  opacity: 0.9;
 }
+
+.term-privacy-header-button:hover::after {
+  width: calc(100% - 32px);
+}
+
+/* Hamburger */
 .term-privacy-header-hamberburger-container {
   border: none;
-
-  cursor: pointer;
-
   background-color: #ebebeb;
-
   padding: 5px;
-
   border-radius: 20px;
-
-  display: flex;
-  flex-direction: row;
+  display: none;
   align-items: center;
   justify-content: center;
-
-  display: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.term-privacy-header-hamberburger-container:hover {
   cursor: pointer;
+}
+
+.term-privacy-header-hamberburger-container:hover {
   transform: scale(1.1);
   opacity: 0.8;
 }
-.term-privacy-header-hamberburger {
-}
 
+/* ===== PAGE LAYOUT ===== */
 .termsPage,
 .privacyPage {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background-color: #ebebeb;
-
   color: black;
-
-  padding-top: 192px;
-
-  padding-left: 4.72%;
-  padding-right: 4.93%;
-
+  padding: 192px 4.72% 0;
   font-family: "Inter", sans-serif;
 }
 
-/* Title */
-
+/* ===== TITLE SECTION ===== */
 .terms-privacy-title-container {
   width: 100%;
-  /* background-color: rebeccapurple; */
-
   display: flex;
   flex-direction: column;
-
-  /* padding-left: 68px; */
-
   padding-bottom: 62px;
-
   color: black;
 }
 
 .terms-privacy-title-box {
   width: fit-content;
-  /* background-color: aqua; */
-  padding-top: 10px;
-
-  padding-bottom: 10px;
-
+  padding: 10px 0;
   border-bottom: 1px solid #d8d8d8;
   display: flex;
   flex-direction: column;
@@ -119,107 +102,72 @@
 }
 
 .terms-privacy-title {
-  width: fit-content;
   font-weight: 600;
   font-size: 48px;
-
-  /* background-color: red; */
-
   letter-spacing: -2%;
-
   line-height: 56px;
-
   color: black;
 }
 
 .terms-privacy-time-container {
-  width: fit-content;
   display: flex;
   flex-direction: column;
-
-  /* background-color: blue; */
 }
 
-.terms-privacy-last-update {
+.terms-privacy-last-update,
+.terms-privacy-time {
   font-size: 16px;
-
-  /* background-color: green; */
   line-height: 24px;
   letter-spacing: -1%;
-
   font-weight: 500;
 }
 
 .terms-privacy-time {
-  /* color: #303030; */
   color: #828282;
-  font-weight: normal;
-  font-size: 16px;
-  /* background-color: yellow; */
-  line-height: 24px;
-  letter-spacing: -1%;
-  font-weight: 500;
 }
-/* adsfsdgdafdg */
 
+/* ===== INDEX & CONTENT SECTION ===== */
 .terms-privacy-index-content-container {
   width: 100%;
-  /* background-color: hotpink; */
-
-  /* margin-top: 62px; */
-
   display: flex;
   flex-direction: row;
-
   gap: 166px;
-
-  /* padding-left: 68px; */
 }
 
-/* Index */
-
-/* dbfjhgsdfgb;s */
-
 .terms-privacy-index-container {
-  /* width: 220px; */
   max-width: 220px;
   width: 100%;
-  /* background-color: red; */
   padding-left: 5px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  /* padding-right: 42.65; */
 }
 
 .terms-privacy-index {
-  width: fit-content;
-  background-color: #ebebeb;
   display: flex;
-  flex-direction: row;
+  align-items: center;
   gap: 5px;
   color: #828282;
+  background-color: #ebebeb;
   cursor: pointer;
-  border: 0px;
+  border: none;
 }
+
 .terms-privacy-index:hover {
   color: black;
 }
+
 .terms-privacy-index-number,
 .terms-privacy-index-name {
-  font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
 }
 
-/* Content */
-
+/* ===== CONTENT ===== */
 .terms-privacy-content-container {
-  /* background-color: blue; */
   max-width: 890px;
   width: 100%;
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   display: flex;
@@ -231,10 +179,7 @@
 .terms-privacy-content-intro2 {
   font-size: 16px;
   max-width: 826px;
-  /* background-color: aqua; */
   display: flex;
-  flex-direction: row;
-  /* padding-left: 68px; */
 }
 
 .terms-privacy-content-intro2 {
@@ -242,16 +187,12 @@
 }
 
 .terms-privacy-content-title-text-container {
-  width: 100%;
-  /* background-color: yellow; */
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
 .terms-privacy-content-title-text-box {
-  width: 100%;
-  /* background-color: cadetblue; */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -261,14 +202,11 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 30px;
-  /* background-color: red; */
 }
 
 .terms-privacy-content-text {
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  /* background-color: pink; */
   display: flex;
   flex-direction: column;
 }
@@ -279,7 +217,6 @@
 
 .terms-privacy-highlight {
   font-weight: 600;
-  font-size: 16px;
   color: black;
 }
 
@@ -293,77 +230,70 @@
   cursor: pointer;
 }
 
-/* line */
+/* ===== LINE ===== */
 .terms-privacy-line-conatiner {
   width: 100%;
   height: 64px;
-  /* background-color: red; */
-
   margin-top: 143px;
-
   display: flex;
-  flex-direction: row;
-
   align-items: center;
   justify-content: center;
 }
+
 .terms-privacy-line {
   width: 100%;
-
   border: 1px dashed #d8d8d8;
 }
-/* footer */
 
-/* bfsdbfjabsjf */
+/* ===== FOOTER ===== */
 .terms-privacy-footer {
   width: 100%;
-  /* height: 100px; */
-  /* background-color: red; */
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  /* padding-left: 78px; */
-  /* padding-right: 78px; */
-  padding-top: 64px;
-  padding-bottom: 42px;
+  align-items: center;
+  padding: 64px 0 42px;
 }
 
 .terms-privacy-numora-icon {
   width: 36px;
   height: 36px;
-
   cursor: pointer;
-  /* background-color: coral; */
 }
 
 .terms-privacy-footer-button-container {
   display: flex;
-  flex-direction: row;
   align-items: center;
-
-  /* background-color: aquamarine; */
 }
 
 .terms-privacy-footer-button-text {
   padding: 10px 12px;
-
   color: #828282;
   cursor: pointer;
-
   font-weight: 500;
-
-  border: 0px;
+  border: 0;
   text-decoration: none;
-
   display: flex;
-  flex-direction: row;
+  align-items: center;
 }
 
 .terms-privacy-footer-button-text:hover {
   text-decoration: underline;
 }
 
+/* ===== UTILITIES ===== */
+.terms-privacy-black {
+  color: #171717 !important;
+}
+
+.terms-privacy-trademark-logo {
+  text-decoration: none !important;
+}
+
+.terms-privacy-display-none {
+  display: flex !important;
+}
+
+/* ===== RESPONSIVE ===== */
 @media screen and (max-width: 1440px) {
   .terms-privacy-title-container {
     padding-bottom: 44px;
@@ -393,63 +323,47 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .term-privacy-header-hamberburger-container {
+    display: flex;
+  }
+
+  .term-privacy-header-button-container {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 530px) {
   .terms-privacy-footer {
-    display: flex;
     flex-direction: column;
     gap: 30px;
   }
+
   .terms-privacy-footer-button-container {
     flex-direction: column;
-
     gap: 25px;
   }
-  .terms-privacy-line-conatiner {
-    /* margin-top: 50px; */
-  }
+
   .termsPage,
   .privacyPage {
     padding-top: 125px;
   }
 }
 
-@media screen and (max-width: 800px) {
-  .term-privacy-header-hamberburger-container {
-    display: flex;
-  }
-  .term-privacy-header-hamberburger {
-    border: none;
-  }
-  .term-privacy-header-button-container {
-    display: none;
-  }
-}
-.terms-privacy-black {
-  color: #171717 !important;
-}
-.terms-privacy-trademark-logo {
-  text-decoration: none !important;
-}
-.terms-privacy-display-none {
-  display: flex !important;
-}
-
 @media screen and (max-width: 414px) {
   .terms-privacy-title {
     font-size: 42px;
   }
+
   .terms-privacy-last-update,
-  .terms-privacy-time {
-    font-size: 14px;
-  }
-  .terms-privacy-content-intro2 {
-    font-size: 14px;
-  }
-  .terms-privacy-content-title {
-    font-size: 22px;
-  }
+  .terms-privacy-time,
+  .terms-privacy-content-intro2,
   .terms-privacy-content-text,
   .terms-privacy-highlight {
     font-size: 14px;
+  }
+
+  .terms-privacy-content-title {
+    font-size: 22px;
   }
 }
