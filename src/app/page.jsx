@@ -8,7 +8,7 @@ export const metadata = {
     description: "Welcome to my awesome homepage.",
     images: [
       {
-        url: "https://my-app.vercel.app/api/og", // dynamic OG URL
+        url: "https://expense-tracker-alpha-lyart.vercel.app/api/og", // dynamic OG URL
         width: 1200,
         height: 630,
       },

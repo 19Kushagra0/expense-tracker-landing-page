@@ -10,3 +10,5 @@ export async function GET() {
     height: 630,
   });
 }
+
+// http://localhost:3000/api/og?title=Home
