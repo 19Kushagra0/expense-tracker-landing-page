@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import JoinGroup from "@/app/join-group/components/Join-group";
 
 export function generateMetadata({ searchParams }) {
@@ -32,5 +32,9 @@ export function generateMetadata({ searchParams }) {
 }
 
 export default function Page() {
-  return <JoinGroup />;
+  return (
+    <Suspense fallback={<div />}>
+      <JoinGroup />
+    </Suspense>
+  );
 }
