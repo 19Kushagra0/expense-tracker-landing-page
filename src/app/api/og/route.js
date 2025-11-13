@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import LandingOg from "@/app/api/og/landingOg/LandingOg";
 import TermOg from "@/app/api/og/termOg/TermOg";
+import PrivacyOg from "@/app/api/og/privacyOg/PrivacyOg";
 
 export const runtime = "edge";
 
@@ -22,16 +23,23 @@ export async function GET(req) {
     });
   }
 
+  if (page === "privacyPage") {
+    return new ImageResponse(<PrivacyOg />, {
+      width: 1200,
+      height: 630,
+    });
+  }
+
   return new ImageResponse(
     (
       <div
         style={{
           width: "100%",
           height: "100%",
-          fontSize: 60,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          fontSize: 60,
         }}
       >
         OG Not Found
