@@ -1,4 +1,4 @@
-import Image from "next/image";
+// app/components/og/LandingOg.jsx
 export default function LandingOg() {
   return (
     <div
@@ -46,7 +46,7 @@ export default function LandingOg() {
         width={377}
         height={415}
         style={{ objectFit: "contain" }}
-      />
+      /> */}
     </div>
   );
 }
