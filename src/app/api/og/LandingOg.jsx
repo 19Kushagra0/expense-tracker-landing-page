@@ -40,11 +40,11 @@ export default function LandingOg() {
       </div>
 
       {/* RIGHT SECTION */}
-      {/* <img
-        src="https://my-app.vercel.app/images/hero-banner.png" // replace with your actual deployed URL
+      <img
+        src="https://expense-tracker-alpha-lyart.vercel.app/images/hero-banner.png"
         alt="Hero Banner"
         width={377}
-        height={815}
+        height={415}
         style={{ objectFit: "contain" }}
       /> */}
     </div>
