@@ -3,14 +3,16 @@ import Terms from "@/app/terms/components/Terms";
 import Header from "../myComponents/Header/Header";
 
 export const metadata = {
-  title: "Home | My Website",
-  description: "Welcome to my awesome homepage.",
+  title: "Terms of Service | My Website",
+  description:
+    "Read the Terms of Service for My Website to understand your rights, responsibilities, and how we handle your data.",
   openGraph: {
-    title: "Home | My Website",
-    description: "Welcome to my awesome homepage.",
+    title: "Terms of Service | My Website",
+    description:
+      "Read the Terms of Service for My Website to understand your rights, responsibilities, and how we handle your data.",
     images: [
       {
-        url: "https://expense-tracker-alpha-lyart.vercel.app/api/og", // dynamic OG URL
+        url: "https://expense-tracker-alpha-lyart.vercel.app/api/og/termOg",
         width: 1200,
         height: 630,
       },

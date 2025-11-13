@@ -1,4 +1,3 @@
-// app/api/og/landingOg/route.js
 import { ImageResponse } from "next/og";
 import LandingOg from "@/app/api/og/landingOg/LandingOg";
 
