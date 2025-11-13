@@ -6,16 +6,23 @@ export default function LandingOg() {
         width: "1200px",
         height: "630px",
         display: "flex",
-        justifyContent: "space-between",
         alignItems: "center",
         justifyContent: "center",
-        // padding: "40px",
         backgroundColor: "#ebebeb",
         fontFamily: "Inter, sans-serif",
+        gap: "0px",
+        flexDirection: "row",
       }}
     >
       {/* LEFT SECTION */}
-      <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+          //   backgroundColor: "red",
+        }}
+      >
         <span
           style={{
             fontSize: "96px",
@@ -43,7 +50,7 @@ export default function LandingOg() {
       <img
         src="https://expense-tracker-alpha-lyart.vercel.app/images/hero-banner.png"
         alt="Hero Banner"
-        width={377}
+        width={277}
         height={415}
         style={{ objectFit: "contain" }}
       />
