@@ -1,4 +1,3 @@
-// app/join-group/og/JoinGroupOg.jsx
 export default function JoinGroupOg({ groupName }) {
   return (
     <div
