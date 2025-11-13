@@ -1,8 +1,8 @@
+// app/api/og/landingOg/route.js
 import { ImageResponse } from "next/og";
-// Og image location
-import LandingOg from "@/app/api/og/LandingOg";
+import LandingOg from "@/app/api/og/landingOg/LandingOg";
 
-// export const runtime = "edge";
+export const runtime = "edge"; // ✅ recommended for OG images
 
 export async function GET() {
   return new ImageResponse(<LandingOg />, {
