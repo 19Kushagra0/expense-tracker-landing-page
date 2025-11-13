@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 // Og image location
 import LandingOg from "@/app/api/og/LandingOg";
 
-export const runtime = "edge";
+// export const runtime = "edge";
 
 export async function GET() {
   return new ImageResponse(<LandingOg />, {
