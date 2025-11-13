@@ -27,7 +27,7 @@ export default function LandingOg() {
           style={{
             fontSize: "96px",
             fontWeight: 600,
-            color: "rgba(0,0,0,0.1)",
+            color: "#bfbfbfff",
           }}
         >
           SPEND
@@ -39,7 +39,7 @@ export default function LandingOg() {
           style={{
             fontSize: "96px",
             fontWeight: 600,
-            color: "rgba(0,0,0,0.1)",
+            color: "#bfbfbfff",
           }}
         >
           SPLIT
