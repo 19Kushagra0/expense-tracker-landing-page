@@ -12,7 +12,7 @@ export const metadata = {
       "Read the Terms of Service for My Website to understand your rights, responsibilities, and how we handle your data.",
     images: [
       {
-        url: "/api/og?groupName=termsPage",
+        url: "https://expense-tracker-alpha-lyart.vercel.app/api/og?groupName=termsPage", // ✅ CORRECT
         width: 1200,
         height: 630,
       },
