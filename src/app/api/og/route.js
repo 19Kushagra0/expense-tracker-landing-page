@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import LandingOg from "@/app/api/og/landingOg/LandingOg";
+import TermOg from "@/app/api/og/termOg/TermOg";
 
 export const runtime = "edge";
 
@@ -9,6 +10,13 @@ export async function GET(req) {
 
   if (page === "landingPage") {
     return new ImageResponse(<LandingOg />, {
+      width: 1200,
+      height: 630,
+    });
+  }
+
+  if (page === "termsPage") {
+    return new ImageResponse(<TermOg />, {
       width: 1200,
       height: 630,
     });
