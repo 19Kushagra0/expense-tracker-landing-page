@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React, { Suspense } from "react";
 import JoinGroup from "@/app/join-group/components/Join-group";
 
