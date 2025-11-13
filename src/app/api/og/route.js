@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
-import LandingOg from "@/app/components/og/LandingOg";
+// Og image location
+import LandingOg from "@/app/api/og/LandingOg";
 
 export const runtime = "edge";
 
