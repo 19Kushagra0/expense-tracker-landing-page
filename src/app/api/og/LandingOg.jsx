@@ -46,7 +46,7 @@ export default function LandingOg() {
         width={377}
         height={415}
         style={{ objectFit: "contain" }}
-      /> */}
+      />
     </div>
   );
 }
