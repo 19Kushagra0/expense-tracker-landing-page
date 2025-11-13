@@ -7,7 +7,6 @@ export async function GET(req) {
   const { searchParams } = new URL(req.url);
   const page = searchParams.get("groupName");
 
-  // Only Landing Page support for now
   if (page === "landingPage") {
     return new ImageResponse(<LandingOg />, {
       width: 1200,
