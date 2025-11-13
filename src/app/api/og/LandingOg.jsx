@@ -1,4 +1,3 @@
-// app/components/og/LandingOg.jsx
 export default function LandingOg() {
   return (
     <div
@@ -40,7 +39,7 @@ export default function LandingOg() {
 
       {/* RIGHT SECTION */}
       <img
-        src="https://yourdomain.com/images/hero-banner.png"
+        src="https://my-app.vercel.app/images/hero-banner.png" // replace with your actual deployed URL
         alt="Hero Banner"
         width={377}
         height={815}
