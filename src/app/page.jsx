@@ -1,4 +1,3 @@
-import Image from "next/image";
 import LandingPage from "@/app/myComponents/landing/landing";
 
 export const metadata = {
@@ -9,13 +8,13 @@ export const metadata = {
     description: "Welcome to my awesome homepage.",
     images: [
       {
-        url: "https://yourdomain.com/api/og",
+        url: "https://my-app.vercel.app/api/og", // dynamic OG URL
         width: 1200,
         height: 630,
       },
     ],
   },
-}; // <-- This closing bracket was missing
+};
 
 export default function Home() {
   return (
