@@ -8,7 +8,8 @@ export default function LandingOg() {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: "40px",
+        justifyContent: "center",
+        // padding: "40px",
         backgroundColor: "#ebebeb",
         fontFamily: "Inter, sans-serif",
       }}
