@@ -9,8 +9,6 @@ export async function generateMetadata(_, parent) {
 
   const baseUrl = "https://expense-tracker-alpha-lyart.vercel.app";
 
-  const baseUrl = "https://expense-tracker-alpha-lyart.vercel.app";
-
   return {
     title: `${groupName} | Numora`,
     openGraph: {
