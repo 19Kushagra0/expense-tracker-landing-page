@@ -1,14 +1,8 @@
 "use client";
-import React from "react";
-import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-
 import "@/app/join-group/components/Join-group.css";
 
-export default function JoinGroup() {
-  const searchParams = useSearchParams();
-  const groupName = searchParams.get("groupName") || "to join our group";
-
+export default function JoinGroup({ groupName }) {
   return (
     <div className="join-group">
       <span className="join-group-top-line">You are invited to</span>
@@ -26,19 +20,9 @@ export default function JoinGroup() {
       <div className="join-group-button-container">
         <button className="join-group-button">
           <div className="join-image-conatiner">
-            <Image
-              src="/icons/apple-svg.svg"
-              alt="apple store"
-              height={18}
-              width={18}
-            />
+            <Image src="/icons/apple-svg.svg" width={18} height={18} />
             <div className="join-group-image-line"></div>
-            <Image
-              src="/icons/playstore-svg.svg"
-              alt="play store"
-              height={18}
-              width={18}
-            />
+            <Image src="/icons/playstore-svg.svg" width={18} height={18} />
           </div>
           <span className="join-group-text">Download Numora</span>
         </button>

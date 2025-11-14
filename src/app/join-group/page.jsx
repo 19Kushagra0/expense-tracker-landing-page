@@ -8,7 +8,7 @@ export async function generateMetadata({ searchParams }) {
 
   const ogImage = `https://expense-tracker-alpha-lyart.vercel.app/api/og/join-group?groupName=${encodeURIComponent(
     groupName
-  )}`;
+  )}&v=${Date.now()}`;
 
   return {
     title: `${groupName} | Join Group`,
@@ -31,6 +31,8 @@ export async function generateMetadata({ searchParams }) {
   };
 }
 
-export default function Page() {
-  return <JoinGroup />;
+export default function Page({ searchParams }) {
+  const groupName = searchParams.groupName || "Join our group";
+
+  return <JoinGroup groupName={groupName} />;
 }
