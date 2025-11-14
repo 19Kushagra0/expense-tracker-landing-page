@@ -32,6 +32,8 @@ export async function generateMetadata({ searchParams }) {
   };
 }
 
-export default function Page() {
-  return <JoinGroup />;
+export default function Page({ searchParams }) {
+  const groupName = searchParams.groupName || "Join our group";
+
+  return <JoinGroup groupName={groupName} />;
 }
