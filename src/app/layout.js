@@ -11,6 +11,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Allow dynamic metadata from pages
 export const metadata = {
   metadataBase: new URL("https://expense-tracker-alpha-lyart.vercel.app"),
   title: {
