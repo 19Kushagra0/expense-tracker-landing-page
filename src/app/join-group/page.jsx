@@ -4,9 +4,6 @@ import { headers } from "next/headers";
 
 export const dynamic = "force-dynamic";
 
-export async function generateMetadata() {
-  const hdrs = headers();
-
 export async function generateMetadata({ searchParams }) {
   const groupName = searchParams?.groupName || "Your Group";
 
