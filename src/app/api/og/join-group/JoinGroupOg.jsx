@@ -8,6 +8,8 @@ export default function JoinGroupOg({ groupName }) {
         display: "flex",
         flexDirection: "column",
         padding: "80px",
+        paddingLeft: "300px",
+
         fontFamily: "Inter, sans-serif",
       }}
     >
