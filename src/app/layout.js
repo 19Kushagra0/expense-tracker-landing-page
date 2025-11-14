@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 
 // Allow dynamic metadata from pages
 export const metadata = {
+  metadataBase: new URL("https://expense-tracker-alpha-lyart.vercel.app"),
   title: {
     default: "Numora",
     template: "%s | Numora",
