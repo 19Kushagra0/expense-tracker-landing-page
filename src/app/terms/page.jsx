@@ -1,24 +1,14 @@
-import Terms from "@/app/terms/components/Terms";
-
-export const dynamic = "force-dynamic"; // MUST for reading searchParams
+import JoinGroup from "./components/Join-group";
 
 export async function generateMetadata({ searchParams }) {
-  const params = await searchParams; // ⭐ REQUIRED FIX
-  const groupName = params.groupName || "termsPage";
+  const params = await searchParams;
+  const groupName = params.groupName || "Your Group";
 
   return {
-    title: "Terms of Service | My Website",
-    description:
-      "Read the Terms of Service for My Website to understand your rights, responsibilities, and how we handle your data.",
     openGraph: {
-      title: "Terms of Service | My Website",
-      description:
-        "Read the Terms of Service for My Website to understand your rights, responsibilities, and how we handle your data.",
-      url: "https://expense-tracker-alpha-lyart.vercel.app/terms",
-      type: "website",
       images: [
         {
-          url: `https://expense-tracker-alpha-lyart.vercel.app/api/og?groupName=${groupName}`,
+          url: `/api/og/join-group?groupName=${groupName}`,
           width: 1200,
           height: 630,
         },
@@ -27,11 +17,10 @@ export async function generateMetadata({ searchParams }) {
   };
 }
 
-export default function Page() {
-  return (
-    <div>
-      <Terms />
-    </div>
-  );
+export default async function Page({ searchParams }) {
+  const params = await searchParams; // ⬅️ FIX
+  const groupName = params.groupName || "Your Group";
+
+  return <JoinGroup groupName={groupName} />;
 }
 //
