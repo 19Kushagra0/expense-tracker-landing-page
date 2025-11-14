@@ -1,42 +1,25 @@
-import { Suspense } from "react";
-import JoinGroup from "@/app/join-group/components/Join-group";
+"use client";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+import "./Join-group.css";
 
-export async function generateMetadata({ searchParams }) {
-  const groupName = searchParams.groupName || "Join our group";
-
-  // Force OG refresh
-  const ogImage = `https://expense-tracker-alpha-lyart.vercel.app/api/og/join-group?groupName=${encodeURIComponent(
-    groupName
-  )}&v=${Date.now()}`;
-
-  return {
-    title: `${groupName} | Join Group`,
-    description: "Add, track, and split expenses with your friends",
-    openGraph: {
-      title: `${groupName} | Join Group`,
-      description: "Add, track, and split expenses with your friends",
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      images: [ogImage],
-    },
-  };
-}
-
-export default function Page({ searchParams }) {
+export default function JoinGroup({ groupName }) {
   return (
-    <Suspense fallback={null}>
-      <JoinGroup groupName={searchParams.groupName} />
-    </Suspense>
+    <div className="join-group">
+      <div className="join-group-top-line">You are invited to</div>
+
+      <div className="join-group-dynamic-text">
+        {groupName || "Your Group Name"}
+      </div>
+
+      <div className="join-group-tag-line">
+        Easily join this group using the link below.
+      </div>
+
+      <div className="join-group-line" />
+
+      <button className="join-group-button">
+        <span className="join-group-text">Join Group</span>
+      </button>
+    </div>
   );
 }
