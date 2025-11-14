@@ -16,6 +16,11 @@ export async function generateMetadata({ searchParams }) {
       title: `${groupName} | Numora`,
       images: [`/api/og/join-group?groupName=${encodeURIComponent(groupName)}`],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${groupName} | Numora`,
+      images: [`/api/og/join-group?groupName=${encodeURIComponent(groupName)}`],
+    },
   };
 }
 
