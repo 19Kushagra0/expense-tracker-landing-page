@@ -6,10 +6,7 @@ export const revalidate = 0;
 export async function generateMetadata({ searchParams }) {
   const groupName = searchParams.groupName || "Join our group";
 
-  // Force WhatsApp/Twitter to fetch new image
-  const ogImage = `https://expense-tracker-alpha-lyart.vercel.app/api/og/join-group?groupName=${encodeURIComponent(
-    groupName
-  )}&v=${Date.now()}`;
+  const ogUrl = `/api/og/join-group?groupName=${encodeURIComponent(groupName)}`;
 
   return {
     title: `${groupName} | Join Group`,
@@ -19,7 +16,7 @@ export async function generateMetadata({ searchParams }) {
       description: "Add, track, and split expenses with your friends",
       images: [
         {
-          url: ogImage,
+          url: ogUrl,
           width: 1200,
           height: 630,
         },
@@ -27,7 +24,7 @@ export async function generateMetadata({ searchParams }) {
     },
     twitter: {
       card: "summary_large_image",
-      images: [ogImage],
+      images: [ogUrl],
     },
   };
 }

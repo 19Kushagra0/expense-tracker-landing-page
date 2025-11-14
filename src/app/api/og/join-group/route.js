@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import JoinGroupOg from "./JoinGroupOg";
 
-export const runtime = "edge"; // REQUIRED for ImageResponse
+export const runtime = "edge";
 
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
