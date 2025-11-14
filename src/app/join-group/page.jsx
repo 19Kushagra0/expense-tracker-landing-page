@@ -17,7 +17,7 @@ export async function generateMetadata({ searchParams }) {
       description: "Add, track, and split expenses with your friends",
       images: [
         {
-          url: ogImage,
+          url: ogUrl,
           width: 1200,
           height: 630,
         },
@@ -25,7 +25,7 @@ export async function generateMetadata({ searchParams }) {
     },
     twitter: {
       card: "summary_large_image",
-      images: [ogImage],
+      images: [ogUrl],
     },
   };
 }
