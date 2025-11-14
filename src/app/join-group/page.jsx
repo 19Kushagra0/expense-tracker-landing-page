@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import JoinGroup from "@/app/join-group/components/Join-group";
 
 export const dynamic = "force-dynamic";
@@ -7,10 +6,9 @@ export const revalidate = 0;
 export async function generateMetadata({ searchParams }) {
   const groupName = searchParams.groupName || "Join our group";
 
-  // Force WhatsApp/Twitter to fetch new image
   const ogImage = `https://expense-tracker-alpha-lyart.vercel.app/api/og/join-group?groupName=${encodeURIComponent(
     groupName
-  )}&v=${Date.now()}`;
+  )}`;
 
   return {
     title: `${groupName} | Join Group`,
@@ -34,9 +32,5 @@ export async function generateMetadata({ searchParams }) {
 }
 
 export default function Page() {
-  return (
-    <Suspense fallback={null}>
-      <JoinGroup />
-    </Suspense>
-  );
+  return <JoinGroup />;
 }
