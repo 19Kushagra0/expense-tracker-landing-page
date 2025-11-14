@@ -4,7 +4,6 @@ import JoinGroup from "@/app/join-group/components/Join-group";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-// Generate dynamic OG metadata
 export async function generateMetadata({ searchParams }) {
   const groupName = searchParams.groupName || "Join our group";
 
