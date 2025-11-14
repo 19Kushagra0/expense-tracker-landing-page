@@ -7,12 +7,13 @@ export const revalidate = 0;
 export async function generateMetadata({ searchParams }) {
   const groupName = searchParams.groupName || "Join our group";
 
-  // Force WhatsApp/Twitter/LinkedIn to fetch a NEW image
-  const version = Date.now();
+  // Same t parameter from URL (for WhatsApp cache busting)
+  const t = searchParams.t || Date.now();
 
+  // Dynamic OG image URL
   const ogImage = `https://expense-tracker-alpha-lyart.vercel.app/api/og/join-group?groupName=${encodeURIComponent(
     groupName
-  )}&v=${version}`;
+  )}&t=${t}`;
 
   return {
     title: `${groupName} | Join Group`,
