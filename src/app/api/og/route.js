@@ -3,7 +3,7 @@ import LandingOg from "@/app/api/og/landingOg/LandingOg";
 import TermOg from "@/app/api/og/termOg/TermOg";
 import PrivacyOg from "@/app/api/og/privacyOg/PrivacyOg";
 
-export const runtime = "edge";
+// export const runtime = "edge";
 
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
