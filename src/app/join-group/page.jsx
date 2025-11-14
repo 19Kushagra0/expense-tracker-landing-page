@@ -1,12 +1,13 @@
+import { Suspense } from "react";
 import JoinGroup from "@/app/join-group/components/Join-group";
-
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
 
 export async function generateMetadata({ searchParams }) {
   const groupName = searchParams.groupName || "Join our group";
 
-  const ogUrl = `/api/og/join-group?groupName=${encodeURIComponent(groupName)}`;
+  // OG image without version param
+  const ogImage = `https://expense-tracker-alpha-lyart.vercel.app/api/og/join-group?groupName=${encodeURIComponent(
+    groupName
+  )}`;
 
   return {
     title: `${groupName} | Join Group`,
@@ -30,7 +31,9 @@ export async function generateMetadata({ searchParams }) {
 }
 
 export default function Page({ searchParams }) {
-  const groupName = searchParams.groupName || "Join our group";
-
-  return <JoinGroup groupName={groupName} />;
+  return (
+    <Suspense fallback={null}>
+      <JoinGroup groupName={searchParams.groupName} />
+    </Suspense>
+  );
 }
