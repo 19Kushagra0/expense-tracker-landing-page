@@ -1,16 +1,18 @@
 import { Suspense } from "react";
 import JoinGroup from "@/app/join-group/components/Join-group";
 
-export const dynamic = "force-dynamic"; // IMPORTANT for dynamic OG
-export const revalidate = 0; // no caching
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
-// Generate dynamic OG metadata
 export async function generateMetadata({ searchParams }) {
   const groupName = searchParams.groupName || "Join our group";
 
+  // Force WhatsApp/Twitter/LinkedIn to fetch a NEW image
+  const version = Date.now();
+
   const ogImage = `https://expense-tracker-alpha-lyart.vercel.app/api/og/join-group?groupName=${encodeURIComponent(
     groupName
-  )}`;
+  )}&v=${version}`;
 
   return {
     title: `${groupName} | Join Group`,
