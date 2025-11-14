@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import JoinGroup from "./components/Join-group";
 
-export const dynamic = "force-dynamic"; // required for dynamic metadata
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ searchParams }) {
   const groupName = searchParams?.groupName || "Your Group";
