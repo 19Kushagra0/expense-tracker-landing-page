@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import JoinGroup from "@/app/join-group/components/Join-group";
 
 export const dynamic = "force-dynamic";
@@ -34,9 +33,5 @@ export async function generateMetadata({ searchParams }) {
 }
 
 export default function Page() {
-  return (
-    <Suspense fallback={null}>
-      <JoinGroup />
-    </Suspense>
-  );
+  return <JoinGroup />;
 }
