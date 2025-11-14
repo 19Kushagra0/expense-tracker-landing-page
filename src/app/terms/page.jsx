@@ -2,9 +2,9 @@ import Terms from "@/app/terms/components/Terms";
 
 export const dynamic = "force-dynamic"; // MUST for reading searchParams
 
-export function generateMetadata({ searchParams }) {
-  // Want Terms OG? Then lock it to termsPage
-  const groupName = searchParams.groupName || "termsPage";
+export async function generateMetadata({ searchParams }) {
+  const params = await searchParams; // ⭐ REQUIRED FIX
+  const groupName = params.groupName || "termsPage";
 
   return {
     title: "Terms of Service | My Website",
@@ -27,10 +27,11 @@ export function generateMetadata({ searchParams }) {
   };
 }
 
-export default function page() {
+export default function Page() {
   return (
     <div>
       <Terms />
     </div>
   );
 }
+//

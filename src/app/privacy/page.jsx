@@ -2,8 +2,9 @@ import Privacy from "@/app/privacy/components/Privacy";
 
 export const dynamic = "force-dynamic"; // ✔ required for dynamic OG
 
-export function generateMetadata({ searchParams }) {
-  const groupName = searchParams.groupName || "privacyPage";
+export async function generateMetadata({ searchParams }) {
+  const params = await searchParams; // ⭐ REQUIRED FIX
+  const groupName = params.groupName || "privacyPage";
 
   return {
     title: "Privacy Policy | My Website",
@@ -26,10 +27,11 @@ export function generateMetadata({ searchParams }) {
   };
 }
 
-export default function page() {
+export default function Page() {
   return (
     <div>
       <Privacy />
     </div>
   );
 }
+//

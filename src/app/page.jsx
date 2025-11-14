@@ -2,8 +2,9 @@ import LandingPage from "@/app/myComponents/landing/landing";
 
 export const dynamic = "force-dynamic"; // ⭐ REQUIRED ⭐
 
-export function generateMetadata({ searchParams }) {
-  const groupName = searchParams.groupName || "landingPage";
+export async function generateMetadata({ searchParams }) {
+  const params = await searchParams; // ⭐ REQUIRED FIX ⭐
+  const groupName = params.groupName || "landingPage";
 
   return {
     title: "Home | My Website",
@@ -23,7 +24,7 @@ export function generateMetadata({ searchParams }) {
     },
   };
 }
-
+//sd
 export default function Home() {
   return (
     <div className="app">
@@ -31,3 +32,4 @@ export default function Home() {
     </div>
   );
 }
+//

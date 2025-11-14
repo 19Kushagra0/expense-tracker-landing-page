@@ -1,14 +1,11 @@
+//
 "use client";
-import React from "react";
-import { useSearchParams } from "next/navigation";
+import React, { useState } from "react";
 import Image from "next/image";
 
 import "@/app/join-group/components/Join-group.css";
 
-export default function JoinGroup() {
-  const searchParams = useSearchParams();
-  const groupName = searchParams.get("groupName") || "to join our group";
-
+export default function JoinGroup({ groupName }) {
   return (
     <div className="join-group">
       <span className="join-group-top-line">You are invited to</span>
@@ -18,7 +15,6 @@ export default function JoinGroup() {
       <span className="join-group-tag-line">
         Add, track, and split expenses with your friends
       </span>
-
       <div className="join-group-line"></div>
 
       <span className="join-group-bottom-line">Simplify your debts</span>
@@ -49,3 +45,4 @@ export default function JoinGroup() {
     </div>
   );
 }
+//
