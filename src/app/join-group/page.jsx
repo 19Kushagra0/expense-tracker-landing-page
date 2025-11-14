@@ -1,11 +1,7 @@
 import { Suspense } from "react";
 import JoinGroup from "./components/Join-group";
-import { headers } from "next/headers";
 
-export const dynamic = "force-dynamic";
-
-export async function generateMetadata() {
-  const hdrs = headers();
+export const dynamic = "force-dynamic"; // required for dynamic metadata
 
 export async function generateMetadata({ searchParams }) {
   const groupName = searchParams?.groupName || "Your Group";
@@ -13,6 +9,11 @@ export async function generateMetadata({ searchParams }) {
   return {
     title: `${groupName} | Numora`,
     openGraph: {
+      title: `${groupName} | Numora`,
+      images: [`/api/og/join-group?groupName=${encodeURIComponent(groupName)}`],
+    },
+    twitter: {
+      card: "summary_large_image",
       title: `${groupName} | Numora`,
       images: [`/api/og/join-group?groupName=${encodeURIComponent(groupName)}`],
     },
