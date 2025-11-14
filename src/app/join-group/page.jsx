@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import JoinGroup from "./components/Join-group";
+import { headers } from "next/headers";
 
 export const dynamic = "force-dynamic";
 
