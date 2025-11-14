@@ -19,7 +19,7 @@ export async function generateMetadata({ searchParams }) {
     },
   };
 }
-
+//
 export default function Page() {
   return (
     <Suspense fallback={<div></div>}>
