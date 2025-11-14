@@ -1,11 +1,7 @@
-import { Suspense } from "react";
-import JoinGroup from "./JoinGroup";
-import React from "react";
+// export const dynamic = "force-dynamic";
 
-export default function Page({ searchParams = {} }) {
-  return (
-    <Suspense fallback={null}>
-      <JoinGroup groupName={searchParams.groupName} />
-    </Suspense>
-  );
+import JoinGroup from "./components/Join-group";
+
+export default function Page() {
+  return <JoinGroup />;
 }
