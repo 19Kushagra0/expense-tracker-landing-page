@@ -10,8 +10,8 @@
 
   /* gap: 100px; */
 
-  /* padding-top: 151px; */
-  /* padding-left: 18.8%; */
+  padding-top: 151px;
+  padding-left: 18.8%;
   /* padding-right: 20px; */
 
   font-family: "Inter", sans-serif;
@@ -150,8 +150,10 @@
 /* 50% */
 @media screen and (max-width: 3100px) {
   .join-group {
-    padding-left: 300px;
-    padding-top: 75px;
+    padding-top: 8%;
+    padding-left: 18.8%;
+
+    /* background-color: red; */
   }
   .join-group-background-image {
     width: 1336px;
@@ -199,8 +201,8 @@
 /* 67% */
 @media screen and (max-width: 2350px) {
   .join-group {
-    padding-left: 200px;
-    padding-top: 65px;
+    padding-top: 8%;
+    padding-left: 18.8%;
   }
   .join-group-background-image {
     width: 1036px;
@@ -254,8 +256,8 @@
 /* 75*/
 @media screen and (max-width: 2100px) {
   .join-group {
-    padding-left: 170px;
-    padding-top: 60px;
+    padding-top: 8%;
+    padding-left: 18.8%;
   }
   .join-group-background-image {
     width: 936px;
@@ -309,8 +311,8 @@
 /* 80*/
 @media screen and (max-width: 1925px) {
   .join-group {
-    padding-left: 130px;
-    padding-top: 50px;
+    padding-top: 8%;
+    padding-left: 18.8%;
   }
   .join-group-background-image {
     width: 856px;
@@ -362,8 +364,8 @@
 /* 90*/
 @media screen and (max-width: 1710px) {
   .join-group {
-    padding-left: 100px;
-    padding-top: 50px;
+    padding-top: 8%;
+    padding-left: 18.8%;
   }
   .join-group-background-image {
     width: 750px;
@@ -416,8 +418,8 @@
 /* 100*/
 @media screen and (max-width: 1540px) {
   .join-group {
-    padding-left: 100px;
-    padding-top: 50px;
+    padding-top: 8%;
+    padding-left: 18.8%;
   }
   .join-group-background-image {
     width: 600px;
@@ -469,16 +471,21 @@
 @media screen and (max-width: 1200px) {
   .join-group {
     padding: 50px;
+
+    padding-top: 8%;
+    padding-left: 18.8%;
   }
 }
 @media screen and (max-width: 1000px) {
   .join-group {
-    padding: 25px;
+    padding-left: 18.8%;
   }
 }
 @media screen and (max-width: 800px) {
   .join-group {
     width: 100%;
+    padding: 25px;
+    padding-top: 8%;
   }
   .join-group-background-image {
     width: 100%;
