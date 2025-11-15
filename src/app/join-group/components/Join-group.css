@@ -495,3 +495,12 @@
     padding-top: 10vh;
   }
 }
+.join-group-link {
+  width: fit-content;
+
+  text-decoration: none;
+}
+
+.join-group-button-container a {
+  text-decoration: none !important;
+}
