@@ -102,3 +102,12 @@
   letter-spacing: -0.16px;
   color: white; /* unchanged because button is dark */
 }
+.join-group-link {
+  width: fit-content;
+
+  text-decoration: none;
+}
+
+.join-group-button-container a {
+  text-decoration: none !important;
+}
