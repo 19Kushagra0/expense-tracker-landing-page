@@ -20,27 +20,33 @@ export default function JoinGroup({ groupName }) {
       <span className="join-group-bottom-line">Simplify your debts</span>
 
       <div className="join-group-button-container">
-        <button className="join-group-button">
-          <div className="join-image-conatiner">
-            <Image
-              src="/icons/apple-svg.svg"
-              alt="apple store"
-              height={18}
-              width={18}
-            />
+        <a
+          href="https://play.google.com/store/apps/details?id=com.getnumora.app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="join-group-button">
+            <div className="join-image-conatiner">
+              <Image
+                src="/icons/apple-svg.svg"
+                alt="apple store"
+                height={18}
+                width={18}
+              />
 
-            <div className="join-group-image-line"></div>
+              <div className="join-group-image-line"></div>
 
-            <Image
-              src="/icons/playstore-svg.svg"
-              alt="play store"
-              height={18}
-              width={18}
-            />
-          </div>
+              <Image
+                src="/icons/playstore-svg.svg"
+                alt="play store"
+                height={18}
+                width={18}
+              />
+            </div>
 
-          <span className="join-group-text">Download Numora</span>
-        </button>
+            <span className="join-group-text">Download Numora</span>
+          </button>
+        </a>
       </div>
     </div>
   );
