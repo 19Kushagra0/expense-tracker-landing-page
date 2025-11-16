@@ -25,23 +25,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-/* Hide scrollbar globally but keep scrolling working */
-html,
-body {
-  overflow-y: scroll; /* keep scroll functionality */
-  scrollbar-width: none; /* Firefox */
-}
-
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  width: 0px; /* hide scrollbar in Chrome/Safari/Edge */
-  background: transparent;
-}
-
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+
+  /* background-color: #ebebeb; */
 }
 
 body.landing-page-active {
