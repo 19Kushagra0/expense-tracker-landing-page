@@ -11,8 +11,8 @@ export async function GET(req) {
 
   // Return OG Image
   return new ImageResponse(<JoinGroupOg groupName={groupName} />, {
-    width: 1200,
-    height: 630,
+    width: 500,
+    height: 500,
   });
 }
 //
