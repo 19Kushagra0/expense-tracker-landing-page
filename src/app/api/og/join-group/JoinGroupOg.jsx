@@ -1,3 +1,5 @@
+import { Inter } from "next/font/google";
+
 export default function JoinGroupOg({ groupName }) {
   return (
     <div
@@ -7,14 +9,43 @@ export default function JoinGroupOg({ groupName }) {
         background: "white",
         display: "flex",
         flexDirection: "column",
-        padding: "80px",
-        paddingLeft: "300px",
-
         fontFamily: "Inter, sans-serif",
+        gap: "0px",
       }}
     >
-      <div style={{ fontSize: "28px", color: "#6a6a6a", fontWeight: 500 }}>
-        You are invited to
+      <img
+        src="https://expense-tracker-alpha-lyart.vercel.app/images/background/join-group-pattern.svg"
+        alt="Hero Banner"
+        width="100%"
+        height="300px"
+        style={{
+          objectFit: "contain",
+          position: "absolute",
+        }}
+      />
+      <div
+        style={{
+          width: "120px",
+          marginBottom: "20px",
+          backgroundColor: "black",
+
+          color: "white",
+          padding: "10px 10px",
+          borderRadius: "20px",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "30px",
+          marginLeft: "30px",
+          fontSize: "16px",
+          lineHeight: "normal",
+          fontWeight: "400",
+          letterSpacing: "normal",
+          letterSpacing: "0.7px",
+        }}
+      >
+        INVITATION
       </div>
 
       <div
@@ -22,7 +53,8 @@ export default function JoinGroupOg({ groupName }) {
           fontSize: "78px",
           fontWeight: 700,
           color: "#111",
-          marginTop: "10px",
+          marginTop: "250px",
+          marginLeft: "35px",
         }}
       >
         {groupName}
@@ -30,35 +62,36 @@ export default function JoinGroupOg({ groupName }) {
 
       <div
         style={{
-          fontSize: "32px",
+          fontSize: 24,
+          lineHeight: 26.1,
+          fontWeight: 400,
+          letterSpacing: 0, // "normal" becomes 0 in OG
           color: "#5f5f5f",
-          marginTop: "18px",
-          maxWidth: "800px",
+          fontFamily: "Inter",
+          marginTop: "-250px",
+          marginLeft: "35px",
         }}
       >
-        Add, track, and split expenses with your friends
+        Add, track and split expenses with your friends
       </div>
 
-      <div
+      <img
+        src="https://expense-tracker-alpha-lyart.vercel.app/icons/logo.svg"
+        alt="Hero Banner"
+        width={50}
+        height={50}
         style={{
-          width: "100%",
-          height: "2px",
-          background: "#e5e7eb",
-          marginTop: "40px",
-          maxWidth: "900px",
-        }}
-      ></div>
+          objectFit: "contain",
+          width: "50px",
+          height: "50px",
+          backgroundColor: "black",
+          position: "absolute",
 
-      <div
-        style={{
-          fontSize: "30px",
-          color: "#7a7a7a",
-          fontWeight: 500,
-          marginTop: "40px",
+          right: "50px",
+          bottom: "150px",
+          backgroundColor: "transparent",
         }}
-      >
-        Simplify your debts
-      </div>
+      />
     </div>
   );
 }
