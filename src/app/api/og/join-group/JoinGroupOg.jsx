@@ -4,8 +4,8 @@ export default function JoinGroupOg({ groupName }) {
   return (
     <div
       style={{
-        width: "500px",
-        height: "500px",
+        width: "1200px",
+        height: "630px",
         background: "white",
         display: "flex",
         flexDirection: "column",
@@ -36,9 +36,9 @@ export default function JoinGroupOg({ groupName }) {
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
-          marginTop: "90px",
-          marginLeft: "45px",
-          fontSize: "15px",
+          marginTop: "30px",
+          marginLeft: "30px",
+          fontSize: "16px",
           lineHeight: "normal",
           fontWeight: "400",
           letterSpacing: "normal",
@@ -50,11 +50,11 @@ export default function JoinGroupOg({ groupName }) {
 
       <div
         style={{
-          fontSize: "35px",
+          fontSize: "78px",
           fontWeight: 700,
           color: "#111",
-          marginTop: "240px",
-          marginLeft: "45px",
+          marginTop: "250px",
+          marginLeft: "35px",
         }}
       >
         {groupName}
@@ -62,14 +62,14 @@ export default function JoinGroupOg({ groupName }) {
 
       <div
         style={{
-          fontSize: "15px",
+          fontSize: 24,
           lineHeight: 26.1,
           fontWeight: 400,
           letterSpacing: 0, // "normal" becomes 0 in OG
           color: "#5f5f5f",
           fontFamily: "Inter",
-          marginTop: "-170px",
-          marginLeft: "45px",
+          marginTop: "-250px",
+          marginLeft: "35px",
         }}
       >
         Add, track and split expenses with your friends
@@ -82,13 +82,13 @@ export default function JoinGroupOg({ groupName }) {
         height={50}
         style={{
           objectFit: "contain",
-          width: "25px",
-          height: "25px",
+          width: "50px",
+          height: "50px",
           backgroundColor: "black",
           position: "absolute",
 
           right: "50px",
-          bottom: "55px",
+          bottom: "150px",
           backgroundColor: "transparent",
         }}
       />
