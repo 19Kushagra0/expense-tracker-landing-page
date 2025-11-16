@@ -19,6 +19,8 @@ export default function Landing() {
     };
   }, []);
 
+
+
   return (
     <div className="outer">
       <Header showNavBar={showNavBar} />
@@ -31,70 +33,75 @@ export default function Landing() {
             <span className="black">TRACK</span>
             <span className="gray">SPLIT</span>
           </div>
-
-          <div className="hero-img-container">
-            <Image
-              className="hero-img"
-              src="/images/hero-banner.png"
-              alt="banner-img"
-              width={377}
-              height={815}
-              sizes="(max-width: 768px) 80vw, (max-width: 128s0px) 40vw, 360px"
+          <div className="img-container-outer">
+            <div className="hero-img-container">
+              <Image
+                className="hero-img"
+                src="/images/hero-banner.png"
+                alt="banner-img"
+                width={377}
+                height={815}
+                sizes="(max-width: 768px) 80vw, (max-width: 128s0px) 40vw, 360px"
               // priority
-            />
-          </div>
-        </div>
-
-        {/* RIGHT SECTION */}
-        <div className="right-landing">
-          <p className="hero-description">
-            <span>See where, when,</span> <br />
-            <span>with whom and how</span> <br />
-            <span>you spend</span>
-          </p>
-
-          <div className="qr-container">
-            <div className="qr-apple">
-              <Image
-                src="/icons/applestore-qr.svg"
-                alt="apple store"
-                width={128}
-                height={128}
-              />
-            </div>
-            <div className="qr-play-store">
-              <Image
-                src="/icons/playstore-qr.svg"
-                alt="play store"
-                width={128}
-                height={128}
               />
             </div>
           </div>
 
-          <div className="store-icons-container">
-            <div className="store-icons">
-              <div className="apple-icon">
+
+          {/* RIGHT SECTION */}
+          <div className="right-landing">
+            <p className="hero-description">
+              <span>See where, when,</span> <br />
+              <span>with whom and how</span> <br />
+              <span>you spend</span>
+            </p>
+
+            <div className="qr-container">
+              <div className="qr-apple">
                 <Image
-                  src="/icons/apple-svg.svg"
+                  src="/icons/applestore-qr.svg"
                   alt="apple store"
-                  height={18}
-                  width={18}
+                  width={112}
+                  height={112}
                 />
               </div>
-              <div className="divider"></div>
-              <div className="playstore-icon">
+              <div className="qr-play-store">
                 <Image
-                  src="/icons/playstore-svg.svg"
+                  src="/icons/playstore-qr.svg"
                   alt="play store"
-                  height={18}
-                  width={18}
+                  width={112}
+                  height={112}
                 />
               </div>
-              <p>Download App</p>
+            </div>
+
+            <div className="store-icons-container">
+              <div className="store-icons">
+                <div className="apple-icon">
+                  <Image
+                    src="/icons/apple-svg.svg"
+                    alt="apple store"
+                    height={15}
+                    width={15}
+                  />
+                </div>
+                <div className="divider"></div>
+                <div className="playstore-icon">
+                  <Image
+                    src="/icons/playstore-svg.svg"
+                    alt="play store"
+                    height={15}
+                    width={15}
+                  />
+                </div>
+                <span >Download App</span>
+
+              </div>
             </div>
           </div>
         </div>
+
+
       </section>
     </div>
   );
