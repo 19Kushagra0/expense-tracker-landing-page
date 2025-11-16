@@ -32,7 +32,6 @@ body {
 
   /* background-color: #ebebeb; */
 }
-
 body.landing-page-active {
   overflow-y: hidden;
 }
