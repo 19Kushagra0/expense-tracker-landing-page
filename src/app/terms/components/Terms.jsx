@@ -79,11 +79,10 @@ export default function Terms() {
       </div>
 
       <span className="terms-privacy-content-intro2">
-        Numora ("we", "our", or "us") is committed to protecting your privacy.
-        This Privacy Policy explains how we collect, use, and protect
-        information when you use the Numora mobile application and related
-        services (collectively, the "App"). Numora is a free personal and split
-        expense management app.
+        These Terms of Service ("Terms") govern your use of the Numora mobile
+        application and related services (the "App"). By accessing or using
+        Numora, you agree to be bound by these Terms. If you do not agree, do
+        not use the App.
       </span>
       {/* Content and index */}
       <div className="terms-privacy-index-content-container">
@@ -213,6 +212,12 @@ export default function Terms() {
 
         {/* Content */}
         <div className="terms-privacy-content-container">
+          <span className="terms-privacy-content-intro">
+            These Terms of Service ("Terms") govern your use of the Numora
+            mobile application and related services (the "App"). By accessing or
+            using Numora, you agree to be bound by these Terms. If you do not
+            agree, do not use the App.
+          </span>
           <div className="terms-privacy-content-title-text-container">
             {/* 1. Using Numora */}
             <div

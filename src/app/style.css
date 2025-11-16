@@ -141,8 +141,9 @@ html {
   display: flex;
   flex-direction: row;
   gap: 166px;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 44px;
+  gap: 158px;
 }
 
 .terms-privacy-index-container {
@@ -308,6 +309,21 @@ html {
   display: flex !important;
 }
 /* ===== RESPONSIVE ===== */
+
+@media screen and (max-width: 800px) {
+  .terms-privacy-index-content-container {
+    flex-direction: column;
+  }
+  .terms-privacy-index-content-container {
+    gap: 44px;
+  }
+  .terms-privacy-content-intro {
+    display: none;
+  }
+  .terms-privacy-content-intro2 {
+    display: flex;
+  }
+}
 
 @media screen and (max-width: 800px) {
   .term-privacy-header-hamberburger-container {

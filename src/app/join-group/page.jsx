@@ -18,8 +18,8 @@ export async function generateMetadata({ searchParams }) {
       images: [
         {
           url: `/api/og/join-group?groupName=${groupName}`,
-          width: 500,
-          height: 500,
+          width: 1200,
+          height: 630,
         },
       ],
     },
