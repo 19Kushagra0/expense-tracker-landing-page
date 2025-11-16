@@ -65,6 +65,8 @@
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter",
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   animation: navSlideIn 0.6s cubic-bezier(0.32, 0.72, 0, 1);
+
+  background-color: #ebebeb !important;
 }
 
 /* Close button */
@@ -85,6 +87,7 @@
   transition: all 0.3s cubic-bezier(0.32, 0.72, 0, 1);
   position: relative;
   overflow: hidden;
+  background-color: #ebebeb !important;
 }
 
 .back-button::before {
@@ -134,6 +137,8 @@
   gap: 4px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+
+  background-color: #ebebeb !important;
 }
 
 .navbar-links::-webkit-scrollbar {
