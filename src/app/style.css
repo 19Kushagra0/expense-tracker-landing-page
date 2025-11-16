@@ -414,3 +414,14 @@ html {
     scroll-margin-top: 105px;
   }
 }
+html,
+body {
+  overflow-y: scroll; /* keep scroll functionality */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0px; /* hide scrollbar in Chrome/Safari/Edge */
+  background: transparent;
+}
