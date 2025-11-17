@@ -79,140 +79,149 @@ export default function Terms() {
       </div>
 
       <span className="terms-privacy-content-intro2">
-        Numora ("we", "our", or "us") is committed to protecting your privacy.
-        This Privacy Policy explains how we collect, use, and protect
-        information when you use the Numora mobile application and related
-        services (collectively, the "App"). Numora is a free personal and split
-        expense management app.
+        These Terms of Service ("Terms") govern your use of the Numora mobile
+        application and related services (the "App"). By accessing or using
+        Numora, you agree to be bound by these Terms. If you do not agree, do
+        not use the App.
       </span>
       {/* Content and index */}
       <div className="terms-privacy-index-content-container">
         {/* Index */}
         <div className="terms-privacy-index-container">
-          <button
-            className="terms-privacy-index"
-            onClick={() => {
-              document
-                .getElementById("using-numora")
-                .scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            <span className="terms-privacy-index-number">1.</span>
-            <span className="terms-privacy-index-name">Using Numora</span>
-          </button>
-          <button
-            className="terms-privacy-index"
-            onClick={() => {
-              document
-                .getElementById("account-authentication")
-                .scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            <span className="terms-privacy-index-number">2.</span>
-            <span className="terms-privacy-index-name">
-              Account & Authentication
-            </span>
-          </button>
-          <button
-            className="terms-privacy-index"
-            onClick={() => {
-              document
-                .getElementById("user-content")
-                .scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            <span className="terms-privacy-index-number">3.</span>
-            <span className="terms-privacy-index-name">User Content</span>
-          </button>
-          <button
-            className="terms-privacy-index"
-            onClick={() => {
-              document
-                .getElementById("prohibited-conduct")
-                .scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            <span className="terms-privacy-index-number">4.</span>
-            <span className="terms-privacy-index-name">Prohibited Conduct</span>
-          </button>
-          <button
-            className="terms-privacy-index"
-            onClick={() => {
-              document
-                .getElementById("disclaimer-of-warranties")
-                .scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            <span className="terms-privacy-index-number">5.</span>
-            <span className="terms-privacy-index-name">
-              Disclaimer of Warranties
-            </span>
-          </button>
-          <button
-            className="terms-privacy-index"
-            onClick={() => {
-              document
-                .getElementById("limitations-of-liability")
-                .scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            <span className="terms-privacy-index-number">6.</span>
-            <span className="terms-privacy-index-name">
-              Limitations of Liability
-            </span>
-          </button>
-          <button
-            className="terms-privacy-index"
-            onClick={() => {
-              document
-                .getElementById("account-termination")
-                .scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            <span className="terms-privacy-index-number">7.</span>
-            <span className="terms-privacy-index-name">
-              Account Termination
-            </span>
-          </button>
-          <button
-            className="terms-privacy-index"
-            onClick={() => {
-              document
-                .getElementById("changes-to-terms")
-                .scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            <span className="terms-privacy-index-number">8.</span>
-            <span className="terms-privacy-index-name">
-              Changes to the Terms
-            </span>
-          </button>
-          <button
-            className="terms-privacy-index"
-            onClick={() => {
-              document
-                .getElementById("governing-law")
-                .scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            <span className="terms-privacy-index-number">9.</span>
-            <span className="terms-privacy-index-name">Governing Law</span>
-          </button>
-          <button
-            className="terms-privacy-index"
-            onClick={() => {
-              document
-                .getElementById("contact-us")
-                .scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            <span className="terms-privacy-index-number">10.</span>
-            <span className="terms-privacy-index-name">Contact Us</span>
-          </button>
+          <div className="terms-privacy-index-box">
+            <button
+              className="terms-privacy-index"
+              onClick={() => {
+                document
+                  .getElementById("using-numora")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <span className="terms-privacy-index-number">1.</span>
+              <span className="terms-privacy-index-name">Using Numora</span>
+            </button>
+            <button
+              className="terms-privacy-index"
+              onClick={() => {
+                document
+                  .getElementById("account-authentication")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <span className="terms-privacy-index-number">2.</span>
+              <span className="terms-privacy-index-name">
+                Account & Authentication
+              </span>
+            </button>
+            <button
+              className="terms-privacy-index"
+              onClick={() => {
+                document
+                  .getElementById("user-content")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <span className="terms-privacy-index-number">3.</span>
+              <span className="terms-privacy-index-name">User Content</span>
+            </button>
+            <button
+              className="terms-privacy-index"
+              onClick={() => {
+                document
+                  .getElementById("prohibited-conduct")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <span className="terms-privacy-index-number">4.</span>
+              <span className="terms-privacy-index-name">
+                Prohibited Conduct
+              </span>
+            </button>
+            <button
+              className="terms-privacy-index"
+              onClick={() => {
+                document
+                  .getElementById("disclaimer-of-warranties")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <span className="terms-privacy-index-number">5.</span>
+              <span className="terms-privacy-index-name">
+                Disclaimer of Warranties
+              </span>
+            </button>
+            <button
+              className="terms-privacy-index"
+              onClick={() => {
+                document
+                  .getElementById("limitations-of-liability")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <span className="terms-privacy-index-number">6.</span>
+              <span className="terms-privacy-index-name">
+                Limitations of Liability
+              </span>
+            </button>
+            <button
+              className="terms-privacy-index"
+              onClick={() => {
+                document
+                  .getElementById("account-termination")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <span className="terms-privacy-index-number">7.</span>
+              <span className="terms-privacy-index-name">
+                Account Termination
+              </span>
+            </button>
+            <button
+              className="terms-privacy-index"
+              onClick={() => {
+                document
+                  .getElementById("changes-to-terms")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <span className="terms-privacy-index-number">8.</span>
+              <span className="terms-privacy-index-name">
+                Changes to the Terms
+              </span>
+            </button>
+            <button
+              className="terms-privacy-index"
+              onClick={() => {
+                document
+                  .getElementById("governing-law")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <span className="terms-privacy-index-number">9.</span>
+              <span className="terms-privacy-index-name">Governing Law</span>
+            </button>
+            <button
+              className="terms-privacy-index"
+              onClick={() => {
+                document
+                  .getElementById("contact-us")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <span className="terms-privacy-index-number">10.</span>
+              <span className="terms-privacy-index-name">Contact Us</span>
+            </button>
+          </div>
         </div>
 
         {/* Content */}
         <div className="terms-privacy-content-container">
+          <span className="terms-privacy-content-intro">
+            These Terms of Service ("Terms") govern your use of the Numora
+            mobile application and related services (the "App"). By accessing or
+            using Numora, you agree to be bound by these Terms. If you do not
+            agree, do not use the App.
+          </span>
           <div className="terms-privacy-content-title-text-container">
             {/* 1. Using Numora */}
             <div

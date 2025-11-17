@@ -189,7 +189,6 @@ export default function CareerPage() {
 
               <button
                 style={styles.viewButton}
-                onClick={() => setSelectedRole(job)}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = "#333";
                 }}
