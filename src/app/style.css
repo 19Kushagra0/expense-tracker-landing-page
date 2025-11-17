@@ -446,6 +446,15 @@ html {
   .terms-privacy-content-title-text-box {
     scroll-margin-top: 170px;
   }
+  .terms-privacy-title-container {
+    height: 80px;
+  }
+  .terms-privacy-title-box {
+    top: 110px;
+  }
+  .terms-privacy-index-box {
+    top: 270px;
+  }
 }
 @media screen and (max-width: 768px) {
   .term-privacy-header {
