@@ -1,100 +1,117 @@
 "use client";
-import { React, useEffect, useState } from "react";
+
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import "@/app/myComponents/landing/landing.css";
-import Header from "@/app/myComponents/Header/Header.jsx";
+import { useEffect, useState } from "react";
+
+import Header from "@/app/myComponents/Header/Header";
 import Navbar from "../Navbar/Navbar";
+
+import "@/app/myComponents/landing/landing.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Landing() {
   const [navBar, setNavBar] = useState(false);
 
-  const showNavBar = () => {
-    setNavBar(!navBar);
-  };
+  const toggleNav = () => setNavBar((prev) => !prev);
+
+  // Avoid body class manipulation if possible. If needed:
   useEffect(() => {
     document.body.classList.add("landing-page-active");
-    return () => {
-      document.body.classList.remove("landing-page-active");
-    };
+    return () => document.body.classList.remove("landing-page-active");
   }, []);
 
   return (
-    <div className="outer">
-      <Header showNavBar={showNavBar} />
-      {navBar ? <Navbar showNavBar={showNavBar} /> : null}
+    <div className={`${inter.className} outer`}>
+      <Header showNavBar={toggleNav} />
+      {navBar && <Navbar showNavBar={toggleNav} />}
+
       <section className="landing-page">
-        {/* LEFT SECTION */}
         <div className="left-landing">
+
+          {/* LEFT TEXT */}
           <div className="title-text">
             <span className="gray">SPEND</span>
             <span className="black">TRACK</span>
             <span className="gray">SPLIT</span>
           </div>
+
+          {/* HERO IMAGE */}
           <div className="img-container-outer">
             <div className="hero-img-container">
               <Image
-                className="hero-img"
                 src="/images/hero-banner.png"
-                alt="banner-img"
-                width={377}
-                height={815}
-                sizes="(max-width: 768px) 80vw, (max-width: 128s0px) 40vw, 360px"
-                // priority
+                alt="App preview screen"
+                priority
+                fill
+                className="hero-img"
+                sizes="(max-width: 768px) 80vw, (max-width: 1280px) 40vw, 360px"
+                style={{ objectFit: "contain" }}
               />
             </div>
           </div>
 
-          {/* RIGHT SECTION */}
-          <div className="right-landing">
+          {/* RIGHT CONTENT */}
+          <aside className="right-landing">
+
+            {/* HERO DESCRIPTION */}
             <p className="hero-description">
-              <span>See where, when,</span> <br />
-              <span>with whom and how</span> <br />
-              <span>you spend</span>
+              See where, when,<br />
+              with whom and how<br />
+              you spend.
             </p>
 
+            {/* DESKTOP QR */}
             <div className="qr-container">
-              <div className="qr-apple">
+              <a href="#" aria-label="Download from Apple Store">
                 <Image
                   src="/icons/applestore-qr.svg"
-                  alt="apple store"
+                  alt="Apple Store QR"
                   width={112}
                   height={112}
                 />
-              </div>
-              <div className="qr-play-store">
+              </a>
+
+              <a href="#" aria-label="Download from Google Play Store">
                 <Image
                   src="/icons/playstore-qr.svg"
-                  alt="play store"
+                  alt="Play Store QR"
                   width={112}
                   height={112}
                 />
-              </div>
+              </a>
             </div>
 
-            <div className="store-icons-container">
+            {/* MOBILE STORE BUTTON */}
+            <a
+              href="#"
+              className="store-icons-container"
+              aria-label="Download mobile app"
+            >
               <div className="store-icons">
-                <div className="apple-icon">
-                  <Image
-                    src="/icons/apple-svg.svg"
-                    alt="apple store"
-                    height={15}
-                    width={15}
-                  />
-                </div>
-                <div className="divider"></div>
-                <div className="playstore-icon">
-                  <Image
-                    src="/icons/playstore-svg.svg"
-                    alt="play store"
-                    height={15}
-                    width={15}
-                  />
-                </div>
+                <Image
+                  src="/icons/apple-svg.svg"
+                  alt="Apple Store"
+                  height={15}
+                  width={15}
+                  className="apple-icon"
+                />
+
+                <div className="divider" />
+
+                <Image
+                  src="/icons/playstore-svg.svg"
+                  alt="Google Play Store"
+                  height={15}
+                  width={15}
+                  className="playstore-icon"
+                />
+
                 <span>Download App</span>
               </div>
-            </div>
-          </div>
+            </a>
+          </aside>
         </div>
       </section>
     </div>

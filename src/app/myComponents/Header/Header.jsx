@@ -35,8 +35,8 @@ export default function Header({ showNavBar }) {
           <Image
             src="/icons/menu-icon.svg"
             alt="apple store"
-            height={24}
-            width={24}
+            height={28}
+            width={28}
           />
         </div>
       </div>
