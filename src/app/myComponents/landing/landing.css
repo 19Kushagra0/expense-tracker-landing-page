@@ -1,9 +1,4 @@
-/* =========================================================
-   BASE (MOBILE FIRST) — supports fixed header of 100px
-   → This is the default layout applied to ALL devices
-   → All media queries override this starting from below
-========================================================= */
-
+/* ========================================================= BASE (MOBILE FIRST) — supports fixed header of 100px ============================================== */
 .outer {
   width: 100%;
   height: 100svh;
@@ -14,23 +9,21 @@
 }
 
 .landing-page {
-  width: 100%;
-  height: 100svh;
-  min-height: 100svh;
-  padding-top: 110px;
-  padding-left: 26px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  font-family: "Inter", sans-serif;
+    width: 100%;
+    height: 100svh;
+    min-height: 100svh;
+    padding-top: 110px;
+    padding-left: 26px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: "Inter", sans-serif;
+    background-color: #ebebeb;
 }
 
-/* =========================================================
-   BASE MOBILE STRUCTURE (LEFT COLUMN + HERO + RIGHT OVERLAY)
-========================================================= */
-
+/* ========================================================= BASE MOBILE STRUCTURE (LEFT COLUMN + HERO + RIGHT OVERLAY) =========================================== */
 .left-landing {
   width: 100%;
   height: 100%;
@@ -62,10 +55,7 @@
   color: #000;
 }
 
-/* =========================================================
-   HERO IMAGE
-========================================================= */
-
+/* ========================================================= HERO IMAGE ========================================================= */
 .img-container-outer {
   display: flex;
   justify-content: flex-end;
@@ -89,17 +79,18 @@
   object-fit: fill;
 }
 
-/* =========================================================
-   RIGHT OVERLAY
-========================================================= */
-
+/* ========================================================= RIGHT OVERLAY ========================================================= */
 .right-landing {
-  position: absolute;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  /* width: 278px; */
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    bottom: 7vh;
+}
+
+.right-landing a {
+    text-decoration: none;
 }
 
 .hero-description {
@@ -116,10 +107,9 @@
 
 /* App Store Icons */
 .store-icons-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .store-icons-container:hover {
@@ -142,11 +132,10 @@
 }
 
 .store-icons span {
-  color: white;
-  /* background-color: red; */
-  padding-left: 7px;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+    color: white;
+    padding-left: 7px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .apple-icon:hover,
@@ -179,10 +168,7 @@
   opacity: 0.9;
 }
 
-/* =========================================================
-   MOBILE WIDTH BREAKPOINTS
-========================================================= */
-
+/* ========================================================= MOBILE WIDTH BREAKPOINTS ========================================================= */
 /* 320–349px */
 @media screen and (min-width: 320px) and (max-width: 349px) {
   .hero-img-container {
@@ -205,10 +191,9 @@
 
 /* 350–380px */
 @media screen and (min-width: 350px) and (max-width: 380px) {
-  .hero-img-container {
-    width: 200px;
-    /* background-color: gold; */
-  }
+    .hero-img-container {
+        width: 200px;
+    }
 
   .img-container-outer {
     padding-top: 31%;
@@ -219,21 +204,7 @@
   }
 }
 
-@media screen and (min-width: 330px) and (max-width: 370px) and (max-height: 650px) {
-  .title-text span {
-    line-height: 1;
-  }
 
-  .hero-img-container {
-    width: 300px;
-    height: 370px;
-  }
-
-  .right-landing {
-    bottom: 0px;
-    /* background-color: gray; */
-  }
-}
 
 /* 381–399px */
 @media screen and (min-width: 381px) and (max-width: 399px) {
@@ -257,9 +228,9 @@
 
 /* 400–420px benchmark */
 @media screen and (max-height: 920px) and (min-width: 400px) and (max-width: 420px) {
-  .landing-page {
-    padding-top: 100px;
-  }
+    .landing-page {
+        padding-top: 120px;
+    }
 
   .title-text span {
     font-size: clamp(60px, 14vw, 80px);
@@ -298,9 +269,21 @@
   }
 }
 
-/* =========================================================
-   HEIGHT FIXES (tall → short)
-========================================================= */
+/* ========================================================= HEIGHT FIXES (tall → short) ========================================================= */
+@media screen and (max-height: 650px) and (min-height: 550px) {
+    .title-text span {
+        line-height: 1;
+    }
+
+    .hero-img-container {
+        width: 300px;
+        height: 370px;
+    }
+
+    .right-landing {
+        bottom: 0px;
+    }
+}
 
 @media screen and (max-height: 800px) and (max-width: 480px) {
   .right-landing {
@@ -329,13 +312,9 @@
     padding-top: 95px;
   }
 
-  /* .img-container-outer {
-        background-color: rebeccapurple;
-    } */
-
-  .right-landing {
-    bottom: 5.7%;
-  }
+    .right-landing {
+        bottom: 5.7%;
+    }
 }
 
 @media screen and (max-height: 665px) {
@@ -370,10 +349,7 @@
   }
 }
 
-/* =========================================================
-   NARROW + SHORT COMBINATION
-========================================================= */
-
+/* ========================================================= NARROW + SHORT COMBINATION ========================================================= */
 @media screen and (max-height: 670px) and (min-width: 370px) and (max-width: 380px) {
   .landing-page {
     padding-top: 85px;
@@ -393,126 +369,119 @@
   }
 }
 
-/* =========================================================
-   TABLETS (portrait)
-========================================================= */
+/* ========================================================= TABLETS (portrait) ========================================================= */
+@media screen and (min-width: 499px) and (max-width: 766px) and (min-height: 900px) {
+    .landing-page {
+        padding-left: clamp(15px, 4vw, 30px);
+        padding-right: clamp(5px, 7vw, 90px);
+        padding-top: 110px;
+    }
 
-@media screen and (min-width: 500px) and (max-width: 767px) and (min-height: 900px) {
-  .landing-page {
-    padding-left: clamp(15px, 4vw, 30px);
-    padding-right: clamp(5px, 7vw, 90px);
-    padding-top: 110px;
-  }
+    .left-landing {
+        gap: 10px;
+    }
 
-  .left-landing {
-    gap: 10px;
-  }
+    .title-text span {
+        font-size: clamp(40px, 12vw, 84px);
+        letter-spacing: clamp(-1px, -0.5vw, -3.21px);
+        line-height: clamp(38px, 11vw, 90px);
+    }
 
-  .title-text span {
-    font-size: clamp(40px, 12vw, 84px);
-    letter-spacing: clamp(-1px, -0.5vw, -3.21px);
-    line-height: clamp(38px, 11vw, 90px);
-  }
+    .img-container-outer {
+        padding-top: 14%;
+        width: 100%;
+    }
 
-  .img-container-outer {
-    padding-top: 14%;
-    width: 100%;
-  }
+    .hero-img-container {
+        max-width: 377px;
+        height: 75vh;
+        max-width: 377px;
+    }
 
-  .hero-img-container {
-    max-width: 377px;
-    height: 70vh;
-    max-width: 377px;
-  }
-
-  .right-landing {
-    bottom: 8%;
-  }
+    .right-landing {
+        bottom: 8%;
+    }
 }
 
-/* =========================================================
-        TABLETS width: >800px height: >900px
-========================================================= */
-@media screen and (min-width: 768px) and (max-width: 1030px) and (min-height: 900px) and (max-height: 1380px) {
-  .landing-page {
-    display: flex;
-    flex-direction: row;
-    /* background-color: green; */
-  }
+/* ========================================================= TABLETS width: >800px height: >900px =========================================== */
+@media screen and (min-width: 768px) and (max-width: 1030px) and (min-height:900px) and (max-height:1380px) {
+    .landing-page {
+        display: flex;
+        flex-direction: row;
+        /* background-color: green; */
+    }
 
-  .left-landing {
-    /* background-color: pink; */
-    flex-direction: row;
-    width: 100%;
-    gap: 10%;
-    padding: 8px 80px 10% 0px;
-  }
+    .left-landing {
+        /* background-color: pink; */
+        flex-direction: row;
+        width: 100%;
+        gap: 10%;
+        padding: 8px 80px 10% 0px;
+    }
 
-  .title-text {
-    min-width: 300px;
-    min-height: 282px;
-    max-width: clamp(300px, 28vw, 460px);
-  }
+    .title-text {
+        min-width: 300px;
+        min-height: 282px;
+        max-width: clamp(300px, 28vw, 460px);
+    }
 
-  .title-text span {
-    font-size: clamp(87px, 6.6vw, 155px);
-    line-height: clamp(93px, 7.28vw, 168px);
-    letter-spacing: clamp(-3.75px, -0.22vw, -6.02px);
-  }
+    .title-text span {
+        font-size: clamp(87px, 6.6vw, 155px);
+        line-height: clamp(93px, 7.28vw, 168px);
+        letter-spacing: clamp(-3.75px, -0.22vw, -6.02px);
+    }
 
-  .img-container-outer {
-    width: 100%;
-    align-items: center;
-    justify-content: normal;
-    padding-top: 0px;
-  }
+    .img-container-outer {
+        width: 100%;
+        align-items: center;
+        justify-content: normal;
+        padding-top: 10px;
+    }
 
-  .hero-img-container {
-    min-width: 377px;
-    height: 780px;
-    /* untouched as requested */
-  }
+    .hero-img-container {
+        min-width: 367px;
+        height: 750px;
+    }
 
-  .hero-description {
-    font-size: 22px;
-  }
+    .hero-description {
+        font-size: 22px;
+    }
 
-  .store-icons {
-    padding: 12px 30px 12px 25px;
-  }
+    .store-icons {
+        padding: 12px 30px 12px 25px;
+    }
 
-  .right-landing {
-    bottom: 10%;
-  }
+    .right-landing {
+        bottom: 10%;
+    }
 }
 
-@media screen and (min-height: 1280px) {
-  .left-landing {
-    /* background-color: red; */
-    padding-right: 0px;
-  }
+@media screen and (min-height:1280px) {
+    .left-landing {
+        padding-right: 0px;
+    }
 
-  .title-text span {
-    font-size: clamp(92px, 7vw, 155px);
-    line-height: clamp(100px, 8vw, 168px);
-    letter-spacing: clamp(-2.5px, -0.22vw, -6.02px);
-  }
+    .title-text span {
+        font-size: clamp(92px, 7vw, 155px);
+        line-height: clamp(100px, 8vw, 168px);
+        letter-spacing: clamp(-2.5px, -0.22vw, -6.02px);
+    }
 
-  .hero-img-container {
-    min-width: 400px;
-    max-width: 500px;
-    height: 900px;
-  }
+    .hero-img-container {
+        min-width: 400px;
+        max-width: 500px;
+        height: 900px;
+    }
 
-  .right-landing {
-    bottom: 15%;
-    height: fit-content;
-    width: fit-content;
-  }
+    .right-landing {
+        bottom: 15%;
+        height: fit-content;
+        width: fit-content;
+    }
 
-  .store-icons {
-    padding: 12px 30px 12px 25px;
-  }
+    .store-icons {
+        padding: 12px 30px 12px 25px;
+    }
 }
 
 /* tab width >500px and height <720px */
@@ -521,15 +490,13 @@
     padding-top: 100px;
   }
 
-  .left-landing {
-    /* background-color: red; */
-    gap: 70px;
-  }
+    .left-landing {
+        gap: 70px;
+    }
 
-  .img-container-outer {
-    padding-top: 10%;
-    /* background-color: aqua; */
-  }
+    .img-container-outer {
+        padding-top: 10%;
+    }
 
   .hero-img-container {
     width: 380px;
@@ -541,26 +508,16 @@
   }
 }
 
-/* =========================================================
-   📱 FOLD DEVICES (add here — correct position)
-   → These sit ABOVE desktop queries
-   → They handle fold OUTER + INNER displays
-========================================================= */
+/* ================================= FOLD DEVICES (add here — correct position) → These sit ABOVE desktop queries ==================================== */
+@media screen and (min-width: 358px) and (max-width: 450px) and (min-height: 850px) and (max-height: 1000px) {
+    .landing-page {
+        padding-top: 110px;
+        padding-left: 35px;
+    }
 
-/* ---------------------------------------------
-   1️⃣ Samsung Galaxy Z Fold OUTER SCREEN
-   (Cover screen — tall + narrow)
-   Viewport approx: 384 × 885 / 412 × 915
----------------------------------------------- */
-@media screen and (min-width: 360px) and (max-width: 450px) and (min-height: 850px) and (max-height: 1000px) {
-  .landing-page {
-    padding-top: 110px;
-    padding-left: 35px;
-  }
-
-  .img-container-outer {
-    padding-top: 28%;
-  }
+    .img-container-outer {
+        padding-top: 26%;
+    }
 
   .hero-img-container {
     width: 230px;
@@ -577,23 +534,19 @@
   }
 }
 
-/* ---------------------------------------------
-   2️⃣ Samsung Galaxy Z Fold INNER SCREEN
-   (Unfolded tablet — wide + tall)
-   Viewport approx: 768 × 1812 / 800 × 1780
----------------------------------------------- */
+/* Viewport approx: 768 × 1812 / 800 × 1780 */
 @media screen and (min-width: 700px) and (max-width: 950px) and (min-height: 1500px) {
-  .landing-page {
-    flex-direction: row;
-    padding-top: 130px;
-    padding-left: 60px;
-  }
+    .landing-page {
+        flex-direction: row;
+        padding-top: 130px;
+        padding-left: 60px;
+    }
 
-  .left-landing {
-    flex-direction: row;
-    align-items: center;
-    gap: 70px;
-  }
+    .left-landing {
+        flex-direction: row;
+        align-items: center;
+        gap: 70px;
+    }
 
   .title-text span {
     font-size: clamp(80px, 7vw, 150px);
@@ -617,21 +570,17 @@
   }
 }
 
-/* ---------------------------------------------
-   3️⃣ Oppo Find N / Pixel Fold
-   (Short + wide foldables)
-   Common viewport: 550–720 width, 1100–1400 height
----------------------------------------------- */
+/* viewport: 550–720 width, 1100–1400 height */
 @media screen and (min-width: 520px) and (max-width: 750px) and (min-height: 1100px) and (max-height: 1500px) {
-  .landing-page {
-    flex-direction: row;
-    padding-top: 120px;
-    padding-left: 40px;
-  }
+    .landing-page {
+        flex-direction: row;
+        padding-top: 120px;
+        padding-left: 40px;
+    }
 
-  .left-landing {
-    gap: 8%;
-  }
+    .left-landing {
+        gap: 8%;
+    }
 
   .img-container-outer {
     padding-top: 10%;
@@ -653,19 +602,16 @@
   }
 }
 
-/* ---------------------------------------------
-   4️⃣ Samsung Z Flip / Tall phones (super tall)
-   For very tall + narrow viewports
----------------------------------------------- */
+/* --------------------------------------------- Flip / Tall phones (super tall) For very tall + narrow viewports ---------------------------------------------- */
 @media screen and (min-width: 320px) and (max-width: 380px) and (min-height: 800px) {
-  .landing-page {
-    padding-top: 140px;
-    /* background-color: red; */
-  }
+    .landing-page {
+        padding-top: 140px;
+        /* background-color: red; */
+    }
 
-  .img-container-outer {
-    padding-top: 32%;
-  }
+    .img-container-outer {
+        padding-top: 32%;
+    }
 
   .hero-img-container {
     width: 220px;
@@ -677,46 +623,180 @@
   }
 }
 
-/* =========================================================
-   PHONE LANDSCAPE
-========================================================= */
-
+/* ========================================================= PHONE LANDSCAPE ========================================================= */
 @media screen and (orientation: landscape) and (max-height: 500px) {
-  .landing-page {
-    flex-direction: row;
-    align-items: center;
-    padding-top: 20px;
-  }
+    .landing-page {
+        flex-direction: row;
+        align-items: center;
+        padding-top: 20px;
+    }
 
-  .title-text {
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-  }
+    .title-text {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
 
-  .left-landing {
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-  }
+    .left-landing {
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
 
-  .img-container-outer {
-    align-items: center;
-    padding-top: 10%;
-  }
+    .img-container-outer {
+        align-items: center;
+        padding-top: 10%;
+    }
 
-  .hero-img-container {
-    height: 70vh;
-    width: 377px;
-  }
+    .hero-img-container {
+        height: 70vh;
+        width: 377px;
+    }
 
-  .right-landing {
-    bottom: 5%;
-    width: auto;
-  }
+    .right-landing {
+        bottom: 5%;
+        width: auto;
+    }
 
-  .hero-description {
-    font-size: 14px;
-  }
+    .hero-description {
+        font-size: 14px;
+    }
+}
+
+/* ========================================================= DESKTOP: (>=1024px) ========================================================= */
+
+@media screen and (min-width: 1024px) {
+
+    /* 1024px Base Desktop Styling */
+    .landing-page {
+        padding-right: 85px;
+        padding-left: 48px;
+        padding-bottom: 40px;
+    }
+
+    .title-text span {
+        font-size: clamp(90px, 6.8vw, 156px);
+        line-height: clamp(64px, 7.6vw, 168px);
+        letter-spacing: -0.38rem;
+        font-weight: 600;
+    }
+
+    .left-landing {
+        align-items: flex-end;
+    }
+
+    .img-container-outer {
+        align-items: flex-end;
+        justify-content: left;
+        width: 100%;
+        padding-top: 0px;
+        padding-left: 70px;
+    }
+
+    .hero-img-container {
+        width: 47vw;
+        max-width: 380px;
+        height: auto;
+        aspect-ratio: 380 / 760;
+        position: relative;
+        margin: 0px;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .hero-img-container[data-preferred="desktop-fixed"] {
+        max-height: 830px;
+        width: auto;
+    }
+
+    .right-landing {
+        position: static;
+        width: 277px;
+        height: 260px;
+        gap: 14px;
+        padding-top: 20px;
+    }
+
+    .store-icons-container {
+        display: none;
+    }
+
+    .qr-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 280px;
+        padding: 9px 10px;
+        background: #fff;
+        border-radius: 20px;
+    }
+
+    .qr-container img,
+    .qr-container svg {
+        max-width: clamp(72px, 12vw, 115px);
+        max-height: clamp(72px, 12vw, 115px);
+        width: auto;
+        height: auto;
+        display: block;
+    }
+
+    .hero-description {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1.21px;
+    }
+
+    /* ========================================================= 
+       Desktop height adjustments (OVERLAYS ORIGINAL VALUES)
+       ========================================================= */
+
+    /* 1025px–1400px width → override padding + title size */
+    @media (min-width: 1025px) and (max-width: 1400px) {
+        .landing-page {
+            padding-right: 60px;
+        }
+
+        .title-text span {
+            font-size: clamp(90px, 8vw, 156px);
+            line-height: clamp(80px, 8vw, 168px);
+        }
+
+        .img-container-outer {
+            padding-left: 0px;
+        }
+
+        .hero-img-container {
+            max-height: 70vh;
+        }
+    }
+
+    /* 1400px wide + max-height 900px → override size only */
+    @media (min-width: 1400px) and (max-height: 1081px) {
+        .hero-img-container {
+            max-height: 70vh;
+        }
+
+        .title-text span {
+            font-size: clamp(90px, 8vw, 156px);
+            line-height: clamp(80px, 8vw, 168px);
+        }
+    }
+
+    /* Ultra-wide screens 1600px+ */
+    @media (min-width: 1600px) and (min-height: 1082px) {
+        .title-text span {
+            font-size: clamp(93px, 6.5vw, 180px);
+            line-height: clamp(92px, 7vw, 190px);
+        }
+
+        .hero-img-container {
+            width: clamp(420px, 26vw, 560px);
+            max-height: 88vh;
+        }
+    }
 }
