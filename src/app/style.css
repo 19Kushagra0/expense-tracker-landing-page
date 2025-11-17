@@ -93,12 +93,16 @@ html {
 
 /* ===== TITLE SECTION ===== */
 .terms-privacy-title-container {
-  width: 100%;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   padding-bottom: 62px;
   color: black;
   padding-bottom: 44px;
+
+  /* background-color: red; */
+
+  height: 150px;
 }
 
 .terms-privacy-title-box {
@@ -108,6 +112,12 @@ html {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  /* background-color: blue; */
+  /*  */
+  position: fixed;
+
+  top: 155px;
 }
 
 .terms-privacy-title {
@@ -140,21 +150,32 @@ html {
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 166px;
   /* flex-direction: column; */
   gap: 44px;
-  gap: 10.29%;
+  /* gap: 10.29%; */
+  gap: 106px;
 }
 
 .terms-privacy-index-container {
-  max-width: 220px;
+  max-width: 420px;
   width: 100%;
   padding-left: 5px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
 
+  /* background-color: teal; */
+}
+.terms-privacy-index-box {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /*  */
+  position: fixed;
+  /*  */
+  top: 330px;
+}
 .terms-privacy-index {
   display: flex;
   align-items: center;
@@ -268,6 +289,8 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 64px 0 42px;
+
+  padding-top: 0px;
 }
 
 .terms-privacy-numora-icon {
@@ -309,8 +332,24 @@ html {
   display: flex !important;
 }
 /* ===== RESPONSIVE ===== */
+@media screen and (max-width: 1200px) {
+  .termsPage,
+  .privacyPage {
+    padding: 192px 1.72% 0;
+  }
+  .terms-privacy-index-content-container {
+    gap: 25px;
+  }
+  .term-privacy-header {
+    padding-left: 1.72%;
+    padding-right: 1.72%;
+  }
+}
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+  .privacyPage {
+    padding: 192px 4.72% 0;
+  }
   .terms-privacy-index-content-container {
     flex-direction: column;
   }
@@ -322,6 +361,22 @@ html {
   }
   .terms-privacy-content-intro2 {
     display: flex;
+  }
+  .terms-privacy-title-box {
+    position: static;
+    height: fit-content;
+  }
+  .terms-privacy-index-box {
+    position: static;
+  }
+  .terms-privacy-title-container {
+    padding-bottom: 200px;
+  }
+  .terms-privacy-footer {
+    padding-top: 25px;
+  }
+  .term-privacy-header {
+    padding: 45px 4.72%;
   }
 }
 
@@ -383,7 +438,10 @@ html {
 /* auto scrolling */
 @media screen and (max-width: 1024px) {
   .term-privacy-header {
-    padding: 45px 4.72%;
+    /* padding: 45px 4.72%; */
+
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
   .terms-privacy-content-title-text-box {
     scroll-margin-top: 170px;
@@ -400,7 +458,8 @@ html {
 
 @media screen and (max-width: 500px) {
   .term-privacy-header {
-    padding: 30px 4.72%;
+    padding-bottom: 30px;
+    padding-top: 30px;
   }
   .terms-privacy-content-title-text-box {
     scroll-margin-top: 105px;
@@ -408,7 +467,9 @@ html {
 }
 @media screen and (max-width: 400px) {
   .term-privacy-header {
-    padding: 20px 4.72%;
+    /* padding: 20px 4.72%; */
+    padding-bottom: 00px;
+    padding-top: 20px;
   }
   .terms-privacy-content-title-text-box {
     scroll-margin-top: 105px;
