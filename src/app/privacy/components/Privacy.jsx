@@ -10,6 +10,7 @@ export default function privacy1() {
   const showNavBar = () => {
     setNavBar(!navBar);
   };
+
   return (
     <div className="privacyPage">
       <div className="term-privacy-header">
