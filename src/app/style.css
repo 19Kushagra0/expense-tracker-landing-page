@@ -561,3 +561,6 @@ body::-webkit-scrollbar {
   background: transparent;
 }
 /*  */
+.active-index {
+  color: black !important;
+}
