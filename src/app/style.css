@@ -347,7 +347,8 @@ html {
 }
 
 @media screen and (max-width: 1000px) {
-  .privacyPage {
+  .privacyPage,
+  .termsPage {
     padding: 192px 4.72% 0;
   }
   .terms-privacy-index-content-container {
