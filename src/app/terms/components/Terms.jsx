@@ -75,7 +75,7 @@ export default function Terms() {
             <span className="terms-privacy-last-update">Last updated</span>
             <span className="terms-privacy-time">12th Sept, 2025</span>
             <br />
-            <div className="terms-privacy-title-container-line"></div>
+            <div className="terms-privacy-title-container-line2"></div>
           </div>
         </div>
       </div>
