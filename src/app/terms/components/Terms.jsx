@@ -10,6 +10,13 @@ export default function Terms() {
   const showNavBar = () => {
     setNavBar(!navBar);
   };
+  function makeActive(el) {
+    document
+      .querySelectorAll(".terms-privacy-index")
+      .forEach((i) => i.classList.remove("active-index"));
+
+    el.classList.add("active-index");
+  }
   return (
     <div className="termsPage">
       <div className="term-privacy-header">
@@ -93,7 +100,8 @@ export default function Terms() {
           <div className="terms-privacy-index-box">
             <button
               className="terms-privacy-index"
-              onClick={() => {
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("using-numora")
                   .scrollIntoView({ behavior: "smooth" });
@@ -102,9 +110,11 @@ export default function Terms() {
               <span className="terms-privacy-index-number">1.</span>
               <span className="terms-privacy-index-name">Using Numora</span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() => {
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("account-authentication")
                   .scrollIntoView({ behavior: "smooth" });
@@ -115,9 +125,11 @@ export default function Terms() {
                 Account & Authentication
               </span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() => {
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("user-content")
                   .scrollIntoView({ behavior: "smooth" });
@@ -126,9 +138,11 @@ export default function Terms() {
               <span className="terms-privacy-index-number">3.</span>
               <span className="terms-privacy-index-name">User Content</span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() => {
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("prohibited-conduct")
                   .scrollIntoView({ behavior: "smooth" });
@@ -139,9 +153,11 @@ export default function Terms() {
                 Prohibited Conduct
               </span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() => {
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("disclaimer-of-warranties")
                   .scrollIntoView({ behavior: "smooth" });
@@ -152,9 +168,11 @@ export default function Terms() {
                 Disclaimer of Warranties
               </span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() => {
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("limitations-of-liability")
                   .scrollIntoView({ behavior: "smooth" });
@@ -165,9 +183,11 @@ export default function Terms() {
                 Limitations of Liability
               </span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() => {
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("account-termination")
                   .scrollIntoView({ behavior: "smooth" });
@@ -178,9 +198,11 @@ export default function Terms() {
                 Account Termination
               </span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() => {
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("changes-to-terms")
                   .scrollIntoView({ behavior: "smooth" });
@@ -191,9 +213,11 @@ export default function Terms() {
                 Changes to the Terms
               </span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() => {
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("governing-law")
                   .scrollIntoView({ behavior: "smooth" });
@@ -202,9 +226,11 @@ export default function Terms() {
               <span className="terms-privacy-index-number">9.</span>
               <span className="terms-privacy-index-name">Governing Law</span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() => {
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("contact-us")
                   .scrollIntoView({ behavior: "smooth" });

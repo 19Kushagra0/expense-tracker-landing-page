@@ -10,6 +10,13 @@ export default function privacy1() {
   const showNavBar = () => {
     setNavBar(!navBar);
   };
+  function makeActive(el) {
+    document
+      .querySelectorAll(".terms-privacy-index")
+      .forEach((i) => i.classList.remove("active-index"));
+
+    el.classList.add("active-index");
+  }
 
   return (
     <div className="privacyPage">
@@ -92,100 +99,115 @@ export default function privacy1() {
           <div className="terms-privacy-index-box">
             <button
               className="terms-privacy-index"
-              onClick={() =>
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("information-we-collect")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               <span className="terms-privacy-index-number">1.</span>
               <span className="terms-privacy-index-name">
                 Information We Collect
               </span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() =>
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("use-of-information")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               <span className="terms-privacy-index-number">2.</span>
               <span className="terms-privacy-index-name">
                 Use of Information
               </span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() =>
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("data-storage-security")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               <span className="terms-privacy-index-number">3.</span>
               <span className="terms-privacy-index-name">
                 Data Storage & Security
               </span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() =>
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("sharing-third-parties")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               <span className="terms-privacy-index-number">4.</span>
               <span className="terms-privacy-index-name">
                 Sharing & Third Parties
               </span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() =>
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("your-rights")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               <span className="terms-privacy-index-number">5.</span>
               <span className="terms-privacy-index-name">Your Rights</span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() =>
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("childrens-privacy")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               <span className="terms-privacy-index-number">6.</span>
               <span className="terms-privacy-index-name">
                 Children’s Privacy
               </span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() =>
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("changes-to-policy")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               <span className="terms-privacy-index-number">7.</span>
               <span className="terms-privacy-index-name">
                 Changes to this Policy
               </span>
             </button>
+
             <button
               className="terms-privacy-index"
-              onClick={() =>
+              onClick={(e) => {
+                makeActive(e.currentTarget);
                 document
                   .getElementById("contact-us")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
             >
               <span className="terms-privacy-index-number">8.</span>
               <span className="terms-privacy-index-name">Contact Us</span>
