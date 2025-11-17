@@ -113,6 +113,11 @@ html {
 .terms-privacy-title-container-line2 {
   width: 390px;
 }
+.terms-privacy-title-container-line {
+  width: 330px;
+  height: 1px;
+  background-color: #d8d8d8;
+}
 
 .terms-privacy-title-box {
   width: 100%;
