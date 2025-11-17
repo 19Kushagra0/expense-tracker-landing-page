@@ -1,405 +1,742 @@
+/* =========================================================
+   BASE (MOBILE FIRST) — supports fixed header of 100px
+   → This is the default layout applied to ALL devices
+   → All media queries override this starting from below
+========================================================= */
+
 .outer {
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  background-color: #ebebeb;
-  box-sizing: border-box;
+    width: 100%;
+    height: 100svh;
+    min-height: 100svh;
+    overflow: hidden;
+    background-color: #ebebeb;
+    box-sizing: border-box;
 }
 
-/* Main landing layout */
 .landing-page {
-  width: 100%;
-  height: 91vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 20px 90px 20px 59px;
-  margin-top: 8.6vh;
-  font-family: "Inter", sans-serif;
+    width: 100%;
+    height: 100svh;
+    min-height: 100svh;
+    padding-top: 110px;
+    padding-left: 26px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: "Inter", sans-serif;
 }
 
-/* LEFT SECTION */
+/* =========================================================
+   BASE MOBILE STRUCTURE (LEFT COLUMN + HERO + RIGHT OVERLAY)
+========================================================= */
+
 .left-landing {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 70px;
-  justify-content: space-between;
-  align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: normal;
+    align-items: flex-start;
+    /* background-color: red; */
 }
 
-/* Title Text Styles */
 .title-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  /* z-index: 999; */
+    display: flex;
+    flex-direction: column;
 }
 
 .title-text span {
-  font-weight: 600;
-  font-size: 156px;
-  letter-spacing: -0.38rem;
-  line-height: 1.08;
-  transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    font-size: clamp(40px, 22vw, 55px);
+    letter-spacing: -2.75px;
+    line-height: 60px;
 }
 
 .title-text .gray {
-  color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.1);
 }
 
 .title-text .black {
-  color: #000;
+    color: #000;
 }
 
-/* Hero Image Section */
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.img-container-outer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: auto;
+    height: 100%;
+    padding-top: 24%;
+}
+
 .hero-img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: clamp(300px, 320vw, 360px);
+    width: 47vw;
+    max-width: 204px;
+    height: auto;
+    aspect-ratio: 204 / 444;
+    position: relative;
 }
 
 .hero-img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
 
-/* =========================== RIGHT SECTION =========================== */
+/* =========================================================
+   RIGHT OVERLAY
+========================================================= */
+
 .right-landing {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  text-align: center;
-  width: 278px;
-  gap: 14px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    /* width: 278px; */
 }
 
 .hero-description {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 30px;
-  letter-spacing: -1.2px;
-  padding: 0 24px;
-  text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18.7px;
+    letter-spacing: -0.75px;
+    text-align: left;
 }
 
-/* QR Container */
 .qr-container {
-  width: fit-content;
-  display: flex;
-  flex-direction: row;
-  gap: 2px;
-  border-radius: 20px;
-  background-color: #fff;
-  padding: 9px 10px;
+    display: none;
 }
 
 /* App Store Icons */
 .store-icons-container {
-  display: none;
-  flex-direction: row;
-  justify-content: left;
-  width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* background-color: aqua; */
 }
 
 .store-icons-container:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .store-icons {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  background-color: black;
-  border-radius: 800px;
-  padding: 9px 20px 9px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    background-color: black;
+    border-radius: 800px;
+    padding: 9px 20px 9px 15px;
 }
 
 .store-icons:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
 }
 
-.store-icons:hover {
-  box-shadow: 0 4px 20px rgba(9, 9, 9, 0.35);
-  transform: translateY(-2px);
-}
-
-.store-icons p {
-  color: #fff;
-  padding-left: 7px;
-  font-size: medium;
-  line-height: 24.1px;
-  letter-spacing: -0.16px;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-
+.store-icons span {
+    color: white;
+    /* background-color: red; */
+    padding-left: 7px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .apple-icon:hover,
 .playstore-icon {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .apple-icon,
 .playstore-icon {
-  cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .apple-icon:hover,
 .playstore-icon:hover {
-  transform: scale(1.15) rotate(3deg);
-  filter: brightness(1.2);
+    transform: scale(1.15) rotate(3deg);
+    filter: brightness(1.2);
 }
 
-/* Divider subtle fade */
+
 .divider {
-  width: 1px;
-  height: 12px;
-  background-color: #555;
-  margin: 0 10px;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+    width: 1px;
+    height: 12px;
+    background-color: #555;
+    margin: 0 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
 
 .store-icons:hover .divider {
-  opacity: 0.9;
+    opacity: 0.9;
 }
 
-/* RESPONSIVE BREAKPOINTS */
-/* ----------- 1440px ----------- */
-@media screen and (max-width: 1440px) {
-  .landing-page {
-    padding-left: 47px;
-    padding-right: 84px;
-  }
+/* =========================================================
+   MOBILE WIDTH BREAKPOINTS
+========================================================= */
 
-  .title-text span {
-    font-size: 5.37rem;
-    line-height: 105px;
-    letter-spacing: -3.75px;
-  }
+/* 320–349px */
+@media screen and (min-width: 320px) and (max-width: 349px) {
+    .hero-img-container {
+        width: 46vw;
+        max-width: 180px;
+    }
+
+    .img-container-outer {
+        padding-top: 32%;
+    }
+
+    .title-text span {
+        font-size: clamp(36px, 19vw, 50px);
+    }
+
+    .right-landing {
+        bottom: 18%;
+    }
 }
 
-/* ----------- 1280px ----------- */
-@media screen and (max-width: 1280px) {
-  .landing-page {
-    padding: 20px 59px;
-  }
+/* 350–380px */
+@media screen and (min-width: 350px) and (max-width: 380px) {
+    .hero-img-container {
+        width: 200px;
+        /* background-color: gold; */
+    }
 
-  .left-landing {
-    gap: 20px;
-  }
+    .img-container-outer {
+        padding-top: 31%;
+    }
 
-  .title-text span {
-    font-size: clamp(2rem, 6vw + 1rem, 5.375rem);
-    line-height: 93px;
-    letter-spacing: -3.35px;
-  }
-
-  .hero-img-container {
-    width: 337px;
-    height: 648px;
-    transition: all 0.3s ease-in-out;
-  }
+    .right-landing {
+        bottom: 22%;
+    }
 }
 
-/* ----------- 1130px & below ----------- */
-@media screen and (max-width: 1130px) {
-  .left-landing {
-    align-items: flex-start;
-    width: 100%;
-  }
+@media screen and (min-width: 330px) and (max-width: 370px) and (max-height: 650px) {
 
-  .qr-container {
-    display: none;
-  }
+    .title-text span {
+        line-height: 1;
+    }
 
-  .title-text {
-    width: 290px;
-    justify-content: flex-start;
-  }
+    .hero-img-container {
+        width: 300px;
+        height: 370px;
+    }
 
-  .title-text span {
-    font-size: clamp(40px, 11.83px + 7.51vw, 120px);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-  }
-
-  .hero-img-container {
-    position: sticky;
-    right: 20px;
-    width: 360px;
-    height: 640px;
-    margin-top: 120px;
-  }
-
-  .store-icons-container {
-    display: flex;
-  }
-
-  .hero-description {
-    font-size: 15px;
-    line-height: 18.7px;
-    letter-spacing: -0.75px;
-    padding-left: 0;
-  }
-
-  .right-landing {
-    position: absolute;
-    bottom: 60px;
-    left: 6%;
-    gap: 14px;
-  }
+    .right-landing {
+        bottom: 0px;
+        /* background-color: gray; */
+    }
 }
 
-/* ----------- 1000px ----------- */
-@media screen and (max-width: 1000px) {
-  .landing-page {
-    padding: 20px 80px 20px 26px;
-  }
+/* 381–399px */
+@media screen and (min-width: 381px) and (max-width: 399px) {
+    .hero-img-container {
+        width: 48vw;
+        max-width: 200px;
+    }
 
-  .right-landing {
-    left: 26px;
-  }
+    .img-container-outer {
+        padding-top: 31%;
+    }
+
+    .title-text span {
+        font-size: clamp(48px, 16vw, 64px);
+    }
+
+    .right-landing {
+        bottom: 20%;
+    }
 }
 
-/* ----------- 799px ----------- */
-@media screen and (max-width: 799px) {
-  .landing-page {
-    padding-right: 8%;
-  }
+/* 400–420px benchmark */
+@media screen and (max-height: 920px) and (min-width: 400px) and (max-width: 420px) {
+    .landing-page {
+        padding-top: 100px;
+    }
 
-  .hero-img-container {
-    margin-top: 0;
-    width: 330px;
-    height: 680px;
-  }
+    .title-text span {
+        font-size: clamp(60px, 14vw, 80px);
+    }
+
+    .img-container-outer {
+        padding-top: 30%;
+    }
+
+    .hero-img-container {
+        width: 204px;
+    }
+
+    .right-landing {
+        bottom: 18%;
+    }
 }
 
-/* ----------- 414px (Mobile) ----------- */
-@media screen and (max-width: 414px) {
-  .landing-page {
-    padding: 70px 0 0 26px;
-    margin-top: 0;
-    height: 100vh;
-    overflow: hidden;
-  }
+/* 421–480px */
+@media screen and (min-width: 421px) and (max-width: 500px) {
+    .hero-img-container {
+        width: 52vw;
+        max-width: 235px;
+    }
 
-  .title-text {
-    width: 200px;
-    margin-top: 20px;
-  }
+    .img-container-outer {
+        padding-top: 28%;
+    }
 
-  .title-text span {
-    font-size: 56px;
-    line-height: 61px;
-    letter-spacing: -2.2px;
-  }
+    .title-text span {
+        font-size: clamp(52px, 15vw, 70px);
+    }
 
-  .hero-img-container {
-    width: 203px;
-    height: 443px;
-    margin-top: 120px;
-    right: 0;
-  }
-
-  .right-landing {
-    bottom: 50px;
-  }
+    .right-landing {
+        bottom: 14%;
+    }
 }
 
-/* ----------- Extra tall screens ----------- */
-@media screen and (min-height: 960px) {
-  .hero-img-container {
-    height: 817px;
-    width: 360px;
-  }
+/* =========================================================
+   HEIGHT FIXES (tall → short)
+========================================================= */
+
+
+@media screen and (max-height: 800px) and (max-width: 480px) {
+    .right-landing {
+        bottom: 10%;
+    }
 }
 
-@media screen and (max-height: 890px) {
-  .hero-img-container {
-    height: auto;
-    width: 327px;
-    margin-top: 90px;
-  }
+@media screen and (max-height: 800px) and (max-width: 370px) {
+    .landing-page {
+        padding-top: 100px;
+    }
+
+    .hero-img-container {
+        width: 180px;
+        height: 430px;
+    }
+
+    .right-landing {
+        bottom: 6%;
+    }
 }
 
-@media screen and (max-width: 1130) and (max-height: 800px) {
-  .hero-img-container {
-    height: 500px;
-    width: 327px;
-    margin-top: 90px;
-  }
+@media screen and (max-height: 715px) and (max-width: 480px) {
+    .landing-page {
+        padding-left: 22px;
+        padding-top: 95px;
+    }
+
+    /* .img-container-outer {
+        background-color: rebeccapurple;
+    } */
+
+    .right-landing {
+        bottom: 5.7%;
+    }
 }
 
-@media screen and (max-width: 440px) and (min-height: 900px) {
-  .left-landing {
-    gap: 0px;
-  }
 
-  .hero-img-container {
-    height: 700px;
-    margin-top: 50px;
-  }
+
+@media screen and (max-height: 665px) {
+    .landing-page {
+        padding-top: 80px;
+    }
+
+    .hero-img-container {
+        max-height: 444px;
+    }
+
+    .img-container-outer {
+        padding-top: 25%;
+    }
+
+    .title-text span {
+        font-size: clamp(46px, 2vh, 36px);
+    }
+
+    .right-landing {
+        bottom: 5%;
+    }
 }
 
-@media screen and (max-width: 440px) and (max-height: 800px) {
-  .left-landing {
-    gap: 0px;
-  }
+@media screen and (max-height: 600px) and (max-width: 480px) {
+    .hero-img-container {
+        height: clamp(280px, 48vh, 360px);
+    }
 
-  .hero-img-container {
-    right: 10px;
-  }
+    .title-text span {
+        font-size: clamp(34px, 18vw, 48px);
+    }
 }
 
-@media screen and (max-width: 430px) and (min-width: 335px) and (min-height: 900px) {
-  .hero-img-container {
-    height: max-content;
-    margin-top: 19vh;
-  }
+/* =========================================================
+   NARROW + SHORT COMBINATION
+========================================================= */
+
+@media screen and (max-height: 670px) and (min-width: 370px) and (max-width: 380px) {
+    .landing-page {
+        padding-top: 85px;
+        padding-left: 20px;
+    }
+
+    .img-container-outer {
+        padding-top: 25%;
+    }
+
+    .hero-img-container {
+        height: 380px;
+    }
+
+    .right-landing {
+        bottom: 8%;
+    }
 }
 
-@media screen and (max-width: 345px) and (min-width: 340px) and (max-height: 885px) and (min-height: 880px) {
-  .landing-page {
-    padding-left: 27px;
-    padding-right: 27px;
-  }
+/* =========================================================
+   TABLETS (portrait)
+========================================================= */
 
-  .left-landing {
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-  }
+@media screen and (min-width: 500px) and (max-width: 767px) and (min-height: 900px) {
+    .landing-page {
+        padding-left: clamp(15px, 4vw, 30px);
+        padding-right: clamp(5px, 7vw, 90px);
+        padding-top: 110px;
+    }
 
-  .hero-img-container {
-    margin-top: 10px;
-    width: 200px;
-    top: 80px;
-  }
+    .left-landing {
+        gap: 10px;
+    }
 
-  .right-landing {
-    left: 18%;
-    width: fit-content;
-  }
+    .title-text span {
+        font-size: clamp(40px, 12vw, 84px);
+        letter-spacing: clamp(-1px, -0.5vw, -3.21px);
+        line-height: clamp(38px, 11vw, 90px);
+    }
 
-  .hero-description {
-    text-align: center;
-  }
+    .img-container-outer {
+        padding-top: 14%;
+        width: 100%;
+    }
+
+    .hero-img-container {
+        max-width: 377px;
+        height: 70vh;
+        max-width: 377px;
+    }
+
+    .right-landing {
+        bottom: 8%;
+    }
 }
 
-@media screen and (max-width: 414px) and (min-height: 800px) and (max-height: 815px) {
-  .landing-page {
-    padding-top: 80px;
-  }
+/* =========================================================
+        TABLETS width: >800px height: >900px
+========================================================= */
+@media screen and (min-width: 768px) and (max-width: 1030px) and (min-height:900px) and (max-height:1380px) {
+    .landing-page {
+        display: flex;
+        flex-direction: row;
+        /* background-color: green; */
+    }
 
-  .hero-img-container {
-    margin-top: 19vh;
-    height: 680px;
-  }
+    .left-landing {
+        /* background-color: pink; */
+        flex-direction: row;
+        width: 100%;
+        gap: 10%;
+        padding: 8px 80px 10% 0px;
+    }
+
+    .title-text {
+        min-width: 300px;
+        min-height: 282px;
+        max-width: clamp(300px, 28vw, 460px);
+    }
+
+    .title-text span {
+        font-size: clamp(87px, 6.6vw, 155px);
+        line-height: clamp(93px, 7.28vw, 168px);
+        letter-spacing: clamp(-3.75px, -0.22vw, -6.02px);
+    }
+
+    .img-container-outer {
+        width: 100%;
+        align-items: center;
+        justify-content: normal;
+        padding-top: 0px;
+    }
+
+    .hero-img-container {
+        min-width: 377px;
+        height: 780px;
+        /* untouched as requested */
+    }
+
+    .hero-description {
+        font-size: 22px;
+    }
+
+    .store-icons {
+        padding: 12px 30px 12px 25px;
+    }
+
+    .right-landing {
+        bottom: 10%;
+    }
+}
+
+@media screen and (min-height:1280px) {
+
+    .left-landing {
+        /* background-color: red; */
+        padding-right: 0px;
+    }
+
+    .title-text span {
+        font-size: clamp(92px, 7vw, 155px);
+        line-height: clamp(100px, 8vw, 168px);
+        letter-spacing: clamp(-2.5px, -0.22vw, -6.02px);
+    }
+
+    .hero-img-container {
+        min-width: 400px;
+        max-width: 500px;
+        height: 900px;
+    }
+
+    .right-landing {
+        bottom: 15%;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .store-icons {
+        padding: 12px 30px 12px 25px;
+    }
+
+}
+
+/* tab width >500px and height <720px */
+@media screen and (min-width: 500px) and (min-height: 700px) and (max-height: 750px) {
+    .landing-page {
+        padding-top: 100px;
+    }
+
+    .left-landing {
+        /* background-color: red; */
+        gap: 70px;
+
+    }
+
+    .img-container-outer {
+        padding-top: 10%;
+        /* background-color: aqua; */
+    }
+
+    .hero-img-container {
+        width: 380px;
+        height: auto;
+    }
+
+    .right-landing {
+        bottom: 10%;
+    }
+}
+
+/* =========================================================
+   📱 FOLD DEVICES (add here — correct position)
+   → These sit ABOVE desktop queries
+   → They handle fold OUTER + INNER displays
+========================================================= */
+
+
+/* ---------------------------------------------
+   1️⃣ Samsung Galaxy Z Fold OUTER SCREEN
+   (Cover screen — tall + narrow)
+   Viewport approx: 384 × 885 / 412 × 915
+---------------------------------------------- */
+@media screen and (min-width: 360px) and (max-width: 450px) and (min-height: 850px) and (max-height: 1000px) {
+
+    .landing-page {
+        padding-top: 110px;
+        padding-left: 35px;
+    }
+
+    .img-container-outer {
+        padding-top: 28%;
+    }
+
+    .hero-img-container {
+        width: 230px;
+        height: auto;
+    }
+
+    .title-text span {
+        font-size: clamp(55px, 11vw, 75px);
+        line-height: 1.05;
+    }
+
+    .right-landing {
+        bottom: 12%;
+    }
+}
+
+
+
+/* ---------------------------------------------
+   2️⃣ Samsung Galaxy Z Fold INNER SCREEN
+   (Unfolded tablet — wide + tall)
+   Viewport approx: 768 × 1812 / 800 × 1780
+---------------------------------------------- */
+@media screen and (min-width: 700px) and (max-width: 950px) and (min-height: 1500px) {
+
+    .landing-page {
+        flex-direction: row;
+        padding-top: 130px;
+        padding-left: 60px;
+    }
+
+    .left-landing {
+        flex-direction: row;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .title-text span {
+        font-size: clamp(80px, 7vw, 150px);
+        line-height: clamp(90px, 8vw, 165px);
+    }
+
+    .img-container-outer {
+        padding-top: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-img-container {
+        min-width: 420px;
+        max-width: 520px;
+        height: 900px;
+    }
+
+    .right-landing {
+        bottom: 18%;
+    }
+}
+
+
+
+/* ---------------------------------------------
+   3️⃣ Oppo Find N / Pixel Fold
+   (Short + wide foldables)
+   Common viewport: 550–720 width, 1100–1400 height
+---------------------------------------------- */
+@media screen and (min-width: 520px) and (max-width: 750px) and (min-height: 1100px) and (max-height: 1500px) {
+
+    .landing-page {
+        flex-direction: row;
+        padding-top: 120px;
+        padding-left: 40px;
+    }
+
+    .left-landing {
+        gap: 8%;
+    }
+
+    .img-container-outer {
+        padding-top: 10%;
+        justify-content: center;
+    }
+
+    .hero-img-container {
+        min-width: 360px;
+        max-width: 440px;
+        height: 820px;
+    }
+
+    .title-text span {
+        font-size: clamp(70px, 6vw, 130px);
+    }
+
+    .right-landing {
+        bottom: 14%;
+    }
+}
+
+
+
+/* ---------------------------------------------
+   4️⃣ Samsung Z Flip / Tall phones (super tall)
+   For very tall + narrow viewports
+---------------------------------------------- */
+@media screen and (min-width: 320px) and (max-width: 380px) and (min-height: 800px) {
+
+    .landing-page {
+        padding-top: 140px;
+        /* background-color: red; */
+    }
+
+    .img-container-outer {
+        padding-top: 32%;
+    }
+
+    .hero-img-container {
+        width: 220px;
+        height: auto;
+    }
+
+    .right-landing {
+        bottom: 20%;
+    }
+}
+
+
+/* =========================================================
+   PHONE LANDSCAPE
+========================================================= */
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .landing-page {
+        flex-direction: row;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .title-text {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .left-landing {
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .img-container-outer {
+        align-items: center;
+        padding-top: 10%;
+    }
+
+    .hero-img-container {
+        height: 70vh;
+        width: 377px;
+    }
+
+    .right-landing {
+        bottom: 5%;
+        width: auto;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
 }
