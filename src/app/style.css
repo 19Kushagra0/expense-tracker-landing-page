@@ -104,11 +104,19 @@ html {
 
   height: 150px;
 }
+.terms-privacy-title-container-line {
+  width: 330px;
+  height: 1px;
+  background-color: #d8d8d8;
+}
 
 .terms-privacy-title-box {
-  /* width: fit-content; */
+  width: 100%;
+
   padding: 10px 0;
-  border-bottom: 1px solid #d8d8d8;
+
+  padding-bottom: 27px;
+  /* border-bottom: 1px solid #d8d8d8; */
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -118,6 +126,8 @@ html {
   position: fixed;
 
   top: 155px;
+  background-color: #ebebeb;
+  /* background-color: blue; */
 }
 
 .terms-privacy-title {
@@ -378,6 +388,13 @@ html {
   }
   .term-privacy-header {
     padding: 45px 4.72%;
+  }
+  .terms-privacy-title-box {
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 1px;
+  }
+  .terms-privacy-title-container-line {
+    display: none;
   }
 }
 

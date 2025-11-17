@@ -19,8 +19,6 @@ export default function Landing() {
     };
   }, []);
 
-
-
   return (
     <div className="outer">
       <Header showNavBar={showNavBar} />
@@ -42,11 +40,10 @@ export default function Landing() {
                 width={377}
                 height={815}
                 sizes="(max-width: 768px) 80vw, (max-width: 128s0px) 40vw, 360px"
-              // priority
+                // priority
               />
             </div>
           </div>
-
 
           {/* RIGHT SECTION */}
           <div className="right-landing">
@@ -94,14 +91,11 @@ export default function Landing() {
                     width={15}
                   />
                 </div>
-                <span >Download App</span>
-
+                <span>Download App</span>
               </div>
             </div>
           </div>
         </div>
-
-
       </section>
     </div>
   );
