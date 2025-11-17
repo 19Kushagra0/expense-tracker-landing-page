@@ -25,20 +25,20 @@ export default function JoinGroupOg({ groupName }) {
       />
       <div
         style={{
-          width: "120px",
+          width: "290px",
           marginBottom: "20px",
           backgroundColor: "black",
 
           color: "white",
-          padding: "10px 10px",
-          borderRadius: "20px",
+          padding: "30px 30px",
+          borderRadius: "100px",
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
           marginTop: "30px",
           marginLeft: "30px",
-          fontSize: "16px",
+          fontSize: "40px",
           lineHeight: "normal",
           fontWeight: "400",
           letterSpacing: "normal",
@@ -50,10 +50,10 @@ export default function JoinGroupOg({ groupName }) {
 
       <div
         style={{
-          fontSize: "78px",
+          fontSize: "100px",
           fontWeight: 700,
           color: "#111",
-          marginTop: "250px",
+          marginTop: "200px",
           marginLeft: "35px",
         }}
       >
@@ -63,12 +63,13 @@ export default function JoinGroupOg({ groupName }) {
       <div
         style={{
           fontSize: 24,
+          fontSize: "40px",
           lineHeight: 26.1,
           fontWeight: 400,
           letterSpacing: 0, // "normal" becomes 0 in OG
           color: "#5f5f5f",
           fontFamily: "Inter",
-          marginTop: "-250px",
+          marginTop: "-430px",
           marginLeft: "35px",
         }}
       >
@@ -88,7 +89,7 @@ export default function JoinGroupOg({ groupName }) {
           position: "absolute",
 
           right: "50px",
-          bottom: "150px",
+          bottom: "110px",
           backgroundColor: "transparent",
         }}
       />
