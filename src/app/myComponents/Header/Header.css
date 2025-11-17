@@ -120,4 +120,20 @@
     }
 }
 
-@media screen and (min-height:1280px) {}
+@media screen and (min-height:900px) {
+    .header {
+        height: 100px;
+    }
+
+    .careers,
+    .privacy,
+    .terms {
+        padding: 10px 16px;
+        color: #828282;
+        font-size: 18.5px;
+        line-height: 30px;
+        position: relative;
+        transition: color 0.3s ease, opacity 0.3s ease;
+        text-decoration: none;
+    }
+}

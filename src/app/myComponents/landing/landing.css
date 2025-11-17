@@ -1,9 +1,4 @@
-/* =========================================================
-   BASE (MOBILE FIRST) — supports fixed header of 100px
-   → This is the default layout applied to ALL devices
-   → All media queries override this starting from below
-========================================================= */
-
+/* ========================================================= BASE (MOBILE FIRST) — supports fixed header of 100px ============================================== */
 .outer {
     width: 100%;
     height: 100svh;
@@ -25,12 +20,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     font-family: "Inter", sans-serif;
+    background-color: #ebebeb;
 }
 
-/* =========================================================
-   BASE MOBILE STRUCTURE (LEFT COLUMN + HERO + RIGHT OVERLAY)
-========================================================= */
-
+/* ========================================================= BASE MOBILE STRUCTURE (LEFT COLUMN + HERO + RIGHT OVERLAY) =========================================== */
 .left-landing {
     width: 100%;
     height: 100%;
@@ -62,10 +55,7 @@
     color: #000;
 }
 
-/* =========================================================
-   HERO IMAGE
-========================================================= */
-
+/* ========================================================= HERO IMAGE ========================================================= */
 .img-container-outer {
     display: flex;
     justify-content: flex-end;
@@ -89,17 +79,18 @@
     object-fit: fill;
 }
 
-/* =========================================================
-   RIGHT OVERLAY
-========================================================= */
-
+/* ========================================================= RIGHT OVERLAY ========================================================= */
 .right-landing {
     position: absolute;
     left: 0;
     display: flex;
     flex-direction: column;
     gap: 14px;
-    /* width: 278px; */
+    bottom: 7vh;
+}
+
+.right-landing a {
+    text-decoration: none;
 }
 
 .hero-description {
@@ -119,7 +110,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* background-color: aqua; */
 }
 
 .store-icons-container:hover {
@@ -143,7 +133,6 @@
 
 .store-icons span {
     color: white;
-    /* background-color: red; */
     padding-left: 7px;
     cursor: pointer;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
@@ -166,7 +155,6 @@
     filter: brightness(1.2);
 }
 
-
 .divider {
     width: 1px;
     height: 12px;
@@ -180,10 +168,7 @@
     opacity: 0.9;
 }
 
-/* =========================================================
-   MOBILE WIDTH BREAKPOINTS
-========================================================= */
-
+/* ========================================================= MOBILE WIDTH BREAKPOINTS ========================================================= */
 /* 320–349px */
 @media screen and (min-width: 320px) and (max-width: 349px) {
     .hero-img-container {
@@ -208,7 +193,6 @@
 @media screen and (min-width: 350px) and (max-width: 380px) {
     .hero-img-container {
         width: 200px;
-        /* background-color: gold; */
     }
 
     .img-container-outer {
@@ -220,22 +204,7 @@
     }
 }
 
-@media screen and (min-width: 330px) and (max-width: 370px) and (max-height: 650px) {
 
-    .title-text span {
-        line-height: 1;
-    }
-
-    .hero-img-container {
-        width: 300px;
-        height: 370px;
-    }
-
-    .right-landing {
-        bottom: 0px;
-        /* background-color: gray; */
-    }
-}
 
 /* 381–399px */
 @media screen and (min-width: 381px) and (max-width: 399px) {
@@ -260,7 +229,7 @@
 /* 400–420px benchmark */
 @media screen and (max-height: 920px) and (min-width: 400px) and (max-width: 420px) {
     .landing-page {
-        padding-top: 100px;
+        padding-top: 120px;
     }
 
     .title-text span {
@@ -300,10 +269,21 @@
     }
 }
 
-/* =========================================================
-   HEIGHT FIXES (tall → short)
-========================================================= */
+/* ========================================================= HEIGHT FIXES (tall → short) ========================================================= */
+@media screen and (max-height: 650px) and (min-height: 550px) {
+    .title-text span {
+        line-height: 1;
+    }
 
+    .hero-img-container {
+        width: 300px;
+        height: 370px;
+    }
+
+    .right-landing {
+        bottom: 0px;
+    }
+}
 
 @media screen and (max-height: 800px) and (max-width: 480px) {
     .right-landing {
@@ -332,16 +312,10 @@
         padding-top: 95px;
     }
 
-    /* .img-container-outer {
-        background-color: rebeccapurple;
-    } */
-
     .right-landing {
         bottom: 5.7%;
     }
 }
-
-
 
 @media screen and (max-height: 665px) {
     .landing-page {
@@ -375,10 +349,7 @@
     }
 }
 
-/* =========================================================
-   NARROW + SHORT COMBINATION
-========================================================= */
-
+/* ========================================================= NARROW + SHORT COMBINATION ========================================================= */
 @media screen and (max-height: 670px) and (min-width: 370px) and (max-width: 380px) {
     .landing-page {
         padding-top: 85px;
@@ -398,11 +369,8 @@
     }
 }
 
-/* =========================================================
-   TABLETS (portrait)
-========================================================= */
-
-@media screen and (min-width: 500px) and (max-width: 767px) and (min-height: 900px) {
+/* ========================================================= TABLETS (portrait) ========================================================= */
+@media screen and (min-width: 499px) and (max-width: 766px) and (min-height: 900px) {
     .landing-page {
         padding-left: clamp(15px, 4vw, 30px);
         padding-right: clamp(5px, 7vw, 90px);
@@ -426,7 +394,7 @@
 
     .hero-img-container {
         max-width: 377px;
-        height: 70vh;
+        height: 75vh;
         max-width: 377px;
     }
 
@@ -435,9 +403,7 @@
     }
 }
 
-/* =========================================================
-        TABLETS width: >800px height: >900px
-========================================================= */
+/* ========================================================= TABLETS width: >800px height: >900px =========================================== */
 @media screen and (min-width: 768px) and (max-width: 1030px) and (min-height:900px) and (max-height:1380px) {
     .landing-page {
         display: flex;
@@ -469,13 +435,12 @@
         width: 100%;
         align-items: center;
         justify-content: normal;
-        padding-top: 0px;
+        padding-top: 10px;
     }
 
     .hero-img-container {
-        min-width: 377px;
-        height: 780px;
-        /* untouched as requested */
+        min-width: 367px;
+        height: 750px;
     }
 
     .hero-description {
@@ -492,9 +457,7 @@
 }
 
 @media screen and (min-height:1280px) {
-
     .left-landing {
-        /* background-color: red; */
         padding-right: 0px;
     }
 
@@ -519,7 +482,6 @@
     .store-icons {
         padding: 12px 30px 12px 25px;
     }
-
 }
 
 /* tab width >500px and height <720px */
@@ -529,14 +491,11 @@
     }
 
     .left-landing {
-        /* background-color: red; */
         gap: 70px;
-
     }
 
     .img-container-outer {
         padding-top: 10%;
-        /* background-color: aqua; */
     }
 
     .hero-img-container {
@@ -549,27 +508,15 @@
     }
 }
 
-/* =========================================================
-   📱 FOLD DEVICES (add here — correct position)
-   → These sit ABOVE desktop queries
-   → They handle fold OUTER + INNER displays
-========================================================= */
-
-
-/* ---------------------------------------------
-   1️⃣ Samsung Galaxy Z Fold OUTER SCREEN
-   (Cover screen — tall + narrow)
-   Viewport approx: 384 × 885 / 412 × 915
----------------------------------------------- */
-@media screen and (min-width: 360px) and (max-width: 450px) and (min-height: 850px) and (max-height: 1000px) {
-
+/* ================================= FOLD DEVICES (add here — correct position) → These sit ABOVE desktop queries ==================================== */
+@media screen and (min-width: 358px) and (max-width: 450px) and (min-height: 850px) and (max-height: 1000px) {
     .landing-page {
         padding-top: 110px;
         padding-left: 35px;
     }
 
     .img-container-outer {
-        padding-top: 28%;
+        padding-top: 26%;
     }
 
     .hero-img-container {
@@ -587,15 +534,8 @@
     }
 }
 
-
-
-/* ---------------------------------------------
-   2️⃣ Samsung Galaxy Z Fold INNER SCREEN
-   (Unfolded tablet — wide + tall)
-   Viewport approx: 768 × 1812 / 800 × 1780
----------------------------------------------- */
+/* Viewport approx: 768 × 1812 / 800 × 1780 */
 @media screen and (min-width: 700px) and (max-width: 950px) and (min-height: 1500px) {
-
     .landing-page {
         flex-direction: row;
         padding-top: 130px;
@@ -630,15 +570,8 @@
     }
 }
 
-
-
-/* ---------------------------------------------
-   3️⃣ Oppo Find N / Pixel Fold
-   (Short + wide foldables)
-   Common viewport: 550–720 width, 1100–1400 height
----------------------------------------------- */
+/* viewport: 550–720 width, 1100–1400 height */
 @media screen and (min-width: 520px) and (max-width: 750px) and (min-height: 1100px) and (max-height: 1500px) {
-
     .landing-page {
         flex-direction: row;
         padding-top: 120px;
@@ -669,14 +602,8 @@
     }
 }
 
-
-
-/* ---------------------------------------------
-   4️⃣ Samsung Z Flip / Tall phones (super tall)
-   For very tall + narrow viewports
----------------------------------------------- */
+/* --------------------------------------------- Flip / Tall phones (super tall) For very tall + narrow viewports ---------------------------------------------- */
 @media screen and (min-width: 320px) and (max-width: 380px) and (min-height: 800px) {
-
     .landing-page {
         padding-top: 140px;
         /* background-color: red; */
@@ -696,11 +623,7 @@
     }
 }
 
-
-/* =========================================================
-   PHONE LANDSCAPE
-========================================================= */
-
+/* ========================================================= PHONE LANDSCAPE ========================================================= */
 @media screen and (orientation: landscape) and (max-height: 500px) {
     .landing-page {
         flex-direction: row;
@@ -738,5 +661,142 @@
 
     .hero-description {
         font-size: 14px;
+    }
+}
+
+/* ========================================================= DESKTOP: (>=1024px) ========================================================= */
+
+@media screen and (min-width: 1024px) {
+
+    /* 1024px Base Desktop Styling */
+    .landing-page {
+        padding-right: 85px;
+        padding-left: 48px;
+        padding-bottom: 40px;
+    }
+
+    .title-text span {
+        font-size: clamp(90px, 6.8vw, 156px);
+        line-height: clamp(64px, 7.6vw, 168px);
+        letter-spacing: -0.38rem;
+        font-weight: 600;
+    }
+
+    .left-landing {
+        align-items: flex-end;
+    }
+
+    .img-container-outer {
+        align-items: flex-end;
+        justify-content: left;
+        width: 100%;
+        padding-top: 0px;
+        padding-left: 70px;
+    }
+
+    .hero-img-container {
+        width: 47vw;
+        max-width: 380px;
+        height: auto;
+        aspect-ratio: 380 / 760;
+        position: relative;
+        margin: 0px;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .hero-img-container[data-preferred="desktop-fixed"] {
+        max-height: 830px;
+        width: auto;
+    }
+
+    .right-landing {
+        position: static;
+        width: 277px;
+        height: 260px;
+        gap: 14px;
+        padding-top: 20px;
+    }
+
+    .store-icons-container {
+        display: none;
+    }
+
+    .qr-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 280px;
+        padding: 9px 10px;
+        background: #fff;
+        border-radius: 20px;
+    }
+
+    .qr-container img,
+    .qr-container svg {
+        max-width: clamp(72px, 12vw, 115px);
+        max-height: clamp(72px, 12vw, 115px);
+        width: auto;
+        height: auto;
+        display: block;
+    }
+
+    .hero-description {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1.21px;
+    }
+
+    /* ========================================================= 
+       Desktop height adjustments (OVERLAYS ORIGINAL VALUES)
+       ========================================================= */
+
+    /* 1025px–1400px width → override padding + title size */
+    @media (min-width: 1025px) and (max-width: 1400px) {
+        .landing-page {
+            padding-right: 60px;
+        }
+
+        .title-text span {
+            font-size: clamp(90px, 8vw, 156px);
+            line-height: clamp(80px, 8vw, 168px);
+        }
+
+        .img-container-outer {
+            padding-left: 0px;
+        }
+
+        .hero-img-container {
+            max-height: 70vh;
+        }
+    }
+
+    /* 1400px wide + max-height 900px → override size only */
+    @media (min-width: 1400px) and (max-height: 1081px) {
+        .hero-img-container {
+            max-height: 70vh;
+        }
+
+        .title-text span {
+            font-size: clamp(90px, 8vw, 156px);
+            line-height: clamp(80px, 8vw, 168px);
+        }
+    }
+
+    /* Ultra-wide screens 1600px+ */
+    @media (min-width: 1600px) and (min-height: 1082px) {
+        .title-text span {
+            font-size: clamp(93px, 6.5vw, 180px);
+            line-height: clamp(92px, 7vw, 190px);
+        }
+
+        .hero-img-container {
+            width: clamp(420px, 26vw, 560px);
+            max-height: 88vh;
+        }
     }
 }
