@@ -444,6 +444,12 @@ html {
   .terms-privacy-title-container-line2 {
     display: none;
   }
+  .terms-privacy-title {
+    width: fit-content;
+  }
+  .terms-privacy-title-container {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 800px) {
