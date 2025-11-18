@@ -528,7 +528,7 @@ html {
 @media screen and (max-width: 400px) {
   .term-privacy-header {
     /* padding: 20px 4.72%; */
-    padding-bottom: 00px;
+    padding-bottom: 20px;
     padding-top: 20px;
   }
   .terms-privacy-content-title-text-box {

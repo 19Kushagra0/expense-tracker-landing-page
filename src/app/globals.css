@@ -30,7 +30,7 @@ body {
   padding: 0px;
   box-sizing: border-box;
 
-  /* background-color: #ebebeb; */
+  background-color: #ebebeb;
 }
 
 body.landing-page-active {
