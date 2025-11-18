@@ -1,11 +1,19 @@
 /* ========================================================= BASE (MOBILE FIRST) — supports fixed header of 100px ============================================== */
 .outer {
-  width: 100%;
-  height: 100svh;
-  min-height: 100svh;
-  overflow: hidden;
-  background-color: #ebebeb;
-  box-sizing: border-box;
+    width: 100%;
+    height: 100svh;
+    min-height: 100svh;
+    overflow: hidden;
+    background-color: #ebebeb;
+    box-sizing: border-box;
+}
+
+aside {
+    background-color: transparent;
+}
+
+.left-landing span {
+    background-color: transparent;
 }
 
 .landing-page {
@@ -24,58 +32,58 @@
 
 /* ========================================================= BASE MOBILE STRUCTURE (LEFT COLUMN + HERO + RIGHT OVERLAY) =========================================== */
 .left-landing {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  justify-content: normal;
-  align-items: flex-start;
-  /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: normal;
+    align-items: flex-start;
+    /* background-color: red; */
 }
 
 .title-text {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .title-text span {
-  font-weight: 600;
-  font-size: clamp(40px, 22vw, 55px);
-  letter-spacing: -2.75px;
-  line-height: 60px;
+    font-weight: 600;
+    font-size: clamp(40px, 22vw, 55px);
+    letter-spacing: -2.75px;
+    line-height: 60px;
 }
 
 .title-text .gray {
-  color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.1);
 }
 
 .title-text .black {
-  color: #000;
+    color: #000;
 }
 
 /* ========================================================= HERO IMAGE ========================================================= */
 .img-container-outer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  width: auto;
-  height: 100%;
-  padding-top: 24%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: auto;
+    height: 100%;
+    padding-top: 24%;
 }
 
 .hero-img-container {
-  width: 47vw;
-  max-width: 204px;
-  height: auto;
-  aspect-ratio: 204 / 444;
-  position: relative;
+    width: 47vw;
+    max-width: 204px;
+    height: auto;
+    aspect-ratio: 204 / 444;
+    position: relative;
 }
 
 .hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
 
 /* ========================================================= RIGHT OVERLAY ========================================================= */
@@ -93,15 +101,15 @@
 }
 
 .hero-description {
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 18.7px;
-  letter-spacing: -0.75px;
-  text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18.7px;
+    letter-spacing: -0.75px;
+    text-align: left;
 }
 
 .qr-container {
-  display: none;
+    display: none;
 }
 
 /* App Store Icons */
@@ -112,22 +120,22 @@
 }
 
 .store-icons-container:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .store-icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 3px;
-  background-color: black;
-  border-radius: 800px;
-  padding: 9px 20px 9px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    background-color: black;
+    border-radius: 800px;
+    padding: 9px 20px 9px 15px;
 }
 
 .store-icons:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
 }
 
 .store-icons span {
@@ -139,53 +147,53 @@
 
 .apple-icon:hover,
 .playstore-icon {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .apple-icon,
 .playstore-icon {
-  cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .apple-icon:hover,
 .playstore-icon:hover {
-  transform: scale(1.15) rotate(3deg);
-  filter: brightness(1.2);
+    transform: scale(1.15) rotate(3deg);
+    filter: brightness(1.2);
 }
 
 .divider {
-  width: 1px;
-  height: 12px;
-  background-color: #555;
-  margin: 0 10px;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+    width: 1px;
+    height: 12px;
+    background-color: #555;
+    margin: 0 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
 
 .store-icons:hover .divider {
-  opacity: 0.9;
+    opacity: 0.9;
 }
 
 /* ========================================================= MOBILE WIDTH BREAKPOINTS ========================================================= */
 /* 320–349px */
 @media screen and (min-width: 320px) and (max-width: 349px) {
-  .hero-img-container {
-    width: 46vw;
-    max-width: 180px;
-  }
+    .hero-img-container {
+        width: 46vw;
+        max-width: 180px;
+    }
 
-  .img-container-outer {
-    padding-top: 32%;
-  }
+    .img-container-outer {
+        padding-top: 32%;
+    }
 
-  .title-text span {
-    font-size: clamp(36px, 19vw, 50px);
-  }
+    .title-text span {
+        font-size: clamp(36px, 19vw, 50px);
+    }
 
-  .right-landing {
-    bottom: 18%;
-  }
+    .right-landing {
+        bottom: 18%;
+    }
 }
 
 /* 350–380px */
@@ -194,35 +202,35 @@
         width: 200px;
     }
 
-  .img-container-outer {
-    padding-top: 31%;
-  }
+    .img-container-outer {
+        padding-top: 31%;
+    }
 
-  .right-landing {
-    bottom: 22%;
-  }
+    .right-landing {
+        bottom: 22%;
+    }
 }
 
 
 
 /* 381–399px */
 @media screen and (min-width: 381px) and (max-width: 399px) {
-  .hero-img-container {
-    width: 48vw;
-    max-width: 200px;
-  }
+    .hero-img-container {
+        width: 48vw;
+        max-width: 200px;
+    }
 
-  .img-container-outer {
-    padding-top: 31%;
-  }
+    .img-container-outer {
+        padding-top: 31%;
+    }
 
-  .title-text span {
-    font-size: clamp(48px, 16vw, 64px);
-  }
+    .title-text span {
+        font-size: clamp(48px, 16vw, 64px);
+    }
 
-  .right-landing {
-    bottom: 20%;
-  }
+    .right-landing {
+        bottom: 20%;
+    }
 }
 
 /* 400–420px benchmark */
@@ -231,41 +239,41 @@
         padding-top: 120px;
     }
 
-  .title-text span {
-    font-size: clamp(60px, 14vw, 80px);
-  }
+    .title-text span {
+        font-size: clamp(60px, 14vw, 80px);
+    }
 
-  .img-container-outer {
-    padding-top: 30%;
-  }
+    .img-container-outer {
+        padding-top: 30%;
+    }
 
-  .hero-img-container {
-    width: 204px;
-  }
+    .hero-img-container {
+        width: 204px;
+    }
 
-  .right-landing {
-    bottom: 18%;
-  }
+    .right-landing {
+        bottom: 18%;
+    }
 }
 
 /* 421–480px */
 @media screen and (min-width: 421px) and (max-width: 500px) {
-  .hero-img-container {
-    width: 52vw;
-    max-width: 235px;
-  }
+    .hero-img-container {
+        width: 52vw;
+        max-width: 235px;
+    }
 
-  .img-container-outer {
-    padding-top: 28%;
-  }
+    .img-container-outer {
+        padding-top: 28%;
+    }
 
-  .title-text span {
-    font-size: clamp(52px, 15vw, 70px);
-  }
+    .title-text span {
+        font-size: clamp(52px, 15vw, 70px);
+    }
 
-  .right-landing {
-    bottom: 14%;
-  }
+    .right-landing {
+        bottom: 14%;
+    }
 }
 
 /* ========================================================= HEIGHT FIXES (tall → short) ========================================================= */
@@ -285,31 +293,31 @@
 }
 
 @media screen and (max-height: 800px) and (max-width: 480px) {
-  .right-landing {
-    bottom: 10%;
-  }
+    .right-landing {
+        bottom: 10%;
+    }
 }
 
 @media screen and (max-height: 800px) and (max-width: 370px) {
-  .landing-page {
-    padding-top: 100px;
-  }
+    .landing-page {
+        padding-top: 100px;
+    }
 
-  .hero-img-container {
-    width: 180px;
-    height: 430px;
-  }
+    .hero-img-container {
+        width: 180px;
+        height: 430px;
+    }
 
-  .right-landing {
-    bottom: 6%;
-  }
+    .right-landing {
+        bottom: 6%;
+    }
 }
 
 @media screen and (max-height: 715px) and (max-width: 480px) {
-  .landing-page {
-    padding-left: 22px;
-    padding-top: 95px;
-  }
+    .landing-page {
+        padding-left: 22px;
+        padding-top: 95px;
+    }
 
     .right-landing {
         bottom: 5.7%;
@@ -317,55 +325,55 @@
 }
 
 @media screen and (max-height: 665px) {
-  .landing-page {
-    padding-top: 80px;
-  }
+    .landing-page {
+        padding-top: 80px;
+    }
 
-  .hero-img-container {
-    max-height: 444px;
-  }
+    .hero-img-container {
+        max-height: 444px;
+    }
 
-  .img-container-outer {
-    padding-top: 25%;
-  }
+    .img-container-outer {
+        padding-top: 25%;
+    }
 
-  .title-text span {
-    font-size: clamp(46px, 2vh, 36px);
-  }
+    .title-text span {
+        font-size: clamp(46px, 2vh, 36px);
+    }
 
-  .right-landing {
-    bottom: 5%;
-  }
+    .right-landing {
+        bottom: 5%;
+    }
 }
 
 @media screen and (max-height: 600px) and (max-width: 480px) {
-  .hero-img-container {
-    height: clamp(280px, 48vh, 360px);
-  }
+    .hero-img-container {
+        height: clamp(280px, 48vh, 360px);
+    }
 
-  .title-text span {
-    font-size: clamp(34px, 18vw, 48px);
-  }
+    .title-text span {
+        font-size: clamp(34px, 18vw, 48px);
+    }
 }
 
 /* ========================================================= NARROW + SHORT COMBINATION ========================================================= */
 @media screen and (max-height: 670px) and (min-width: 370px) and (max-width: 380px) {
-  .landing-page {
-    padding-top: 85px;
-    padding-left: 20px;
-  }
+    .landing-page {
+        padding-top: 85px;
+        padding-left: 20px;
+    }
 
-  .img-container-outer {
-    padding-top: 25%;
-  }
+    .img-container-outer {
+        padding-top: 25%;
+    }
 
-  .hero-img-container {
-    height: 380px;
-  }
+    .hero-img-container {
+        height: 380px;
+    }
 
-  .right-landing {
-    bottom: 8%;
-  }
+    .right-landing {
+        bottom: 8%;
+    }
 }
 
 /* ========================================================= TABLETS (portrait) ========================================================= */
@@ -485,9 +493,9 @@
 
 /* tab width >500px and height <720px */
 @media screen and (min-width: 500px) and (min-height: 700px) and (max-height: 750px) {
-  .landing-page {
-    padding-top: 100px;
-  }
+    .landing-page {
+        padding-top: 100px;
+    }
 
     .left-landing {
         gap: 70px;
@@ -497,14 +505,14 @@
         padding-top: 10%;
     }
 
-  .hero-img-container {
-    width: 380px;
-    height: auto;
-  }
+    .hero-img-container {
+        width: 380px;
+        height: auto;
+    }
 
-  .right-landing {
-    bottom: 10%;
-  }
+    .right-landing {
+        bottom: 10%;
+    }
 }
 
 /* ================================= FOLD DEVICES (add here — correct position) → These sit ABOVE desktop queries ==================================== */
@@ -518,19 +526,19 @@
         padding-top: 26%;
     }
 
-  .hero-img-container {
-    width: 230px;
-    height: auto;
-  }
+    .hero-img-container {
+        width: 230px;
+        height: auto;
+    }
 
-  .title-text span {
-    font-size: clamp(55px, 11vw, 75px);
-    line-height: 1.05;
-  }
+    .title-text span {
+        font-size: clamp(55px, 11vw, 75px);
+        line-height: 1.05;
+    }
 
-  .right-landing {
-    bottom: 12%;
-  }
+    .right-landing {
+        bottom: 12%;
+    }
 }
 
 /* Viewport approx: 768 × 1812 / 800 × 1780 */
@@ -547,26 +555,26 @@
         gap: 70px;
     }
 
-  .title-text span {
-    font-size: clamp(80px, 7vw, 150px);
-    line-height: clamp(90px, 8vw, 165px);
-  }
+    .title-text span {
+        font-size: clamp(80px, 7vw, 150px);
+        line-height: clamp(90px, 8vw, 165px);
+    }
 
-  .img-container-outer {
-    padding-top: 0;
-    justify-content: center;
-    align-items: center;
-  }
+    .img-container-outer {
+        padding-top: 0;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .hero-img-container {
-    min-width: 420px;
-    max-width: 520px;
-    height: 900px;
-  }
+    .hero-img-container {
+        min-width: 420px;
+        max-width: 520px;
+        height: 900px;
+    }
 
-  .right-landing {
-    bottom: 18%;
-  }
+    .right-landing {
+        bottom: 18%;
+    }
 }
 
 /* viewport: 550–720 width, 1100–1400 height */
@@ -581,24 +589,24 @@
         gap: 8%;
     }
 
-  .img-container-outer {
-    padding-top: 10%;
-    justify-content: center;
-  }
+    .img-container-outer {
+        padding-top: 10%;
+        justify-content: center;
+    }
 
-  .hero-img-container {
-    min-width: 360px;
-    max-width: 440px;
-    height: 820px;
-  }
+    .hero-img-container {
+        min-width: 360px;
+        max-width: 440px;
+        height: 820px;
+    }
 
-  .title-text span {
-    font-size: clamp(70px, 6vw, 130px);
-  }
+    .title-text span {
+        font-size: clamp(70px, 6vw, 130px);
+    }
 
-  .right-landing {
-    bottom: 14%;
-  }
+    .right-landing {
+        bottom: 14%;
+    }
 }
 
 /* --------------------------------------------- Flip / Tall phones (super tall) For very tall + narrow viewports ---------------------------------------------- */
@@ -612,14 +620,14 @@
         padding-top: 32%;
     }
 
-  .hero-img-container {
-    width: 220px;
-    height: auto;
-  }
+    .hero-img-container {
+        width: 220px;
+        height: auto;
+    }
 
-  .right-landing {
-    bottom: 20%;
-  }
+    .right-landing {
+        bottom: 20%;
+    }
 }
 
 /* ========================================================= PHONE LANDSCAPE ========================================================= */
