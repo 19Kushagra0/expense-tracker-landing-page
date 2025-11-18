@@ -15,7 +15,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 65px 4.72%;
+  padding: 40px 4.72%;
   z-index: 9;
 }
 
@@ -96,19 +96,37 @@ html {
   width: fit-content;
   display: flex;
   flex-direction: column;
-  padding-bottom: 62px;
   color: black;
   padding-bottom: 44px;
 
   /* background-color: red; */
 
-  height: 150px;
+  height: 100px;
+}
+.terms-privacy-title-container-line,
+.terms-privacy-title-container-line2 {
+  width: 330px;
+  height: 1px;
+  background-color: #d8d8d8;
+}
+
+.terms-privacy-title-container-line2 {
+  width: 390px;
+}
+.terms-privacy-title-container-line {
+  width: 330px;
+  height: 1px;
+  background-color: #d8d8d8;
 }
 
 .terms-privacy-title-box {
-  /* width: fit-content; */
+  width: 100%;
+
   padding: 10px 0;
-  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 0px;
+
+  /* padding-bottom: 27px; */
+  /* border-bottom: 1px solid #d8d8d8; */
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -117,7 +135,9 @@ html {
   /*  */
   position: fixed;
 
-  top: 155px;
+  top: 105px;
+  background-color: #ebebeb;
+  /* background-color: blue; */
 }
 
 .terms-privacy-title {
@@ -174,7 +194,7 @@ html {
   /*  */
   position: fixed;
   /*  */
-  top: 330px;
+  top: 290px;
 }
 .terms-privacy-index {
   display: flex;
@@ -288,9 +308,8 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 64px 0 42px;
-
-  padding-top: 0px;
+  padding: 20px 0;
+  padding-bottom: 20px;
 }
 
 .terms-privacy-numora-icon {
@@ -332,7 +351,7 @@ html {
   display: flex !important;
 }
 /* ===== RESPONSIVE ===== */
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   .termsPage,
   .privacyPage {
     padding: 192px 1.72% 0;
@@ -344,8 +363,24 @@ html {
     padding-left: 1.72%;
     padding-right: 1.72%;
   }
+} */
+@media screen and (max-width: 1286px) {
+  .privacyPage,
+  .termsPage {
+    padding: 192px 1.72% 0;
+  }
+  .term-privacy-header {
+    /* padding: 45px ; */
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  .terms-privacy-index-content-container {
+    gap: 0px;
+  }
+  .terms-privacy-index-container {
+    max-width: 410px;
+  }
 }
-
 @media screen and (max-width: 1000px) {
   .privacyPage,
   .termsPage {
@@ -378,6 +413,14 @@ html {
   }
   .term-privacy-header {
     padding: 45px 4.72%;
+  }
+  .terms-privacy-title-box {
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 1px;
+  }
+  .terms-privacy-title-container-line,
+  .terms-privacy-title-container-line2 {
+    display: none;
   }
 }
 
