@@ -5,10 +5,10 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 
 import "@/app/join-group/components/Join-group.css";
-
+const inter = Inter({ subsets: ["latin"] });
 export default function JoinGroup({ groupName }) {
   return (
-    <div className="join-group">
+    <div className="${inter.className} join-group">
       <div className="join-group-background-image-container">
         <div className="join-group-background-image">
           <div className="join-group-invitation-button">

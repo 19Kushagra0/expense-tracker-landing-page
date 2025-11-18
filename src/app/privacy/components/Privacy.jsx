@@ -4,6 +4,7 @@ import "@/app/style.css";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import Navbar from "@/app/myComponents/Navbar/Navbar";
+const inter = Inter({ subsets: ["latin"] });
 export default function privacy1() {
   const [navBar, setNavBar] = useState(false);
 
@@ -19,7 +20,7 @@ export default function privacy1() {
   }
 
   return (
-    <div className="privacyPage">
+    <div className="${inter.className} privacyPage">
       <div className="term-privacy-header">
         <Link href="/">
           <svg
