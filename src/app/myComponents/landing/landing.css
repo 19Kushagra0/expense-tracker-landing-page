@@ -98,6 +98,7 @@ aside {
 
 .right-landing a {
     text-decoration: none;
+    background-color: transparent;
 }
 
 .hero-description {
@@ -106,6 +107,7 @@ aside {
     line-height: 18.7px;
     letter-spacing: -0.75px;
     text-align: left;
+    background-color: transparent;
 }
 
 .qr-container {
@@ -143,6 +145,7 @@ aside {
     padding-left: 7px;
     cursor: pointer;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: transparent;
 }
 
 .apple-icon:hover,
@@ -154,6 +157,7 @@ aside {
 .playstore-icon {
     cursor: pointer;
     transition: transform 0.3s ease, filter 0.3s ease;
+    background-color: transparent;
 }
 
 .apple-icon:hover,
