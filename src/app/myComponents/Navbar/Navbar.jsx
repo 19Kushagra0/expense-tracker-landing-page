@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 import "@/app/myComponents/Navbar/Navbar.css";
 import Link from "next/link";
-
+import { Inter } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
 export default function Navbar({ showNavBar }) {
   const [isClosing, setIsClosing] = useState(false);
 
@@ -38,7 +39,9 @@ export default function Navbar({ showNavBar }) {
       {/* Backdrop overlay */}
       <div
         onClick={handleClose}
-        className={`navbar-cover ${isClosing ? "cover-closing" : ""}`}
+        className={`navbar-cover ${isClosing ? "cover-closing" : ""} ${
+          inter.className
+        } `}
         aria-hidden="true"
       />
 

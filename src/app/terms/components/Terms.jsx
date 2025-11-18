@@ -4,6 +4,7 @@ import "@/app/style.css";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import Navbar from "@/app/myComponents/Navbar/Navbar";
+const inter = Inter({ subsets: ["latin"] });
 export default function Terms() {
   const [navBar, setNavBar] = useState(false);
 
@@ -18,7 +19,7 @@ export default function Terms() {
     el.classList.add("active-index");
   }
   return (
-    <div className="termsPage">
+    <div className="${inter.className} termsPage">
       <div className="term-privacy-header">
         <Link href="/">
           <svg
