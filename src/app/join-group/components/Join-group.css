@@ -542,7 +542,7 @@ div {
 @media screen and (max-width: 800px) {
   .join-group {
     padding: 6% 1px;
-    padding-top: 10%;
+    padding-top: 0%;
   }
   .join-group-background-image {
     width: 100%;
