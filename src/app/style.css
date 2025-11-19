@@ -5,6 +5,9 @@
 html {
   scroll-behavior: smooth;
 }
+span {
+  background-color: transparent;
+}
 .terms-privacy-content-title-text-box {
   scroll-margin-top: 170px; /* Adjust based on your fixed header height */
 }
@@ -155,6 +158,8 @@ html {
 .terms-privacy-time-container {
   display: flex;
   flex-direction: column;
+
+  background-color: transparent;
 }
 
 .terms-privacy-last-update,
