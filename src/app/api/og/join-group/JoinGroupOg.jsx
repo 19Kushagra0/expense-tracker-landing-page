@@ -25,21 +25,20 @@ export default function JoinGroupOg({ groupName }) {
       />
       <div
         style={{
-          width: "230px",
+          width: "290px",
           marginBottom: "20px",
           backgroundColor: "black",
 
           color: "white",
-          padding: "20px 30px",
+          padding: "30px 30px",
           borderRadius: "100px",
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
           marginTop: "30px",
-          marginLeft: "300px",
-          // marginLeft: "30px",
-          fontSize: "30px",
+          marginLeft: "30px",
+          fontSize: "40px",
           lineHeight: "normal",
           fontWeight: "400",
           letterSpacing: "normal",
@@ -51,33 +50,31 @@ export default function JoinGroupOg({ groupName }) {
 
       <div
         style={{
-          fontSize: "75px",
+          fontSize: "100px",
           fontWeight: 700,
           color: "#111",
           marginTop: "200px",
           marginLeft: "35px",
-          marginLeft: "300px",
         }}
       >
         {groupName}
       </div>
-      <span
+
+      <div
         style={{
-          width: "630px",
-          fontSize: 20,
+          fontSize: 24,
           fontSize: "40px",
-          // lineHeight: 26.1,
+          lineHeight: 26.1,
           fontWeight: 400,
           letterSpacing: 0, // "normal" becomes 0 in OG
           color: "#5f5f5f",
           fontFamily: "Inter",
-          // marginTop: "-430px",
+          marginTop: "-430px",
           marginLeft: "35px",
-          marginLeft: "300px",
         }}
       >
         Add, track and split expenses with your friends
-      </span>
+      </div>
 
       <img
         src="https://expense-tracker-alpha-lyart.vercel.app/icons/logo.svg"
@@ -91,7 +88,7 @@ export default function JoinGroupOg({ groupName }) {
           backgroundColor: "black",
           position: "absolute",
 
-          right: "200px",
+          right: "50px",
           bottom: "110px",
           backgroundColor: "transparent",
         }}
