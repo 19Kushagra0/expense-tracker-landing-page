@@ -33,7 +33,7 @@ export default function JoinGroupOg({ groupName }) {
         style={{
           backgroundColor: "black",
           color: "white",
-          padding: "22px 46px",
+          padding: "15px 30px",
           borderRadius: "100px",
           fontSize: "36px",
           fontWeight: 500,
@@ -59,11 +59,12 @@ export default function JoinGroupOg({ groupName }) {
       <div
         style={{
           fontSize: "40px",
-          lineHeight: 26.1,
+          // lineHeight: 26.1,
           fontWeight: 400,
           color: "#5f5f5f",
-          lineHeight: 1.25,
-          maxWidth: "900px",
+          fontFamily: "Inter",
+          // marginTop: "-430px",
+          marginLeft: "35px",
         }}
       >
         Add, track and split expenses with your friends
