@@ -66,7 +66,6 @@ export default function JoinGroupOg({ groupName }) {
           width: "630px",
           fontSize: 20,
           fontSize: "40px",
-          // lineHeight: 26.1,
           fontWeight: 400,
           letterSpacing: 0, // "normal" becomes 0 in OG
           color: "#5f5f5f",
