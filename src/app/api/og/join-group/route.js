@@ -15,7 +15,3 @@ export async function GET(req) {
     height: 630,
   });
 }
-//
-//
-//
-//
