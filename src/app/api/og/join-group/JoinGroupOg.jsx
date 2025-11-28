@@ -64,12 +64,11 @@ export default function JoinGroupOg({ groupName }) {
         style={{
           fontSize: 24,
           fontSize: "40px",
-          lineHeight: 26.1,
           fontWeight: 400,
           letterSpacing: 0, // "normal" becomes 0 in OG
           color: "#5f5f5f",
           fontFamily: "Inter",
-          marginTop: "-430px",
+          // marginTop: "-430px",
           marginLeft: "35px",
         }}
       >
