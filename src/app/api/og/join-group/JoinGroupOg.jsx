@@ -59,6 +59,7 @@ export default function JoinGroupOg({ groupName }) {
       <div
         style={{
           fontSize: "40px",
+          lineHeight: 26.1,
           fontWeight: 400,
           color: "#5f5f5f",
           lineHeight: 1.25,
