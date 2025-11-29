@@ -13,13 +13,18 @@ export async function generateMetadata({ searchParams }) {
     openGraph: {
       title,
       description,
-      url: `https://expense-tracker-alpha-lyart.vercel.app/api/og/join-group?groupName=${groupName}`,
+      url: "https://www.getnumora.com/join-group",
       type: "website",
       images: [
         {
           // 🔥 IMPORTANT CHANGE: Add `&v=${groupName}` to force OG image refresh per group.
           // This prevents Instagram from using its old cached image.
-          url: `/api/og/join-group?groupName=${groupName}`,
+          url:
+            groupName && groupName !== "Your Group"
+              ? `/api/og/join-group?groupName=${encodeURIComponent(
+                  groupName
+                )}&v=${encodeURIComponent(groupName)}` // 👈 cache-buster
+              : `/api/og/join-group?default=true`,
 
           width: 1200,
           height: 630,
