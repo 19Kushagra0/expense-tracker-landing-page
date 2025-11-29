@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 
 export default function JoinGroupOg({ groupName }) {
+  const displayName = groupName?.trim() ? groupName : "Your Group";
+
   return (
     <div
       style={{
@@ -57,7 +59,7 @@ export default function JoinGroupOg({ groupName }) {
           marginLeft: "35px",
         }}
       >
-        {groupName}
+        {displayName}
       </div>
 
       <div
