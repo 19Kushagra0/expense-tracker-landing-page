@@ -1,5 +1,3 @@
-import { Inter } from "next/font/google";
-
 export default function JoinGroupOg({ groupName }) {
   return (
     <div
@@ -9,64 +7,60 @@ export default function JoinGroupOg({ groupName }) {
         background: "white",
         display: "flex",
         flexDirection: "column",
+        justifyContent: "center", // center safe for Instagram
+        alignItems: "flex-start", // keep left-look style
+        position: "relative",
+        padding: "70px 100px", // top/bottom safe space for 1×1 crop
+        gap: "32px", // spacing between elements
         fontFamily: "Inter, sans-serif",
-        gap: "0px",
       }}
     >
+      {/* Background */}
       <img
         src="https://expense-tracker-alpha-lyart.vercel.app/images/background/join-group-pattern.svg"
         alt="Hero Banner"
         width="100%"
-        height="300px"
+        height="280px"
         style={{
           objectFit: "contain",
           position: "absolute",
+          top: "0px",
         }}
       />
+
+      {/* INVITATION badge */}
       <div
         style={{
-          width: "290px",
-          marginBottom: "20px",
           backgroundColor: "black",
-
           color: "white",
           padding: "15px 30px",
           borderRadius: "100px",
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "center",
-          marginTop: "30px",
-          marginLeft: "30px",
-          fontSize: "40px",
-          lineHeight: "normal",
-          fontWeight: "400",
-          letterSpacing: "normal",
-          letterSpacing: "0.7px",
+          fontSize: "36px",
+          fontWeight: 500,
         }}
       >
         INVITATION
       </div>
 
+      {/* Group Name */}
       <div
         style={{
-          fontSize: "100px",
+          fontSize: "90px",
           fontWeight: 700,
           color: "#111",
-          marginTop: "200px",
-          marginLeft: "35px",
+          lineHeight: 1.05,
+          maxWidth: "900px",
         }}
       >
         {groupName}
       </div>
 
+      {/* Subtitle */}
       <div
         style={{
-          fontSize: 24,
           fontSize: "40px",
           // lineHeight: 26.1,
           fontWeight: 400,
-          letterSpacing: 0, // "normal" becomes 0 in OG
           color: "#5f5f5f",
           fontFamily: "Inter",
           // marginTop: "-430px",
@@ -76,21 +70,17 @@ export default function JoinGroupOg({ groupName }) {
         Add, track and split expenses with your friends
       </div>
 
+      {/* Logo */}
       <img
         src="https://expense-tracker-alpha-lyart.vercel.app/icons/logo.svg"
-        alt="Hero Banner"
-        width={50}
-        height={50}
+        alt=""
         style={{
-          objectFit: "contain",
-          width: "50px",
-          height: "50px",
-          backgroundColor: "black",
           position: "absolute",
-
-          right: "50px",
-          bottom: "110px",
-          backgroundColor: "transparent",
+          right: "46px",
+          bottom: "46px",
+          width: "60px",
+          height: "60px",
+          objectFit: "contain",
         }}
       />
     </div>
