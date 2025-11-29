@@ -1,7 +1,8 @@
 import { Inter } from "next/font/google";
 
 export default function JoinGroupOg({ groupName }) {
-  const displayName = groupName?.trim() ? groupName : "Your Group";
+  const displayName =
+    groupName && groupName.trim().length > 0 ? groupName : "Your Group";
 
   return (
     <div
