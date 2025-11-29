@@ -38,6 +38,8 @@ export default function JoinGroupOg({ groupName }) {
           justifyContent: "center",
           marginTop: "30px",
           marginLeft: "30px",
+          marginLeft: "330px",
+
           fontSize: "40px",
           lineHeight: "normal",
           fontWeight: "400",
@@ -55,6 +57,7 @@ export default function JoinGroupOg({ groupName }) {
           color: "#111",
           marginTop: "200px",
           marginLeft: "35px",
+          marginLeft: "330px",
         }}
       >
         {groupName}
@@ -71,6 +74,8 @@ export default function JoinGroupOg({ groupName }) {
           fontFamily: "Inter",
           // marginTop: "-430px",
           marginLeft: "35px",
+          marginLeft: "330px",
+          width: "600px",
         }}
       >
         Add, track and split expenses with your friends
@@ -83,7 +88,7 @@ export default function JoinGroupOg({ groupName }) {
         height={50}
         style={{
           objectFit: "contain",
-          width: "50px",
+          width: "250px",
           height: "50px",
           backgroundColor: "black",
           position: "absolute",
