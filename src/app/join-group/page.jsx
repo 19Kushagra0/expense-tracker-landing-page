@@ -13,7 +13,7 @@ export async function generateMetadata({ searchParams }) {
     openGraph: {
       title,
       description,
-      url: "https://www.getnumora.com/join-group",
+      url: `https://expense-tracker-alpha-lyart.vercel.app/api/og/join-group?groupName=${groupName}`,
       type: "website",
       images: [
         {
