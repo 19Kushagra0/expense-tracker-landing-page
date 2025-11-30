@@ -56,7 +56,7 @@ export default function JoinGroupOg({ groupName }) {
           color: "#111",
           marginTop: "200px",
           marginLeft: "34px",
-          paddingTop: "100px",
+          paddingTop: "80px",
         }}
       >
         {displayName}
