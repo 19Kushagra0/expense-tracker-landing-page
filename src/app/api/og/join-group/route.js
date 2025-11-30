@@ -1,8 +1,8 @@
 import { ImageResponse } from "next/og";
 import JoinGroupOg from "./JoinGroupOg";
 
-// export const runtime = "edge";
-export const runtime = "nodejs";
+export const runtime = "edge";
+// export const runtime = "nodejs";
 
 // 1) Load your font files from the fonts folder
 const interMediumFont = fetch(
