@@ -5,11 +5,11 @@ export const runtime = "edge";
 
 // 1) Load your font files from the fonts folder
 const interMediumFont = fetch(
-  new URL("./fonts/Inter_28pt-Medium.ttf", import.meta.url)
+  new URL("./fonts/Inter_28pt-Medium.woff2", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
 const interSemiBoldFont = fetch(
-  new URL("./fonts/Inter_28pt-SemiBold.ttf", import.meta.url)
+  new URL("./fonts/Inter_28pt-SemiBold.woff2", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
 export async function GET(req) {
