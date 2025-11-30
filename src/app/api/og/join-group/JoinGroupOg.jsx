@@ -11,6 +11,7 @@ export default function JoinGroupOg({ groupName }) {
         display: "flex",
         flexDirection: "column",
         gap: "0px",
+        fontFamily: "Inter",
       }}
     >
       <img
@@ -40,7 +41,7 @@ export default function JoinGroupOg({ groupName }) {
           marginLeft: "34px",
           fontSize: "40px",
           lineHeight: "normal",
-          fontWeight: "400",
+          fontWeight: "500",
           letterSpacing: "normal",
           letterSpacing: "0.7px",
         }}
@@ -55,7 +56,7 @@ export default function JoinGroupOg({ groupName }) {
           color: "#111",
           marginTop: "200px",
           marginLeft: "34px",
-          paddingTop: "80px",
+          paddingTop: "100px",
         }}
       >
         {displayName}
@@ -66,9 +67,9 @@ export default function JoinGroupOg({ groupName }) {
           fontSize: 24,
           fontSize: "40px",
           // lineHeight: 26.1,
-          fontWeight: 400,
+          fontWeight: 500,
           letterSpacing: 0,
-          color: "#5f5f5f",
+          color: "#828282",
           marginLeft: "34px",
         }}
       >
