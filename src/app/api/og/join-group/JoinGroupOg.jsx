@@ -1,5 +1,3 @@
-import { Inter } from "next/font/google";
-
 export default function JoinGroupOg({ groupName }) {
   const displayName =
     groupName && groupName.trim().length > 0 ? groupName : "Your Group";
@@ -12,7 +10,6 @@ export default function JoinGroupOg({ groupName }) {
         background: "white",
         display: "flex",
         flexDirection: "column",
-        fontFamily: "Inter, sans-serif",
         gap: "0px",
       }}
     >
@@ -58,7 +55,6 @@ export default function JoinGroupOg({ groupName }) {
           color: "#111",
           marginTop: "200px",
           marginLeft: "34px",
-          fontFamily: "Inter, sans-serif",
           paddingTop: "80px",
         }}
       >
@@ -71,10 +67,8 @@ export default function JoinGroupOg({ groupName }) {
           fontSize: "40px",
           // lineHeight: 26.1,
           fontWeight: 400,
-          letterSpacing: 0, // "normal" becomes 0 in OG
+          letterSpacing: 0,
           color: "#5f5f5f",
-          fontFamily: "Inter",
-          // marginTop: "-430px",
           marginLeft: "34px",
         }}
       >
