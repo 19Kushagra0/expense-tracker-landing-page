@@ -19,8 +19,7 @@ export async function generateMetadata({ searchParams }) {
       type: "website",
       images: [
         {
-          // ⬇ v=3 forces Instagram to refresh to new OG (don't remove version)
-          url: `/api/og/join-group?groupName=${groupName}&v=3`,
+          url: `/api/og/join-group?groupName=${groupName}&v=4`,
           width: 1200,
           height: 630,
         },
