@@ -2,9 +2,7 @@ import JoinGroup from "./components/Join-group";
 
 export async function generateMetadata({ searchParams }) {
   const params = await searchParams;
-
-  // ⬇ New default name so Instagram treats it as dynamic invite (fixes 1:1 square)
-  const groupName = params.groupName || "Join the Group";
+  const groupName = params.groupName || "Your Group";
 
   const title = `${groupName} - Numora`;
   const description = "Add, track, and split expenses with your friends";
@@ -38,9 +36,7 @@ export async function generateMetadata({ searchParams }) {
 
 export default async function Page({ searchParams }) {
   const params = await searchParams;
-
-  // ⬇ Must match the same default above
-  const groupName = params.groupName || "Join the Group";
+  const groupName = params.groupName || "Your Group";
 
   return <JoinGroup groupName={groupName} />;
 }
