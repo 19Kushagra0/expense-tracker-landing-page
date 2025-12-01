@@ -1,4 +1,7 @@
 export default function JoinGroupOg({ groupName }) {
+  const displayName =
+    groupName && groupName.trim().length > 0 ? groupName : "Your Group";
+
   return (
     <div
       style={{
@@ -56,7 +59,7 @@ export default function JoinGroupOg({ groupName }) {
           paddingTop: "80px",
         }}
       >
-        {groupName}
+        {displayName}
       </div>
 
       <div
@@ -93,4 +96,3 @@ export default function JoinGroupOg({ groupName }) {
     </div>
   );
 }
-//

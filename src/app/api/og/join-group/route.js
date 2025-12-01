@@ -1,18 +1,21 @@
 import { ImageResponse } from "next/og";
 import JoinGroupOg from "./JoinGroupOg";
 
-export const runtime = "edge"; // OG images must run on edge
+export const runtime = "edge";
 
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
 
-  // Read groupName from URL
-  const groupName = searchParams.get("groupName") || "Your Group";
+  // Detect ?default (same behavior as before)
+  const defaultFlag = searchParams.get("default");
 
-  // Return OG Image
+  // Better default name so Instagram always shows wide preview
+  const groupName = defaultFlag
+    ? "Friends Group"
+    : searchParams.get("groupName") || "Friends Group";
+
   return new ImageResponse(<JoinGroupOg groupName={groupName} />, {
     width: 1200,
     height: 630,
   });
 }
-//
