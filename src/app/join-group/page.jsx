@@ -2,9 +2,7 @@ import JoinGroup from "./components/Join-group";
 
 export async function generateMetadata({ searchParams }) {
   const params = await searchParams;
-
-  // ⬇ New default name so Instagram treats it as dynamic invite (fixes 1:1 square)
-  const groupName = params.groupName || "Join the Group";
+  const groupName = params.groupName || "Your Group";
 
   const title = `${groupName} - Numora`;
   const description = "Add, track, and split expenses with your friends";
@@ -19,7 +17,15 @@ export async function generateMetadata({ searchParams }) {
       type: "website",
       images: [
         {
-          url: `/api/og/join-group?groupName=${groupName}&v=4`,
+          // 🔥 IMPORTANT CHANGE: Add `&v=${groupName}` to force OG image refresh per group.
+          // This prevents Instagram from using its old cached image.
+          url:
+            groupName && groupName !== "Your Group"
+              ? `/api/og/join-group?groupName=${encodeURIComponent(
+                  groupName
+                )}&v=${encodeURIComponent(groupName)}` // 👈 cache-buster
+              : `/api/og/join-group?default=true`,
+
           width: 1200,
           height: 630,
         },
@@ -30,9 +36,7 @@ export async function generateMetadata({ searchParams }) {
 
 export default async function Page({ searchParams }) {
   const params = await searchParams;
-
-  // ⬇ Must match the same default above
-  const groupName = params.groupName || "Join the Group";
+  const groupName = params.groupName || "Your Group";
 
   return <JoinGroup groupName={groupName} />;
 }
