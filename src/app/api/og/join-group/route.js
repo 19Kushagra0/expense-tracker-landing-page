@@ -6,13 +6,10 @@ export const runtime = "edge";
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
 
-  // Detect ?default (same behavior as before)
   const defaultFlag = searchParams.get("default");
-
-  // Better default name so Instagram always shows wide preview
   const groupName = defaultFlag
-    ? "Friends Group"
-    : searchParams.get("groupName") || "Friends Group";
+    ? "Your Group"
+    : searchParams.get("groupName") || "Your Group";
 
   return new ImageResponse(<JoinGroupOg groupName={groupName} />, {
     width: 1200,
