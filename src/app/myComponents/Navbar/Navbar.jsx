@@ -4,50 +4,35 @@ import "@/app/myComponents/Navbar/Navbar.css";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
-export default function Navbar({ showNavBar }) {
-  const [isClosing, setIsClosing] = useState(false);
 
-  // Prevent body scroll when navbar is open
+export default function Navbar({ showNavBar }) {
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
-    document.body.style.overflow = "hidden";
-    document.body.style.height = "100vh";
-    return () => {
-      document.body.style.overflow = "";
-      document.body.style.height = "";
-    };
+    setIsOpen(true);
   }, []);
 
-  // Handle ESC key to close navbar
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === "Escape") handleClose();
-    };
-    document.addEventListener("keydown", handleEscape);
-    return () => document.removeEventListener("keydown", handleEscape);
-  });
-
-  // Handle close with animation
   const handleClose = () => {
-    setIsClosing(true);
+    setIsOpen(false);
+
+    // 2) after animation ends, call parent to unmount
+    // setTimeout(() => {
+    //   showNavBar(); // this is your old close function
+    // }, 400);
+
     setTimeout(() => {
       showNavBar();
-    }, 500); // match with CSS animation duration
+    }, 200);
   };
 
   return (
     <>
       {/* Backdrop overlay */}
-      <div
-        onClick={handleClose}
-        className={`navbar-cover ${isClosing ? "cover-closing" : ""} ${
-          inter.className
-        } `}
-        aria-hidden="true"
-      />
+      <div onClick={handleClose} className="navbar-cover" aria-hidden="true" />
 
       {/* Navigation panel */}
       <nav
-        className={`navbar ${isClosing ? "nav-closing" : ""}`}
+        // className={"navbar"}
+        className={`navbar ${isOpen ? "open" : ""}  ${inter.className}`}
         role="navigation"
         aria-label="Main navigation"
       >
@@ -85,6 +70,7 @@ export default function Navbar({ showNavBar }) {
             />
           </svg>
         </button>
+
         {/* Navigation links */}
         <div className="navbar-links">
           <Link onClick={handleClose} href="/career" className="navbar-button">
@@ -97,12 +83,6 @@ export default function Navbar({ showNavBar }) {
             Terms
           </Link>
         </div>
-        {/* Footer */}
-        {/* <div className="navbar-footer">
-          <p className="navbar-footer-text">
-            © 2024 Your Company. All rights reserved.
-          </p>
-        </div> */}
       </nav>
     </>
   );

@@ -103,9 +103,9 @@ div {
 .join-group-tag-line {
   font-size: 18px;
   line-height: 26.1px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: normal;
-  color: #5f5f5f;
+  color: #828282;
 }
 
 /* Dowload — button */
@@ -542,7 +542,7 @@ div {
 @media screen and (max-width: 800px) {
   .join-group {
     padding: 6% 1px;
-    padding-top: 10%;
+    padding-top: 0%;
   }
   .join-group-background-image {
     width: 100%;

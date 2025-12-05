@@ -1,6 +1,7 @@
-import { Inter } from "next/font/google";
-
 export default function JoinGroupOg({ groupName }) {
+  const displayName =
+    groupName && groupName.trim().length > 0 ? groupName : "Your Group";
+
   return (
     <div
       style={{
@@ -9,8 +10,8 @@ export default function JoinGroupOg({ groupName }) {
         background: "white",
         display: "flex",
         flexDirection: "column",
-        fontFamily: "Inter, sans-serif",
         gap: "0px",
+        fontFamily: "Inter",
       }}
     >
       <img
@@ -30,17 +31,17 @@ export default function JoinGroupOg({ groupName }) {
           backgroundColor: "black",
 
           color: "white",
-          padding: "30px 30px",
+          padding: "10px 18px",
           borderRadius: "100px",
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
-          marginTop: "30px",
-          marginLeft: "30px",
+          marginTop: "34px",
+          marginLeft: "34px",
           fontSize: "40px",
           lineHeight: "normal",
-          fontWeight: "400",
+          fontWeight: "500",
           letterSpacing: "normal",
           letterSpacing: "0.7px",
         }}
@@ -51,26 +52,25 @@ export default function JoinGroupOg({ groupName }) {
       <div
         style={{
           fontSize: "100px",
-          fontWeight: 700,
+          fontWeight: 600,
           color: "#111",
-          marginTop: "200px",
-          marginLeft: "35px",
+          marginTop: "224px",
+          marginLeft: "34px",
+          paddingTop: "80px",
         }}
       >
-        {groupName}
+        {displayName}
       </div>
 
       <div
         style={{
           fontSize: 24,
           fontSize: "40px",
-          lineHeight: 26.1,
-          fontWeight: 400,
-          letterSpacing: 0, // "normal" becomes 0 in OG
-          color: "#5f5f5f",
-          fontFamily: "Inter",
-          marginTop: "-430px",
-          marginLeft: "35px",
+          // lineHeight: 26.1,
+          fontWeight: 500,
+          letterSpacing: 0,
+          color: "#828282",
+          marginLeft: "34px",
         }}
       >
         Add, track and split expenses with your friends
@@ -88,8 +88,8 @@ export default function JoinGroupOg({ groupName }) {
           backgroundColor: "black",
           position: "absolute",
 
-          right: "50px",
-          bottom: "110px",
+          right: "34px",
+          bottom: "34px",
           backgroundColor: "transparent",
         }}
       />
