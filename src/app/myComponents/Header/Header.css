@@ -88,7 +88,6 @@
 }
 
 
-
 @media screen and (max-height: 720px) and (max-width: 390px) {
     .header {
         height: 50px;
@@ -103,8 +102,8 @@
     }
 
     .logo {
-        height: 29px;
-        width: 29px;
+        height: 28px;
+        width: 28px;
     }
 
     .terms,
@@ -130,5 +129,11 @@
         position: relative;
         transition: color 0.3s ease, opacity 0.3s ease;
         text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding-left: 20px;
     }
 }
