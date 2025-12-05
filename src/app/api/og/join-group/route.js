@@ -3,9 +3,13 @@ import JoinGroupOg from "./JoinGroupOg";
 
 export const runtime = "edge";
 
-// Load Inter font once (cached on cold start)
-const interFont = fetch(
+// Load both fonts once per cold start
+const interSemiBold = fetch(
   new URL("./font/Inter_28pt-SemiBold.ttf", import.meta.url)
+).then((res) => res.arrayBuffer());
+
+const interMedium = fetch(
+  new URL("./font/Inter_28pt-Medium.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
 export async function GET(req) {
@@ -22,8 +26,14 @@ export async function GET(req) {
     fonts: [
       {
         name: "Inter",
-        data: await interFont,
-        weight: 600, // SemiBold
+        data: await interSemiBold,
+        weight: 600,
+        style: "normal",
+      },
+      {
+        name: "Inter",
+        data: await interMedium,
+        weight: 500,
         style: "normal",
       },
     ],
