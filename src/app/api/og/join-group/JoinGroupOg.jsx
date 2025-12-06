@@ -1,7 +1,9 @@
 export default function JoinGroupOg({ groupName }) {
+  const displayName =
+    groupName && groupName.trim().length > 0 ? groupName : "Your Group";
+
   return (
     <div
-      className="dynamic"
       style={{
         width: "1200px",
         height: "630px",
@@ -52,12 +54,12 @@ export default function JoinGroupOg({ groupName }) {
           fontSize: "100px",
           fontWeight: 600,
           color: "#111",
-          marginTop: "225px",
+          marginTop: "224px",
           marginLeft: "34px",
           paddingTop: "80px",
         }}
       >
-        {groupName}
+        {displayName}
       </div>
 
       <div
