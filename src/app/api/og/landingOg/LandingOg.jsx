@@ -19,7 +19,6 @@ export default function LandingOg() {
           display: "flex",
           flexDirection: "column",
           gap: "10px",
-          backgroundColor: "red",
         }}
       >
         <span
