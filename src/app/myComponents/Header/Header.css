@@ -15,6 +15,7 @@
     left: 0;
     z-index: 999;
     margin-bottom: 4px;
+    margin-top: 20px;
 }
 
 .logo {
@@ -135,5 +136,6 @@
 @media screen and (max-width: 480px) {
     .header {
         padding-left: 20px;
+        margin-top: 0px;
     }
 }
