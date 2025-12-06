@@ -1,5 +1,5 @@
 "use client";
-
+//
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useEffect, useState } from "react";
@@ -36,34 +36,47 @@ export default function Landing() {
             </div>
 
             <div className="hero-img-container">
-              <Image src="/images/hero-banner.png"
+              <Image
+                src="/images/hero-banner.png"
                 alt="App preview screen"
                 priority
                 className="hero-img"
                 width={410}
                 height={830}
-                style={{ objectFit: "fill" }} />
+                style={{ objectFit: "fill" }}
+              />
             </div>
           </div>
 
           {/* DESKTOP QR and description */}
           <div className="description-and-qr-container">
-
             <p className="hero-description">
-              See where, when,<br />
-              with whom and how<br />
-              you spend. </p>
+              See where, when,
+              <br />
+              with whom and how
+              <br />
+              you spend.{" "}
+            </p>
 
             <div className="qr-container">
               <a href="#" aria-label="Download from Apple Store">
-                <Image src="/icons/applestore-qr.svg" alt="Apple Store QR"
-                  width={112} height={112} /> </a>
+                <Image
+                  src="/icons/applestore-qr.svg"
+                  alt="Apple Store QR"
+                  width={112}
+                  height={112}
+                />{" "}
+              </a>
 
               <a href="#" aria-label="Download from Google Play Store">
-                <Image src="/icons/playstore-qr.svg" alt="Play Store QR"
-                  width={112} height={112} /> </a>
+                <Image
+                  src="/icons/playstore-qr.svg"
+                  alt="Play Store QR"
+                  width={112}
+                  height={112}
+                />{" "}
+              </a>
             </div>
-
 
             <div className="join-group-button-container">
               <a
@@ -79,7 +92,6 @@ export default function Landing() {
                       alt="apple store"
                       height={15}
                       width={15}
-
                     />
 
                     <div className="join-group-image-line"></div>
@@ -97,14 +109,9 @@ export default function Landing() {
                 </button>
               </a>
             </div>
-
           </div>
-
-
         </div>
-
       </section>
-
     </div>
   );
 }
