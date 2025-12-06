@@ -8,7 +8,6 @@ import Header from "@/app/myComponents/Header/Header";
 import Navbar from "../Navbar/Navbar";
 
 import "@/app/myComponents/landing/landing.css";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Landing() {
@@ -27,93 +26,85 @@ export default function Landing() {
       <Header showNavBar={toggleNav} />
       {navBar && <Navbar showNavBar={toggleNav} />}
 
-      <section className="landing-page">
-        <div className="left-landing">
+      <section className="landing-container">
+        <div className="landing-content">
+          <div className="titleText-and-img-container">
+            <div className="landing-title-text">
+              <span className="gray">SPEND</span>
+              <span className="black">TRACK</span>
+              <span className="gray">SPLIT</span>
+            </div>
 
-          {/* LEFT TEXT */}
-          <div className="title-text">
-            <span className="gray">SPEND</span>
-            <span className="black">TRACK</span>
-            <span className="gray">SPLIT</span>
-          </div>
-
-          {/* HERO IMAGE */}
-          <div className="img-container-outer">
             <div className="hero-img-container">
-              <Image
-                src="/images/hero-banner.png"
+              <Image src="/images/hero-banner.png"
                 alt="App preview screen"
                 priority
-                fill
                 className="hero-img"
-                sizes="(max-width: 768px) 80vw, (max-width: 1280px) 40vw, 360px"
-                style={{ objectFit: "contain" }}
-              />
+                width={410}
+                height={830}
+                style={{ objectFit: "fill" }} />
             </div>
           </div>
 
-          {/* RIGHT CONTENT */}
-          <aside className="right-landing">
+          {/* DESKTOP QR and description */}
+          <div className="description-and-qr-container">
 
-            {/* HERO DESCRIPTION */}
             <p className="hero-description">
               See where, when,<br />
               with whom and how<br />
-              you spend.
-            </p>
+              you spend. </p>
 
-            {/* DESKTOP QR */}
             <div className="qr-container">
               <a href="#" aria-label="Download from Apple Store">
-                <Image
-                  src="/icons/applestore-qr.svg"
-                  alt="Apple Store QR"
-                  width={112}
-                  height={112}
-                />
-              </a>
+                <Image src="/icons/applestore-qr.svg" alt="Apple Store QR"
+                  width={112} height={112} /> </a>
 
               <a href="#" aria-label="Download from Google Play Store">
-                <Image
-                  src="/icons/playstore-qr.svg"
-                  alt="Play Store QR"
-                  width={112}
-                  height={112}
-                />
+                <Image src="/icons/playstore-qr.svg" alt="Play Store QR"
+                  width={112} height={112} /> </a>
+            </div>
+
+
+            <div className="join-group-button-container">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.getnumora.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="join-group-button">
+                  <div className="join-image-container">
+                    <Image
+                      className="join-image-icon"
+                      src="/icons/apple-svg.svg"
+                      alt="apple store"
+                      height={15}
+                      width={15}
+
+                    />
+
+                    <div className="join-group-image-line"></div>
+
+                    <Image
+                      className="join-image-icon"
+                      src="/icons/playstore-svg.svg"
+                      alt="play store"
+                      height={15}
+                      width={15}
+                    />
+                  </div>
+
+                  <span className="join-group-text">Download Numora</span>
+                </button>
               </a>
             </div>
 
-            {/* MOBILE STORE BUTTON */}
-            <a
-              href="#"
-              className="store-icons-container"
-              aria-label="Download mobile app"
-            >
-              <div className="store-icons">
-                <Image
-                  src="/icons/apple-svg.svg"
-                  alt="Apple Store"
-                  height={15}
-                  width={15}
-                  className="apple-icon"
-                />
+          </div>
 
-                <div className="divider" />
 
-                <Image
-                  src="/icons/playstore-svg.svg"
-                  alt="Google Play Store"
-                  height={15}
-                  width={15}
-                  className="playstore-icon"
-                />
-
-                <span>Download App</span>
-              </div>
-            </a>
-          </aside>
         </div>
+
       </section>
+
     </div>
   );
 }
