@@ -17,15 +17,7 @@ export async function generateMetadata({ searchParams }) {
       type: "website",
       images: [
         {
-          // 🔥 IMPORTANT CHANGE: Add `&v=${groupName}` to force OG image refresh per group.
-          // This prevents Instagram from using its old cached image.
-          url:
-            groupName && groupName !== "Your Group"
-              ? `/api/og/join-group?groupName=${encodeURIComponent(
-                  groupName
-                )}&v=${encodeURIComponent(groupName)}` // 👈 cache-buster
-              : `/api/og/join-group?default=true`,
-
+          url: `/api/og/join-group?groupName=${groupName}`,
           width: 1200,
           height: 630,
         },
