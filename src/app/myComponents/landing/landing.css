@@ -239,9 +239,9 @@
   text-decoration: none;
 }
 
-/* =========================================================
-   RESPONSIVE BREAKPOINTS - MOBILE FIRST APPROACH
-   ========================================================= */
+.store-icons:hover .divider {
+  opacity: 0.9;
+}
 
 /* ========== SMALL MOBILE (<370px) ========== */
 @media screen and (max-width: 369px) {
