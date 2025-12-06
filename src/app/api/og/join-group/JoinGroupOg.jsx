@@ -52,7 +52,7 @@ export default function JoinGroupOg({ groupName }) {
           fontSize: "100px",
           fontWeight: 600,
           color: "#111",
-          marginTop: "200px",
+          marginTop: "225px",
           marginLeft: "34px",
           paddingTop: "80px",
         }}
