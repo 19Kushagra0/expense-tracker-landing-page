@@ -2,9 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-
   background-color: #ebebeb;
-
   font-family: "Inter", sans-serif;
 }
 
@@ -15,4 +13,5 @@ body.landing-page-active {
 .app {
   overflow-x: hidden;
   height: 100vh;
+  background-color: #ebebeb;
 }

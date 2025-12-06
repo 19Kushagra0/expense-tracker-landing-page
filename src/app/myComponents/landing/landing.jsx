@@ -12,9 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Landing() {
   const [navBar, setNavBar] = useState(false);
-
   const toggleNav = () => setNavBar((prev) => !prev);
-
   // Avoid body class manipulation if possible. If needed:
   useEffect(() => {
     document.body.classList.add("landing-page-active");
@@ -97,14 +95,9 @@ export default function Landing() {
                 </button>
               </a>
             </div>
-
           </div>
-
-
         </div>
-
       </section>
-
     </div>
   );
 }
