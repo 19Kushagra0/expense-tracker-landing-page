@@ -464,6 +464,15 @@ span {
   .terms-privacy-content-intro2 {
     padding-top: 25px;
   }
+  .terms-privacy-title-container {
+    /* background-color: red; */
+
+    padding-bottom: 0px;
+    height: fit-content;
+  }
+  .terms-privacy-title-box {
+    /* background-color: yellow; */
+  }
 }
 
 @media screen and (max-width: 800px) {
