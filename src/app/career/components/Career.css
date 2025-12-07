@@ -106,6 +106,7 @@
   border-radius: 12px;
   font-size: 13px;
   font-weight: 500;
+  width: fit-content;
 }
 
 .career-job-meta {
@@ -151,17 +152,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 70px;
+    gap: 50px;
   }
-
+  .career-title-section {
+    text-align: center;
+  }
   .career-title-gray,
   .career-title-black {
     font-size: 100px;
+    line-height: 100px;
+    gap: 0px;
+
+    letter-spacing: 0.1px;
   }
 
   .career-hero-description {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 1.25;
+    text-align: center;
+  }
+  .career-hero {
+    padding-bottom: 50px;
+  }
+  .career-job-card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 }
 /* @media (max-width: 480px) {
