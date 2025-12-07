@@ -96,7 +96,7 @@ export default function privacy1() {
       {/* Content and index */}
       <div className="terms-privacy-index-content-container">
         {/* Index */}
-        <div className="terms-privacy-index-container">
+        <div className="terms-privacy-index-container privacy-index-container">
           <div className="terms-privacy-index-box">
             <button
               className="terms-privacy-index"
