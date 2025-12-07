@@ -1,3 +1,142 @@
 * {
   background-color: transparent;
 }
+.career-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ebebeb;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* Hero */
+.career-hero {
+  padding: 200px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.career-hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.career-title-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.career-title-gray {
+  font-size: 120px;
+  font-weight: 600;
+  letter-spacing: -6px;
+  line-height: 1.08;
+  color: rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+.career-title-black {
+  font-size: 120px;
+  font-weight: 600;
+  letter-spacing: -6px;
+  line-height: 1.08;
+  color: #000;
+  margin: 0;
+}
+
+.career-hero-description {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -1.2px;
+  color: #000;
+  max-width: 300px;
+}
+
+/* Jobs Section */
+.career-jobs-section {
+  padding: 60px 60px 100px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.career-section-title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  letter-spacing: -2px;
+}
+
+.career-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.career-job-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.career-job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.career-job-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.career-job-department {
+  background-color: #ebebeb;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.career-job-meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.career-job-meta-item {
+  font-size: 14px;
+  color: #666;
+}
+
+.career-job-description {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.career-view-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.career-view-button:hover {
+  background-color: #333;
+}
