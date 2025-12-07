@@ -85,7 +85,6 @@ export default function privacy1() {
           </div>
         </div>
       </div>
-
       <span className="terms-privacy-content-intro2">
         Numora ("we", "our", or "us") is committed to protecting your privacy.
         This Privacy Policy explains how we collect, use, and protect
@@ -94,6 +93,7 @@ export default function privacy1() {
         expense management app.
       </span>
       {/* Content and index */}
+
       <div className="terms-privacy-index-content-container">
         {/* Index */}
         <div className="terms-privacy-index-container privacy-index-container">
