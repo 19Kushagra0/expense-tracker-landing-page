@@ -140,6 +140,8 @@ span {
   top: 105px;
   background-color: #ebebeb;
   background-color: transparent;
+
+  /* background-color: red; */
 }
 
 .terms-privacy-title {
@@ -459,6 +461,9 @@ span {
   .terms-privacy-title-container {
     width: 100%;
   }
+  .terms-privacy-content-intro2 {
+    padding-top: 25px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -495,6 +500,11 @@ span {
   .termsPage,
   .privacyPage {
     padding-top: 125px;
+  }
+  .terms-privacy-title-container {
+    /* margin-bottom: 1px; */
+  }
+  .terms-privacy-content-intro2 {
   }
 }
 
