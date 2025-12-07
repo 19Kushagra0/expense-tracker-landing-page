@@ -77,16 +77,16 @@ export default function CareerPage() {
     },
   ];
 
-  const handleApply = (jobTitle) => {
-    alert(
-      `Application form for ${jobTitle} would open here. Connect this to your application system.`
-    );
-  };
-
   return (
     <div className="career-container">
       {/* Header */}
-      <div className="term-privacy-header">
+      <div
+        className="term-privacy-header"
+        style={{
+          paddingLeft: "4.72% ",
+          paddingRight: "4.72% ",
+        }}
+      >
         <Link href="/">
           <svg
             className="term-privacy-header-image-container"
@@ -187,7 +187,7 @@ export default function CareerPage() {
       </section>
 
       {/* Job Modal */}
-      {selectedRole && (
+      {/* {selectedRole && (
         <div className="career-modal" onClick={() => setSelectedRole(null)}>
           <div
             className="career-modal-content"
@@ -238,7 +238,7 @@ export default function CareerPage() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Footer */}
       <div

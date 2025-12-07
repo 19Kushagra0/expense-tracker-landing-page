@@ -1,6 +1,7 @@
 * {
   background-color: transparent;
 }
+
 .career-container {
   width: 100%;
   min-height: 100vh;
@@ -11,9 +12,11 @@
 
 /* Hero */
 .career-hero {
-  padding: 200px 60px;
+  padding: 200px 4.72%;
   max-width: 1400px;
   margin: 0 auto;
+
+  /* background-color: teal; */
 }
 
 .career-hero-content {
@@ -21,7 +24,7 @@
   justify-content: space-between;
   align-items: flex-end;
   gap: 60px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .career-title-section {
@@ -58,7 +61,7 @@
 
 /* Jobs Section */
 .career-jobs-section {
-  padding: 60px 60px 100px;
+  padding: 4.72% 4.72% 100px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -140,3 +143,33 @@
 .career-view-button:hover {
   background-color: #333;
 }
+@media screen and (max-width: 773px) {
+  .career-hero {
+    padding-top: 130px;
+  }
+  .career-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+  }
+
+  .career-title-gray,
+  .career-title-black {
+    font-size: 100px;
+  }
+
+  .career-hero-description {
+    font-size: 25px;
+    line-height: 1.25;
+  }
+}
+/* @media (max-width: 480px) {
+  .career-title-gray,
+  .career-title-black {
+    font-size: 60px;
+  }
+  .career-hero-description {
+    font-size: 20px;
+  }
+} */
