@@ -98,9 +98,6 @@ export default function Landing() {
               </div>
             </div>
           </div>
-          <picture className="landing-page-image">
-            {/* 1800px and above */}
-            <source srcSet="/images/largest.svg" media="(min-width: 1800px)" />
 
           <picture className="landing-page-image">
             {/* 1800px and above */}
