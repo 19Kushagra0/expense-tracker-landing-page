@@ -13,103 +13,72 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Landing() {
   const [navBar, setNavBar] = useState(false);
   const toggleNav = () => setNavBar((prev) => !prev);
-  // Avoid body class manipulation if possible. If needed:
-  useEffect(() => {
-    document.body.classList.add("landing-page-active");
-    return () => document.body.classList.remove("landing-page-active");
-  }, []);
 
   return (
-    <div className={`${inter.className} outer`}>
-      <Header showNavBar={toggleNav} />
-      {navBar && <Navbar showNavBar={toggleNav} />}
+    <div className={`${inter.className} landing`}>
+      {/* <Header showNavBar={toggleNav} />
+      {navBar && <Navbar showNavBar={toggleNav} />} */}
+      <div className="landing-header">
+        <div className="">
+          <div className="landing-logo"></div>
+        </div>
+        <div className="headers-links-container">
+          <div className="headers-links">Carrers</div>
+          <div className="headers-links">Privacy</div>
+          <div className="headers-links">Terms</div>
+        </div>
+      </div>
+      <div className="landing-page">
+        <div className="landing-page-title-image">
+          <div className="landing-page-title">
+            <span>SPEND</span>
+            <span>TRACK</span>
+            <span>SPLIT</span>
+          </div>
+          <picture className="landing-page-image">
+            {/* 1800px and above */}
+            <source srcSet="/images/largest.svg" media="(min-width: 1800px)" />
 
-      <section className="landing-container">
-        <div className="landing-content">
-          <div className="titleText-and-img-container">
-            <div className="landing-title-text">
-              <span className="gray">SPEND</span>
-              <span className="black">TRACK</span>
-              <span className="gray">SPLIT</span>
-            </div>
+            {/* 1440px and above */}
+            <source srcSet="/images/large.svg" media="(min-width: 1440px)" />
 
-            <div className="hero-img-container">
-              <Image
-                src="/images/hero-banner.png"
-                alt="App preview screen"
-                priority
-                className="hero-img"
-                width={410}
-                height={830}
-                style={{ objectFit: "fill" }}
-              />
+            {/* 1280px and above */}
+            <source srcSet="/images/medium.svg" media="(min-width: 1280px)" />
+
+            {/* 800px and above */}
+            <source srcSet="/images/small.svg" media="(min-width: 800px)" />
+
+            {/* fallback */}
+            <img src="/images/small.svg" alt="Landing image" />
+          </picture>
+        </div>
+
+        <div className="landing-page-tagLine-qr">
+          <div className="landing-page-tagLine">
+            <div className="tag-text">
+              <span>See where, when,</span>
+              <span> with whom and how </span>
+              <span>you spend</span>
             </div>
           </div>
-
-          {/* DESKTOP QR and description */}
-          <div className="description-and-qr-container">
-            <p className="hero-description">
-              See where, when,
-              <br />
-              with whom and how
-              <br />
-              you spend.{" "}
-            </p>
-
-            <div className="qr-container">
-              <a href="#" aria-label="Download from Apple Store">
-                <Image
-                  src="/icons/applestore-qr.svg"
-                  alt="Apple Store QR"
-                  width={112}
-                  height={112}
-                />{" "}
-              </a>
-
-              <a href="#" aria-label="Download from Google Play Store">
-                <Image
-                  src="/icons/playstore-qr.svg"
-                  alt="Play Store QR"
-                  width={112}
-                  height={112}
-                />{" "}
-              </a>
-            </div>
-
-            <div className="join-group-button-container">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.getnumora.app"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="join-group-button">
-                  <div className="join-image-container">
-                    <Image
-                      className="join-image-icon"
-                      src="/icons/apple-svg.svg"
-                      alt="apple store"
-                      height={15}
-                      width={15}
-                    />
-
-                    <div className="join-group-image-line"></div>
-
-                    <Image
-                      className="join-image-icon"
-                      src="/icons/playstore-svg.svg"
-                      alt="play store"
-                      height={15}
-                      width={15}
-                    />
-                  </div>
-
-                  <span className="join-group-text">Download Numora</span>
-                </button>
-              </a>
-            </div>
+          <div className="landing-page-tagLine-qr-container">
+            <Image
+              className="landing-page-tagLine-qr-image1"
+              src="/images/playStore.svg"
+              alt="Play Store"
+              width={200}
+              height={200}
+            />
+            <Image
+              className="landing-page-tagLine-qr-image2"
+              src="/images/apple.svg"
+              alt="Play Store"
+              width={200}
+              height={200}
+            />
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
