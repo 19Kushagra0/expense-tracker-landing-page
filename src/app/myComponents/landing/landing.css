@@ -234,12 +234,12 @@ button {
 .landing-page-tagLine-qr-image1 {
   width: 128px;
   height: 128px;
-  background-color: red;
+  /* background-color: red; */
 }
 .landing-page-tagLine-qr-image2 {
   width: 128px;
   height: 128px;
-  background-color: blue;
+  /* background-color: blue; */
 }
 /* dowload */
 .landing-page-dowload {
@@ -393,6 +393,9 @@ button {
 @media screen and (max-width: 600px) {
   .landing-page-image img {
     object-position: left; /* <-- FIX */
+  }
+  .landing-page-image {
+    display: none;
   }
   .landing-page {
     padding-right: 0px;
