@@ -67,7 +67,7 @@ export default function Landing() {
           <div className="landing-page-title-tagLine">
             <div className="landing-page-title">
               <span>SPEND</span>
-              <span className="landing-page-title-black">TRACK</span>
+              <span className="landing-page-title-black ">TRACK</span>
               <span>SPLIT</span>
             </div>
             <div className="landing-page-tagLine left-tag">
@@ -98,10 +98,6 @@ export default function Landing() {
               </div>
             </div>
           </div>
-
-          <picture className="landing-page-image">
-            {/* 1800px and above */}
-            <source srcSet="/images/largest.svg" media="(min-width: 1800px)" />
 
           <picture className="landing-page-image">
             {/* 1800px and above */}
