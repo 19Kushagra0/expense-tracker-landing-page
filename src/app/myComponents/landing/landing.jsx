@@ -1,5 +1,5 @@
 "use client";
-//
+
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useEffect, useState } from "react";
@@ -9,6 +9,15 @@ import "@/app/myComponents/landing/landing.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Landing() {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    window.scrollTo(0, 0);
+
+    return () => {
+      document.body.style.overflow = "auto"; // restore on leaving page
+    };
+  }, []);
+
   const [navBar, setNavBar] = useState(false);
   const showNavBar = () => {
     setNavBar(!navBar);
