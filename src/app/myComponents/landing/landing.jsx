@@ -3,16 +3,16 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useEffect, useState } from "react";
-
-import Header from "@/app/myComponents/Header/Header";
-import Navbar from "../Navbar/Navbar";
-
+import Navbar from "@/app/myComponents/Navbar/Navbar";
+import Link from "next/link";
 import "@/app/myComponents/landing/landing.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Landing() {
   const [navBar, setNavBar] = useState(false);
-  const toggleNav = () => setNavBar((prev) => !prev);
+  const showNavBar = () => {
+    setNavBar(!navBar);
+  };
 
   return (
     <div className={`${inter.className} landing`}>
@@ -20,21 +20,88 @@ export default function Landing() {
       {navBar && <Navbar showNavBar={toggleNav} />} */}
       <div className="landing-header">
         <div className="">
-          <div className="landing-logo"></div>
+          <Link href="/">
+            <Image
+              className="landing-logo"
+              src="/icons/logo.svg"
+              alt="App Logo"
+              width={40}
+              height={40}
+            />
+          </Link>
         </div>
         <div className="headers-links-container">
-          <div className="headers-links">Carrers</div>
+          {/* <div className="">Carrers</div>
           <div className="headers-links">Privacy</div>
-          <div className="headers-links">Terms</div>
+          <div className="headers-links">Terms</div> */}
+
+          <Link href="/career" className="headers-links">
+            Careers
+          </Link>
+          <Link href="/privacy" className="headers-links">
+            Privacy
+          </Link>
+          <Link href="/terms" className="headers-links">
+            Terms
+          </Link>
         </div>
+
+        <button
+          className="hamberger-container"
+          onClick={() => {
+            showNavBar();
+          }}
+        >
+          <Image
+            className="hamberger"
+            src="/icons/menu-icon.svg"
+            alt="App Logo"
+            width={24}
+            height={24}
+          />
+        </button>
       </div>
+      {navBar ? <Navbar showNavBar={showNavBar} /> : null}
       <div className="landing-page">
         <div className="landing-page-title-image">
-          <div className="landing-page-title">
-            <span>SPEND</span>
-            <span>TRACK</span>
-            <span>SPLIT</span>
+          <div className="landing-page-title-tagLine">
+            <div className="landing-page-title">
+              <span>SPEND</span>
+              <span className="landing-page-title-black">TRACK</span>
+              <span>SPLIT</span>
+            </div>
+            <div className="landing-page-tagLine left-tag">
+              <div className="tag-text   ">
+                <span>See where, when,</span>
+                <span> with whom and how </span>
+                <span>you spend</span>
+              </div>
+              <div className="landing-page-dowload ">
+                <div className="landing-page-icon-line">
+                  <Image
+                    className="landing-page-icon"
+                    src="/icons/apple-svg.svg"
+                    alt="My picture"
+                    width={500}
+                    height={500}
+                  />
+                  <div className="landing-page-line"></div>
+                  <Image
+                    className="landing-page-icon"
+                    src="/icons/playstore-svg.svg"
+                    alt="My picture"
+                    width={500}
+                    height={500}
+                  />
+                </div>
+                <span>Dowload App</span>
+              </div>
+            </div>
           </div>
+          <picture className="landing-page-image">
+            {/* 1800px and above */}
+            <source srcSet="/images/largest.svg" media="(min-width: 1800px)" />
+
           <picture className="landing-page-image">
             {/* 1800px and above */}
             <source srcSet="/images/largest.svg" media="(min-width: 1800px)" />
