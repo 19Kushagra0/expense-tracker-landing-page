@@ -6,8 +6,11 @@ button {
 }
 html,
 body {
-  overflow: hidden;
-  /* height: 100%; */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* no scroll on page */
+  height: 100%;
+  background-color: #ebebeb;
 }
 .landing {
   width: 100%;
@@ -16,6 +19,10 @@ body {
 
   display: flex;
   flex-direction: column;
+
+  /* justify-content: space-between; */
+
+  overflow: hidden;
 }
 /* landing header */
 .landing-header {
