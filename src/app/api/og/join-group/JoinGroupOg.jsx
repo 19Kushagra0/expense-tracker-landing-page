@@ -18,7 +18,7 @@ export default function JoinGroupOg({ groupName }) {
         src="https://expense-tracker-alpha-lyart.vercel.app/images/background/join-group-pattern.svg"
         alt="Hero Banner"
         width="100%"
-        height="300px"
+        height="60%"
         style={{
           objectFit: "contain",
           position: "absolute",
@@ -31,7 +31,7 @@ export default function JoinGroupOg({ groupName }) {
           backgroundColor: "black",
 
           color: "white",
-          padding: "10px 18px",
+          padding: "25px 18px",
           borderRadius: "100px",
           display: "flex",
           flexDirection: "row",
@@ -40,10 +40,11 @@ export default function JoinGroupOg({ groupName }) {
           marginTop: "34px",
           marginLeft: "34px",
           fontSize: "40px",
-          lineHeight: "normal",
+          // fontSize: "22px",
           fontWeight: "500",
-          letterSpacing: "normal",
-          letterSpacing: "0.7px",
+
+          lineHeight: " 24px",
+          letterSpacing: "12%",
         }}
       >
         INVITATION
@@ -57,6 +58,9 @@ export default function JoinGroupOg({ groupName }) {
           marginTop: "224px",
           marginLeft: "34px",
           paddingTop: "80px",
+
+          letterSpacing: "-2%",
+          lineHeight: "normal",
         }}
       >
         {displayName}
@@ -66,11 +70,13 @@ export default function JoinGroupOg({ groupName }) {
         style={{
           fontSize: 24,
           fontSize: "40px",
-          // lineHeight: 26.1,
           fontWeight: 500,
-          letterSpacing: 0,
           color: "#828282",
           marginLeft: "34px",
+          marginTop: "10px",
+
+          letterSpacing: "0%",
+          lineHeight: "24.16px",
         }}
       >
         Add, track and split expenses with your friends
