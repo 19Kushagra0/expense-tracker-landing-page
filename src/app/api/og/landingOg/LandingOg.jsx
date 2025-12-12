@@ -46,7 +46,7 @@ export default function LandingOg() {
 
       {/* RIGHT SECTION */}
       <img
-        src="https://expense-tracker-alpha-lyart.vercel.app/images/small.svg"
+        src="https://expense-tracker-landing-page-five.vercel.app/images/small.svg"
         alt="Hero Banner"
         width={277}
         height={415}
