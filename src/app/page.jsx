@@ -10,7 +10,7 @@ export const metadata = {
     images: [
       {
         // 👇 updated to match your new OG route
-        url: "https://expense-tracker-alpha-lyart.vercel.app/api/og/landingOg",
+        url: "https://expense-tracker-landing-page-five.vercel.app/api/og/landingOg",
         width: 1200,
         height: 630,
       },
