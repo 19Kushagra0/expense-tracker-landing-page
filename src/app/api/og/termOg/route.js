@@ -1,10 +1,10 @@
 import { ImageResponse } from "next/og";
-import CareerOg from "@/app/api/og/careerOg/CareerOg";
+import TermOg from "@/app/api/og/termOg/TermOg";
 
 export const runtime = "edge"; // ✅ recommended for OG images
 
 export async function GET() {
-  return new ImageResponse(<CareerOg />, {
+  return new ImageResponse(<TermOg />, {
     width: 1200,
     height: 630,
   });
